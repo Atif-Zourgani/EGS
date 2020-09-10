@@ -1,0 +1,86 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Appel {{ sectionName }} / {{ halfDay }}{% endblock %}
+{% block metaDescriptionContent %}{% endblock %}
+
+{% set bodyClass='create-call' %}
+
+{% form_theme formCall _self %}
+
+{% block body %}
+
+    <div class="main">
+        {% include 'common/_breadcrumbs.html.twig' %}
+
+        <div class="main-scrollable">
+
+            {{ include('call/_legend_call.html.twig') }}
+
+            <div class="flex flex--wrap flex--center">
+
+                {{ form_start(formCall) }}
+
+                {{ form_widget(formCall) }}
+
+                {{ form_end(formCall) }}
+
+            </div>
+
+        </div>
+    </div>
+
+    {% block javascripts %}
+        <script src="{{ asset('build/js/call.js') }}"></script>
+    {% endblock %}
+
+{% endblock %}
+
+
+{% block _roll_call_studentCalls_widget %}
+
+    <div class="flex flex--align-start flex--wrap">
+        {{ form_widget(form) }}
+        <button class="submit-call flex flex--align-center flex--center" type="submit">
+            <i class="fas fa-check"></i>
+            <span>Valider l'appel</span>
+        </button>
+    </div>
+
+{% endblock %}
+
+
+{% block _roll_call_studentCalls_entry_row %}
+
+    {{ form_widget(form) }}
+
+{% endblock %}
+
+
+{% block _roll_call_studentCalls_entry_widget %}
+
+    <div>
+        {% set student = form.vars.value.student %}
+
+        <div class="user user--student">
+            {% if student.image != "" %}
+                <div class="user-photo" style="background: url('{{ asset('uploads/students/photos/' ~ student.image)|imagine_filter('user_photo') }}')">
+                </div>
+            {% else %}
+                <div class="user-photo user-photo--null" style="background: url('{{ asset('logos/user-secret-solid.svg')}}')">
+                </div>
+            {% endif %}
+        </div>
+        <div class="user-name">
+            <span>{{ student.firstname }}</span>
+            <span>{{ student.lastname }}</span>
+        </div>
+
+        {% if is_granted ('ROLE_SUPER_ADMIN') %}
+            {{ form_widget(form.status, {'attr': {'class': 'input-status'}}) }}
+        {% else %}
+            {{ form_widget(form.status, {'attr': {'class': 'input-status input-status-restricted'}}) }}
+        {% endif %}
+
+    </div>
+
+{% endblock %}

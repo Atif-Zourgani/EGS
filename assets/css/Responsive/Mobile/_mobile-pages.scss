@@ -1,0 +1,644 @@
+
+/* ALL DISCIPLINES */
+/***********************************************/
+
+body.all-disciplines {
+  a.discipline {
+    width: 120px;
+    padding: 15px;
+  }
+  .discipline img {
+    max-width: 80px;
+    max-height: 80px;
+  }
+  .cards-container ul {
+    justify-content: center;
+  }
+  .category-name {
+    text-align: center;
+  }
+}
+
+
+/* STUDENT */
+/***********************************************/
+
+body.student {
+  h1 {
+    font-size: 18px;
+  }
+  h2 {
+    font-size: 14px;
+  }
+  h3 {
+    margin: auto;
+  }
+  section.student-skills, section.reliability, section.comments {
+    padding: 25px;
+  }
+  section.reliability {
+    padding: 25px 15px 40px;
+  }
+  section.student-infos {
+    height: 160px;
+  }
+  .student-photo {
+    flex: 1;
+    max-width: 200px;
+  }
+  .student-infos-ctn {
+    padding: 0 15px;
+    flex: none;
+  }
+  .student-contact p {
+    font-size: 13px;
+    padding: 10px 0 0;
+  }
+  .student-reliability {
+    height: 50px;
+    i.far {
+      font-size: 35px;
+      line-height: 50px;
+    }
+  }
+  .section-title {
+    margin-bottom: 0;
+  }
+  .badges-menu {
+    margin: 15px auto 30px;
+  }
+  .empty {
+    text-align: center;
+    display: block;
+    line-height: 1.3;
+  }
+  section.student-behaviour-responsive {
+    padding: 15px;
+    .item-reliability span {
+      font-size: 18px;
+    }
+  }
+  .behaviour-length, .behaviour-points {
+    font-size: 18px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 auto 5px;
+  }
+  .behaviour-length {
+    width: 40px;
+    font-size: 20px;
+  }
+  .behaviour-points {
+    width: 100px;
+  }
+  .behaviour-rules {
+    width: 320px;
+  }
+  .student-behaviour {
+    span {
+      font-size: 12px;
+    }
+  }
+  .student-career {
+    text-align: center;
+  }
+  .select-designed {
+    margin: 10px 5px 0;
+    padding: 10px 30px 10px 15px;
+    &.select-designed--white {
+      margin: auto 30px auto auto;
+    }
+  }
+  section.student-competence {
+    padding: 15px 20px;
+    .js-student-discipline {
+      padding: 10px;
+      width: 115px;
+      max-width: 150px;
+      img {
+        max-height: 70px;
+      }
+    }
+    .discipline-image--null {
+      padding: 0;
+      margin-bottom: 10px;
+    }
+    .student-disciplines {
+      justify-content: space-around;
+      //margin: 0;
+    }
+    .category-name {
+      text-align: center;
+      margin-top: 0;
+    }
+    .category-name ~ div {
+      justify-content: center;
+    }
+  }
+  section.comments {
+    .comment-text {
+      font-size: 14px;
+    }
+    .comment-teacher::after, .comment-discipline::after {
+      margin: 0 5px;
+    }
+  }
+  .chart-container {
+    margin: auto;
+  }
+  .js-all-disciplines button {
+    margin: 0 auto 30px;
+  }
+}
+
+.feed-overlay {
+  right: -820px;
+}
+
+.feed-overlay-body {
+  height: calc(100% - 60px);
+}
+
+.feed-top {
+  height: 60px;
+}
+
+.feed-triangle {
+  position: absolute;
+  bottom: -30px;
+  right: 15px;
+  width: 30px;
+  height: 40px;
+}
+
+.feed-infos {
+  padding: 8px;
+}
+
+.feed-date {
+  font-size: 12px;
+}
+
+.feed-cat {
+  font-size: 13px;
+}
+
+.feed-author {
+  font-size: 13px;
+  margin-right: 45px;
+}
+
+/* LABEL SWITCH CHECKBOX */
+.switch {
+  width: 70px;
+  height: 40px;
+  margin-bottom: 5px;
+}
+
+.switch-slider:before {
+  left: 9px;
+  bottom: 7px;
+}
+
+.user.user--student {
+  width: 100px;
+  box-sizing: border-box;
+  .user-photo::before {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.all-students {
+  .search-bar, .block-gamer-label-search {
+    width: 100% !important;
+  }
+}
+
+.block-gamer-label-search {
+  border-top: 1px solid $lightGrey;
+  height: auto;
+  justify-content: center;
+}
+
+.gamer-label-search {
+  padding: 15px 30px;
+  width: auto;
+  margin-right: 0;
+  span {
+    display: none;
+  }
+}
+
+.modal-student-attendance-ctn {
+  height: 300px;
+  position: fixed;
+}
+
+
+/* FORM INCIDENT (STUDENT RELIABILITY) */
+/***********************************************/
+
+body.student-reliability {
+  h1 {
+    margin: 30px 20px 20px;
+  }
+  .all-incidents {
+    padding: 10px 0 100px;
+    i, input {
+      font-size: 50px;
+    }
+  }
+  form {
+    .submit-incident {
+      position: fixed;
+      z-index: 3;
+      bottom: 60px;
+      width: 100%;
+      margin: 0;
+      border-radius: 0;
+      i {
+        font-size: 35px;
+      }
+      span {
+        font-weight: $medium;
+      }
+    }
+    input[type=checkbox] {
+      //height: 50px;
+      //width: 50px;
+      width: 100px;
+      height: 150px;
+      z-index: 2;
+    }
+    .incident {
+      width: 100px;
+      height: 150px;
+      position: relative;
+      label {
+        position: absolute;
+        top: 70px;
+        left: 50%;
+        transform: translatex(-50%);
+        width: 100px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+
+/* CALL */
+/***********************************************/
+
+body.select-call {
+  form {
+    padding: 20px 0;
+    @media screen and (orientation: landscape) {
+      padding: 20px 0 0;
+    }
+  }
+  .select-call-date {
+    padding: 20px;
+    justify-content: start;
+    align-items: baseline;
+  }
+  .select-designed {
+    width: 60%;
+    margin: 10px auto;
+    padding: 10px 30px 10px 15px;
+    border: 2px solid $darkBlue;
+    box-shadow: 5px 5px 20px 0 rgba(9, 34, 57, 0.3);
+    &:after {
+      right: 15px;
+    }
+    select, input {
+      width: calc(100% + 30px);
+    }
+    > * {
+      text-align: left;
+    }
+  }
+  .block-buttons {
+    width: 100%;
+    position: fixed;
+    bottom: 60px;
+    > * {
+      width: 100% !important;
+      height: 60px;
+    }
+    span {
+      font-size: 18px;
+    }
+    i {
+      margin-right: 10px;
+    }
+  }
+}
+
+
+body.create-call, body.update-call {
+  .legend-call {
+    border-bottom: 2px solid $darkBlue;
+  }
+  form {
+    padding: 0;
+  }
+  #roll_call_studentCalls {
+    justify-content: center;
+  }
+  .user {
+    margin: auto;
+  }
+  .submit-call {
+    bottom: 60px;
+  }
+}
+
+body.display-calls {
+  .call-filters {
+    padding: 20px;
+    span, .select-designed {
+      width: 70%;
+      margin: 5px auto 10px;
+    }
+    span {
+      text-align: center;
+    }
+  }
+  .call-filters select {
+    width: 100%;
+  }
+  ul.list-call {
+    padding: 20px 10px;
+    li {
+      width: auto !important;
+    }
+  }
+  .call-details li:first-of-type {
+    width: 200px;
+  }
+}
+
+
+/* DISCIPLINE */
+/***********************************************/
+
+body.discipline {
+  section.discipline-skills .skill {
+    line-height: 1.3;
+  }
+  .select-designed {
+    margin-left: 0;
+    padding: 0 30px 0 10px;
+  }
+  select[name="levels"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+  }
+  .discipline-infos-sum {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+  section.discipline-infos {
+    img {
+      max-width: 100px;
+      max-height: 100px;
+      margin: 0 auto 20px;
+    }
+    .block-items {
+      margin-top: 20px;
+      justify-content: space-evenly;
+    }
+    .item {
+      padding: 0;
+      .item-circle, .item-prog {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 25px;
+        box-sizing: border-box;
+      }
+      .item-prog {
+        width: 120px;
+      }
+    }
+    .item:last-child {
+      padding-right: 0;
+    }
+    h1 {
+      line-height: 1.4;
+    }
+    h2 {
+      line-height: 1.3;
+    }
+  }
+  section.discipline-levels {
+    padding: 10px 0;
+    background-color: $lightGrey;
+    .select-designed {
+      width: 60%;
+      margin: auto;
+      background-color: $white;
+      box-shadow: 5px 5px 20px 0 rgba(9, 34, 57, 0.3);
+      &:after {
+        right: 15px;
+      }
+    }
+  }
+}
+
+
+/* EVALUATION */
+/***********************************************/
+
+body.evaluation {
+  .block-select {
+    display: block;
+    padding: 15px 0;
+    .select-designed {
+      margin: 10px auto;
+      width: 300px;
+      box-shadow: 5px 5px 20px 0 rgba(9, 34, 57, 0.3);
+      border: 2px solid $darkBlue;
+      padding: 10px 30px 10px 15px;
+      &:after {
+        right: 15px;
+      }
+      select {
+        width: 100%;
+      }
+    }
+  }
+  .block-filters {
+    /*button, a.change-section {
+      width: 50%;
+      box-sizing: border-box;
+    }*/
+    a.change-section {
+      font-size: 16px !important;
+      height: 50px;
+    }
+    .block-buttons {
+      flex-wrap: wrap;
+      position: fixed;
+      bottom: 60px;
+      width: 100%;
+    }
+    button {
+      width: 100%;
+    }
+  }
+  &.evaluation-form, &.evaluation-second-step {
+    .block-filters {
+      .block-buttons {
+        position: relative;
+        bottom: 0;
+      }
+    }
+    .block-skills {
+      padding: 10px 20px 30px 20px;
+    }
+    .form-comment {
+      margin: 50px 10px 20px 10px;
+      textarea {
+        width: 100%;
+        box-sizing: border-box;
+      }
+      label {
+        font-size: 16px;
+      }
+      label, .rating {
+        margin: 5px 15px 5px 0;
+      }
+      .rating {
+        margin: 5px 0;
+      }
+    }
+  }
+  .all-skills-assigned {
+    max-width: 280px;
+    box-sizing: border-box;
+    font-size: 16px;
+    padding: 10px;
+    margin: 30px auto 0;
+  }
+}
+
+body.evaluation, body.evaluation-second-step, body.select-call {
+  .block-buttons {
+    @media screen and (orientation: landscape) {
+      position: relative !important;
+      bottom: 0 !important;
+      margin-top: 30px !important;
+    }
+  }
+}
+
+
+/* ATTENDANCE'S PAGE */
+/***********************************************/
+
+.attendance-card {
+  padding: 30px 20px;
+  width: 50%;
+  height: auto;
+}
+
+.attendance-section {
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.attendance-percentage {
+  font-size: 35px;
+  span {
+    font-size: 20px;
+  }
+}
+
+/* CAREER'S PAGE */
+/***********************************************/
+
+body.careers {
+  .career {
+    margin: 25px 10px 0;
+  }
+  h3 {
+    text-transform: uppercase;
+  }
+}
+
+.career-block {
+  text-align: center;
+  padding: 40px 20px 0 20px;
+}
+
+body.career {
+  text-align: center;
+  .card .discipline {
+    width: 115px;
+  }
+  .discipline img {
+    max-width: 80px;
+  }
+  .progress-wrap {
+    margin: 10px auto 20px;
+    height: 40px;
+    .progress-bar {
+      height: 40px;
+    }
+  }
+  .progress-percentage {
+    height: 40px;
+    line-height: 40px;
+  }
+}
+
+body.discipline {
+  .progress-wrap.item-prog .progress {
+    height: 50px;
+  }
+
+  .progress-percentage {
+    margin: 0 !important;
+    line-height: 50px;
+  }
+}
+
+
+
+
+/* LOGIN */
+/***********************************************/
+
+body.login h1 {
+  font-size: 16px;
+}
+
+
+/* ERROR */
+/***********************************************/
+
+body.error {
+  > * {
+    letter-spacing: 1.3px;
+    font-size: 14px !important;
+    line-height: 1.6;
+  }
+  h1 {
+    font-size: 14px;
+  }
+  img {
+    max-width: 100px;
+  }
+  .main {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+}

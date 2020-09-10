@@ -1,0 +1,28 @@
+{% if is_granted('ROLE_STUDENT') or is_granted('ROLE_PARENT') %}
+    <i class="fas fa-user-graduate"></i>
+    {{ student.fullname }}
+    {% if is_mobile() %}
+        <div class="js-logout flex flex--align-center">
+            <div class="logout">
+                <a href="{{ path('fos_user_security_logout') }}">Déconnexion</a>
+            </div>
+            <i class="fas fa-times-circle"></i>
+        </div>
+    {% endif %}
+{% else %}
+    {% if is_mobile() == false %}
+        <i class="fas fa-user-graduate"></i>
+        <a href="{{ path('all_students') }}">Étudiants</a>
+        <i class="fas fa-angle-right"></i>
+        <a href="{{ path('section', {'shortname': student.section.shortname}) }}">{{ student.section }}</a>
+        <i class="fas fa-angle-right"></i>
+        <span>{{ student.fullname }}</span>
+    {% else %}
+        <i class="fas fa-user-graduate"></i>
+        <a href="{{ path('section', {'shortname': student.section.shortname}) }}">{{ student.section }}</a>
+        <i class="fas fa-angle-right"></i>
+        <span>{{ student.firstname|first }}.{{ student.lastname|first }}.</span>
+    {% endif %}
+{% endif %}
+
+<img class="feed-img display-feed" src="{{ asset('logos/infos.png') }}" alt="Icone infos">

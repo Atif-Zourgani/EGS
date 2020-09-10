@@ -1,0 +1,45 @@
+<li class="card card--discipline" data-id="{{ discipline.id }}">
+    {% if page == 'career' %}
+        {% if is_granted('ROLE_ADMIN') or is_granted('ROLE_STUDENT') or is_granted('ROLE_PARENT') or (is_granted('ROLE_TEACHER') and discipline.id in teacherDisciplines) %}
+            <a class="discipline" href="{{ path('discipline_career', {'discipline': discipline.id, 'career': career.id }) }}">
+        {% else %}
+            <a class="discipline cursor-disabled" disabled>
+        {% endif %}
+    {% else %}
+        {% if is_granted('ROLE_ADMIN') or is_granted('ROLE_STUDENT') or is_granted('ROLE_PARENT') or (is_granted('ROLE_TEACHER') and discipline.id in teacherDisciplines) %}
+            <a class="discipline" href="{{ path('discipline', {'discipline': discipline.id}) }}">
+        {% else %}
+            <a class="discipline cursor-disabled" disabled>
+        {% endif %}
+    {% endif %}
+        {% if discipline.image != "" %}
+            <img src="{{ asset('uploads/disciplines/logos/' ~ discipline.image) }}">
+        {% else %}
+            <i class="fas fa-award"></i>
+        {% endif %}
+        <span>{{ discipline.name }}</span>
+
+        <span class="discipline-levels">
+
+            {% if page == 'career' %}
+                {% for disciplineLevel in discipline.disciplineLevels %}
+                    {% set level = disciplineLevel.skills|length %}
+                    {% for disciplineInfo in disciplineInfos %}
+                        {% if discipline.disciplineLevels|length > 0 and disciplineInfo.id == disciplineLevel.id %}
+                            {% set skillsTotal = disciplineInfo.skillsTotal %}
+                            {% if level == skillsTotal %}
+                                <i class="fas fa-star"></i>
+                                    {% else %}
+                                <i class="fas fa-star-half-alt"></i>
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                {% endfor %}
+            {% else %}
+                {% for disciplineLevel in discipline.disciplineLevels %}
+                    <i class="fas fa-star"></i>
+                {% endfor %}
+            {% endif %}
+        </span>
+        </a>
+</li>

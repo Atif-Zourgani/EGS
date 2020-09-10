@@ -1,0 +1,36 @@
+<i class="fas fa-skull-crossbones"></i>
+{% if is_mobile() == true and is_tablet() == false %}
+    <span>Incidents</span>
+    <i class="fas fa-angle-right"></i>
+    <a href="{{ path('student', {'student': student.id, 'firstname': student.firstname, 'lastname': student.lastname}) }}">{{ student.firstname|first }}.{{ student.lastname }}</a>
+{% elseif is_tablet() %}
+    <span href="">Déclarer un incident</span>
+    <i class="fas fa-angle-right"></i>
+    <a href="{{ path('student', {'student': student.id, 'firstname': student.firstname, 'lastname': student.lastname}) }}">{{ student.fullname }}</a>
+    <i class="fas fa-angle-right"></i>
+    {% set points = currentPoints|last %}
+    <span class="student-points {% if points >= 16 or points == null %} good {% elseif points < 16 and points >= 10 %} medium {% else %} bad {% endif %}">
+            {% if points != null %}
+                {{ points }}
+            {% else %}
+                20
+            {% endif %}
+        points.
+            </span>
+{% else %}
+    <span>Indicateur de fiabilité</span>
+    <i class="fas fa-angle-right"></i>
+    <span>Déclarer un incident</span>
+    <i class="fas fa-angle-right"></i>
+    <a href="{{ path('student', {'student': student.id, 'firstname': student.firstname, 'lastname': student.lastname}) }}">{{ student.fullname }}</a>
+    <i class="fas fa-angle-right"></i>
+    {% set points = currentPoints|last %}
+    <span class="student-points {% if points >= 16 or points is empty %} good {% elseif points < 16 and points >= 10 %} medium {% else %} bad {% endif %}">
+                {% if points is empty %}
+                    20
+                {% else %}
+                    {{ points }}
+                {% endif %}
+        points.
+            </span>
+{% endif %}

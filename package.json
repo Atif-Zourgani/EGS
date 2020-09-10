@@ -1,0 +1,32 @@
+{
+    "browserslist": [
+        "> 1%",
+        "ie > 9"
+    ],
+    "devDependencies": {
+        "@fortawesome/fontawesome-free": "^5.7.2",
+        "@symfony/webpack-encore": "^0.22.0",
+        "node-sass": "^4.11.0",
+        "webpack-notifier": "^1.6.0"
+    },
+    "license": "UNLICENSED",
+    "private": true,
+    "scripts": {
+        "dev-server": "encore dev-server",
+        "dev": "encore dev",
+        "watch": "encore dev --watch",
+        "build": "encore production --progress"
+    },
+    "dependencies": {
+        "@ckeditor/ckeditor5-build-classic": "^16.0.0",
+        "autoprefixer": "^9.5.1",
+        "browserslist": "^4.5.5",
+        "chart.js": "^2.8.0",
+        "jquery": "^3.4.1",
+        "popper.js": "^1.14.7",
+        "postcss-loader": "^3.0.0",
+        "sass-loader": "^7.1.0",
+        "select2": "^4.0.13",
+        "typeahead.js": "^0.11.1"
+    }
+}

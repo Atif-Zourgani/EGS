@@ -1,0 +1,172 @@
+<section class="student-competence">
+
+    {% if is_mobile() %}
+
+        <div class="flex flex--align-center flex--space-between flex--wrap">
+            {% if is_mobile() == true and is_tablet() == false %}
+                <h3>Mes badges pros / <span>Compétences</span></h3>
+            {% else %}
+                <h3>Mes badges professionnels / <span>Compétences</span></h3>
+            {% endif %}
+
+            <div class="badges-menu flex flex--align-center">
+
+                <div class="select-designed">
+                    <select name="skills" id="">
+                        <option class="title" value="all">Toutes les compétences</option>
+                        {% for category in categories %}
+                            <option value="{{ category.name }}">{{ category.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        {% if is_tablet() %}
+            <div class="all-badges flex flex--end">
+                <i class="fas fa-trophy"></i>
+                <span class="" id="js-badges">Voir tous les badges</span>
+            </div>
+        {% endif %}
+
+    {% else %}
+
+        <div class="flex flex--align-center flex--space-between section-title">
+            <h3>Mes badges professionnels / <span>Compétences</span></h3>
+            <div class="badges-menu flex flex--align-center">
+                <div class="all-badges">
+                    <i class="fas fa-trophy"></i>
+                    <span id="js-badges">Voir tous les badges</span>
+                </div>
+                {#<i class="fas fa-th-list"></i>
+                <i class="fas fa-chart-pie"></i>#}
+
+                <div class="select-designed">
+                    <select name="skills" id="">
+                        <option class="title" value="all">Toutes les compétences</option>
+                        {% for category in categories %}
+                            <option value="{{ category.name }}">{{ category.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+        </div>
+
+    {% endif %}
+
+    {% if studentDisciplines is empty %}
+        <span class="empty">Aucune compétence enregistrée pour le moment.</span>
+    {% endif %}
+
+    {% if studentDisciplines %}
+        <div class="js-all-disciplines">
+            <button>
+                <i class="fas fa-chevron-down"></i>
+                <span>Déplier toutes les catégories</span>
+            </button>
+        </div>
+    {% endif %}
+
+
+    {#<div class="student-disciplines flex flex-{#<ap flex--align-start">#}
+
+        {#{% for discipline in studentDisciplines %}
+
+            <div class="js-student-discipline" data-discipline="{{ discipline.name }}" data-category="{{ discipline.category.name}}">
+                <a href="{{ path('student_discipline', {'discipline': discipline.name, 'student': student.id }) }}"
+                   title="{{ discipline.name }}">
+                    {% if discipline.image != "" %}
+                        <img src="{{ asset('uploads/disciplines/logos/' ~ discipline.image) }}">
+                        <span class="discipline-name">{{ discipline.name }}</span>
+                    {% else %}
+                        <div class="discipline-image--null">
+                            <i class="fas fa-award"></i>
+                            <span>{{ discipline.name }}</span>
+                        </div>
+                    {% endif %}
+
+                    <span class="discipline-stars flex flex--center">
+
+                        {% for disciplineLevel in discipline.disciplineLevels %}
+                            {% set level = disciplineLevel.skills|length %}
+                            {% for disciplineInfo in disciplineInfos %}
+                                {% if discipline.disciplineLevels|length > 0 and disciplineInfo.id == disciplineLevel.id %}
+                                    {% set skillsTotal = disciplineInfo.skillsTotal %}
+                                    {% if level == skillsTotal %}
+                                        <i class="fas fa-star"></i>
+                                    {% else %}
+                                        <i class="fas fa-star-half-alt"></i>
+                                    {% endif %}
+                                {% endif %}
+                            {% endfor %}
+                        {% endfor %}
+
+                     </span>
+                </a>
+            </div>
+
+        {% endfor %}#}
+    {#</div>#}
+
+    {% for category in studentDisciplinesCat %}
+
+        <div class="student-disciplines">
+            <div class="category-name" data-category="{{ category.name }}"><i class="fas fa-caret-right"></i> {{
+                category.name }}</div>
+            <div class="flex flex--wrap flex--align-start">
+                {% for discipline in category.disciplines %}
+
+                    <div class="js-student-discipline" data-discipline="{{ discipline.name }}" data-category="{{ category.name }}">
+
+                        {% if is_granted('ROLE_ADMIN') or is_granted('ROLE_STUDENT') or is_granted('ROLE_PARENT') or is_granted('ROLE_TEACHER') and discipline.id in teacherD %}
+                            <a href="{{ path('student_discipline', {'discipline': discipline.id, 'student': student.id }) }}" title="{{ discipline.name }}">
+                        {% else %}
+                            <a class="cursor-disabled" disabled>
+                        {% endif %}
+
+                        {% if discipline.image != "" %}
+                            <img src="{{ asset('uploads/disciplines/logos/' ~ discipline.image) }}">
+                            <span class="discipline-name">{{ discipline.name }}</span>
+                        {% else %}
+                            <div class="discipline-image--null">
+                                <i class="fas fa-award"></i>
+                                <span>{{ discipline.name }}</span>
+                            </div>
+                        {% endif %}
+
+                        <span class="discipline-stars flex flex--center">
+                            {% for disciplineLevel in discipline.disciplineLevels %}
+                                {% set level = disciplineLevel.skills|length %}
+                                {% for disciplineInfo in disciplineInfos %}
+                                    {% if discipline.disciplineLevels|length > 0 and disciplineInfo.id == disciplineLevel.id %}
+                                        {% set skillsTotal = disciplineInfo.skillsTotal %}
+                                        {% if level == skillsTotal %}
+                                            <i class="fas fa-star"></i>
+                                        {% else %}
+                                            <i class="fas fa-star-half-alt"></i>
+                                        {% endif %}
+                                    {% endif %}
+                                {% endfor %}
+                            {% endfor %}
+                        </span>
+                        </a>
+                    </div>
+
+                {% endfor %}
+            </div>
+        </div>
+
+    {% endfor %}
+
+    {% if is_mobile() == true %}
+        <div class="student-career">
+            <a href="{{ path('student_careers', {'student': student.id }) }}">Voir tous les parcours</a>
+        </div>
+
+    {% else %}
+        <h3 class="student-career">
+            <a href="{{ path('student_careers', {'student': student.id }) }}">Voir tous les parcours</a>
+        </h3>
+    {% endif %}
+
+</section>

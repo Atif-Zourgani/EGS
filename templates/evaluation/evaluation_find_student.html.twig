@@ -1,0 +1,82 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Evaluer{% endblock %}
+{% block metaDescriptionContent %}{% endblock %}
+
+{% set bodyClass='evaluation evaluation-second-step' %}
+
+{% block body %}
+
+    <div class="main">
+        {% include 'common/_breadcrumbs.html.twig' %}
+
+        <div class="main-scrollable">
+
+            <div class="block-filters flex flex--align-center flex--wrap">
+
+                <form id="" action="{{ path('evaluation_form', {'disciplineId' : disciplineId}) }}" method="get" class="{% if is_mobile() == false %}flex flex--space-between{% endif %}">
+
+                    <div class="block-select flex flex--align-center flex--wrap flex--space-around">
+                        <div class="select-designed">
+                            <select name="section" id="select-section" class="filters filters--section">
+                                {% for section in sections %}
+                                    <option value="{{ section.shortname }}" class="flex flex--align-center">{{ section.name }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <input name="discipline" type="text" id="select-discipline" {#class="filters filters--discipline"#}/>
+
+                        <div class="select-designed">
+                            <select name="student" id="select-student" class="filters filters--student">
+                                <option value="none">Choisir un étudiant</option>
+                                {% for student in students %}
+                                    <option value="{{ student.id }}" class="flex flex--align-center">{{ student.fullname }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        {% if is_tablet() %}
+                            <a class="change-section change-section--tablet" href="{{ path('evaluation') }}" title="Réinitialiser la sélection">
+                                <i class="fas fa-times-circle"></i>
+                                <span>Réinitialiser la sélection</span>
+                            </a>
+                        {% endif %}
+                    </div>
+
+                    <div class="block-buttons">
+                        {#<button type="submit">
+                            <i class="fas fa-check"></i>
+                        </button>#}
+                        {% if is_tablet() %}
+
+                        {% else %}
+                            <a class="change-section flex flex--center flex--align-center" id="reboot-evaluation" href="{{ path('evaluation') }}">
+                                <i class="fas fa-times-circle"></i>
+                                Réinitialiser la sélection
+                            </a>
+                        {% endif %}
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    {% block javascripts %}
+
+        <script src="{{ asset('build/js/jquery-ui.js') }}"></script>
+
+        <script>
+            var disciplinesA = {{ disciplineNames|json_encode|raw }};
+        </script>
+
+        <script src="{{ asset('build/js/evaluation.js') }}"></script>
+
+    {% endblock %}
+
+{% endblock %}
+

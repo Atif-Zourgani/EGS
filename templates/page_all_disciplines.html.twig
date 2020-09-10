@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les compétences{% endblock %}
+{% block metaDescriptionContent %}{% endblock %}
+
+{% set bodyClass='all-disciplines' %}
+{% block body %}
+
+    <div class="main">
+
+        {% include 'common/_searchbar.html.twig' %}
+
+        <div class="main-scrollable">
+
+            <img id="loader" src="{{ asset('logos/loader-pacman.gif') }}" style="display: none"/>
+
+            <div id="no-result"></div>
+
+            {% for category in categories %}
+                <div class="cards-container">
+                    {% if category.disciplines != '' %}
+                        <h2 class="category-name">{{ category.name }}</h2>
+                    {% endif %}
+                    <ul class="flex flex--wrap flex--align-center">
+                        {% for discipline in category.disciplines %}
+                            {{ include ('cards/_discipline_card.html.twig') }}
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endfor %}
+
+        </div>
+    </div>
+
+
+{% endblock %}

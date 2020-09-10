@@ -1,0 +1,161 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Taux de présence par classe{% endblock %}
+
+{% block reload %}
+    <meta http-equiv="refresh" content="10800"/>
+{% endblock %}
+
+{% set bodyClass = 'attendance' %}
+
+{% block body %}
+
+    {% if is_mobile() == false %}
+    <div class="slideshow">
+
+        <ul class="slider">
+    {% endif %}
+
+            <li class="attendance-grade attendance-grade--current-week">
+
+                <h1 class="slide-title">Semaine en cours</h1>
+
+                <ul class="flex flex--wrap flex--align-content-start">
+
+                    {% for grade in grades %}
+
+                        {% if grade.totalPercentage is defined %}
+                            {% if grade.totalPercentage >= 70 %}
+                                {% set status = 'bg-green' %}
+                            {% elseif grade.totalPercentage < 70 and grade.totalPercentage >= 50 %}
+                                {% set status = 'bg-orange' %}
+                            {% else %}
+                                {% set status = 'bg-red' %}
+                            {% endif %}
+                        {% endif %}
+
+                        <li class="attendance-card {{ status }}">
+                            <p class="attendance-section">
+                                <i class="fas fa-users"></i>{{ grade.name }} - Général
+                            </p>
+                            <p class="attendance-percentage">
+                                <span class="js-percentage">{{ grade.totalPercentage|round(1, 'floor') }} %</span><br>
+                                <span class="span-presence">de présence</span>
+                            </p>
+                        </li>
+
+                        {% for section in grade.gradeSections %}
+
+                            {% if section.percentage >= 70 %}
+                                {% set status = 'bg-green' %}
+                            {% elseif section.percentage < 70 and section.percentage >= 50 %}
+                                {% set status = 'bg-orange' %}
+                            {% else %}
+                                {% set status = 'bg-red' %}
+                            {% endif %}
+
+                            <li class="attendance-card {{ status }}">
+                                <p class="attendance-section">
+                                    <i class="fas fa-users"></i>{{ section.name }}
+                                </p>
+                                <p class="attendance-percentage">
+                                    <span class="js-percentage">{{ section.percentage|round(1, 'floor') }} %</span><br>
+                                    <span class="span-presence">de présence</span>
+                                </p>
+                                {#<p class="attendance-date">
+                                    (Dernier appel : le {{ section.lastRollCall|date('d/m/Y')}})
+                                </p>#}
+                            </li>
+
+                        {% endfor %}
+
+                    {% endfor %}
+
+                </ul>
+
+            </li>
+
+            <li class="attendance-grade attendance-grade--last-week">
+
+                <h1 class="slide-title">Semaine passée</h1>
+
+                <ul class="flex flex--wrap flex--start flex--align-content-start">
+
+                    {% for grade in grades %}
+
+                        {% if grade.totalLastPercentage is defined %}
+                            {% if grade.totalLastPercentage >= 70 %}
+                                {% set status = 'bg-green' %}
+                            {% elseif grade.totalLastPercentage < 70 and grade.totalLastPercentage >= 50 %}
+                                {% set status = 'bg-orange' %}
+                            {% else %}
+                                {% set status = 'bg-red' %}
+                            {% endif %}
+                        {% endif %}
+
+                        <li class="attendance-card {% if grade.totalLastPercentage is defined %} {{ status }} {% else %} bg-grey {% endif %}">
+                            <p class="attendance-section">
+                                <i class="fas fa-users"></i>{{ grade.name }} - Général
+                            </p>
+                            <p class="attendance-percentage">
+                                {% if grade.totalLastPercentage is defined %}
+                                    <span class="js-percentage">{{ grade.totalLastPercentage|round(1, 'floor') }} %</span><br>
+                                    <span class="span-presence">de présence</span>
+                                {% else %}
+                                    <span class="span-presence">Aucun appel</span>
+                                {% endif %}
+                                {#<span class="js-percentage">{{ grade.totalLastPercentage|round(1, 'floor') }} %</span><br>
+                                <span class="span-presence">de présence</span>#}
+                            </p>
+                        </li>
+
+                        {% for section in grade.gradeSections %}
+
+                            {% if section.lastWeek is defined %}
+                                {% if section.lastWeek.percentage >= 70 %}
+                                    {% set status = 'bg-green' %}
+                                {% elseif section.lastWeek.percentage < 70 and section.lastWeek.percentage >= 50 %}
+                                    {% set status = 'bg-orange' %}
+                                {% else %}
+                                    {% set status = 'bg-red' %}
+                                {% endif %}
+                            {% endif %}
+
+                            <li class="attendance-card {% if section.lastWeek is defined %} {{ status }} {% else %} bg-grey {% endif %}">
+                                <p class="attendance-section">
+                                    <i class="fas fa-users"></i>{{ section.name }}
+                                </p>
+                                <p class="attendance-percentage">
+                                    {% if section.lastWeek is defined %}
+                                        <span class="js-percentage">{{ section.lastWeek.percentage|round(1, 'floor') }} %</span><br>
+                                        <span class="span-presence">de présence</span>
+                                    {% else %}
+                                        <span class="span-presence">Aucun appel</span>
+                                    {% endif %}
+                                </p>
+                                {#<p class="attendance-date">
+                                    (Dernier appel : le {{ section.lastRollCall|date('d/m/Y')}})
+                                </p>#}
+                            </li>
+
+                        {% endfor %}
+
+                    {% endfor %}
+
+                </ul>
+
+            </li>
+
+    {% if is_mobile() == false %}
+        </ul>
+    </div>
+    {% endif %}
+
+    {% block javascripts %}
+        <script src="{{ asset('build/js/diffusion.js') }}"></script>
+    {% endblock %}
+
+{% endblock %}
+
+
+

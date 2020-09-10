@@ -1,0 +1,73 @@
+{% if page == 'all_students' %}
+
+    <div class="flex flex--wrap">
+        {{ form_start(formSearch, {'action': path('student_search'), 'attr': {'class': 'search-bar flex flex--align-center w-50'}}) }}
+
+        <i class="fas fa-search"></i>
+
+        {{ form_end(formSearch) }}
+
+        <div class="w-50 flex block-gamer-label-search">
+            <form class="gamer-label-search gamer-label-search--elite flex flex--align-center" action="{{ path('elite_search') }}">
+                <img class="gamer-label-trophy-search" src="{{ asset('logos/elite-trophy.png') }}"
+                     alt="Trophée Elite">
+                    <span>Elite</span>
+            </form>
+
+            <form class="gamer-label-search gamer-label-search--challenger flex flex--align-center" action="{{ path('challenger_search') }}">
+                <img class="gamer-label-trophy-search" src="{{ asset('logos/challenger-trophy.png') }}"
+                     alt="Trophée Challenger">
+                    <span>Challenger</span>
+            </form>
+
+            <form class="gamer-label-search gamer-label-search--gamer flex flex--align-center" action="{{ path('gamer_search') }}">
+                <img class="gamer-label-trophy-search" src="{{ asset('logos/gamer-trophy.png') }}"
+                     alt="Trophée Gamer">
+                <span>Gamer</span>
+            </form>
+        </div>
+
+    </div>
+
+
+{% elseif page == 'all_parents' %}
+
+    {{ form_start(formSearch, {'action': path('parent_search'), 'attr': {'class': 'search-bar flex flex--align-center'}}) }}
+
+    <i class="fas fa-search"></i>
+
+    {{ form_end(formSearch) }}
+
+{% elseif page == 'all_sections' %}
+
+    {{ form_start(formSearch, {'action': path('section_search'), 'attr': {'class': 'search-bar flex flex--align-center'}}) }}
+
+    <i class="fas fa-search"></i>
+
+    {{ form_end(formSearch) }}
+
+{% elseif page == 'call' %}
+
+    {{ form_start(formSearch, {'action': path('section_search'), 'attr': {'class': 'search-bar flex flex--align-center'}}) }}
+
+    <i class="fas fa-search"></i>
+
+    {{ form_end(formSearch) }}
+
+{% elseif page == 'all_teachers' %}
+
+    {{ form_start(formSearch, {'action': path('teacher_search'), 'attr': {'class': 'search-bar flex flex--align-center'}}) }}
+
+    <i class="fas fa-search"></i>
+
+    {{ form_end(formSearch) }}
+
+{% elseif page == 'all_disciplines' %}
+
+    {{ form_start(formSearch, {'action': path('discipline_search'), 'attr': {'class': 'search-bar flex flex--align-center'}}) }}
+
+    <i class="fas fa-search"></i>
+
+    {{ form_end(formSearch) }}
+
+{% endif %}

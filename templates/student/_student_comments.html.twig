@@ -1,0 +1,77 @@
+<section class="comments">
+
+    <div class="flex flex--align-center flex--space-between flex--wrap section-title">
+        <h3>Avis des intervenants / <span>Observations</span></h3>
+
+        <div class="badges-menu flex flex--align-center flex--wrap flex--center">
+            <div class="select-designed">
+                <select name="" class="select-teacher">
+                    <option class="title" value="all">Tous les intervenants</option>
+                    {% for teacher in teachers %}
+                        <option value="{{ teacher.id }}">{{ teacher.firstname }} {{ teacher.lastname }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="select-designed">
+                <select name="" class="select-discipline">
+                    <option class="title" value="all">Toutes les disciplines</option>
+                    {% for category in categories %}
+                        <option value="{{ category.name }}">{{ category.name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+    </div>
+
+    {% if comments is empty %}
+        <span class="empty">Aucun commentaire enregistré pour le moment.</span>
+    {% endif %}
+
+    <div class="all-comments {% if is_mobile() == false %}flex flex--wrap flex--align-start{% endif %}">
+        {% for comment in comments %}
+            <div class="js-teacher-comment flex flex--align-start" data-teacher="{{ comment.teacher.id }}" data-discipline="{{ comment.discipline.category.name }}">
+                {% if is_mobile() == false %}
+                    <div class="user user--teacher" >
+                        {% if comment.teacher.image != "" %}
+                            <div class="user-photo" style="background: url('{{ asset('uploads/teachers/photos/' ~ comment.teacher.image)|imagine_filter('user_photo') }}')"></div>
+                        {% else %}
+                            <div class="user-photo user-photo--null" style="background: url('{{ asset('logos/user-astronaut-solid.svg')}}')"></div>
+                        {% endif %}
+                    </div>
+                {% endif %}
+                <div class="comment-ctn">
+                    <div class="flex flex--align-baseline">
+                        <span class="comment-teacher">{{ comment.teacher.fullname }}</span>
+                        {% if comment.rating != '' %}
+                            <span class="comment-rating">
+                                {% for i in 1..5 %}
+                                    {% if i <= comment.rating %}
+                                         <i class="fas fa-star"></i>
+                                    {% else %}
+                                        <i class="far fa-star"></i>
+                                    {% endif %}
+                                {% endfor %}
+                            </span>
+                        {% endif %}
+                    </div>
+                    <div class="flex flex--align-baseline">
+                        <span class="comment-discipline">{{ comment.discipline.name }}</span>
+                        <span class="comment-date">le {{ comment.createdAt|localizeddate('long', 'none')|lower }}</span>
+                    </div>
+                    <p class="comment-text">
+                        <i class="fas fa-quote-left"></i>
+                        <span>{{ comment.content }}</span>
+                        <i class="fas fa-quote-right"></i>
+                    </p>
+                </div>
+            </div>
+        {% endfor %}
+
+        <p class="no-result">Aucun résultat trouvé pour cette recherche.</p>
+    </div>
+
+    {% if comments|length > 4 %}
+        <div id="load-more">Charger plus de commentaires</div>
+    {% endif %}
+
+</section>

@@ -1,0 +1,88 @@
+<div class="breadcrumbs flex flex--align-center">
+    {% if page == 'student' %}
+
+        {{ include('common/breadcrumbs/_breadcrumbs_student.html.twig') }}
+
+    {% elseif page == 'section' %}
+
+        {{ include('common/breadcrumbs/_breadcrumbs_section.html.twig') }}
+
+    {% elseif page == 'evaluation' %}
+
+        {{ include('common/breadcrumbs/_breadcrumbs_evaluation.html.twig') }}
+
+    {% elseif page == 'evaluation_student' %}
+
+        {{ include('common/breadcrumbs/_breadcrumbs_evaluation_student.html.twig') }}
+
+    {% elseif page == 'evaluation_form' %}
+
+        {{ include('common/breadcrumbs/_breadcrumbs_evaluation_form.html.twig') }}
+
+    {% elseif page == 'select_call' %}
+
+        {{ include('common/breadcrumbs/_breadcrumbs_select_call.html.twig') }}
+
+    {% elseif page == 'create_call' %}
+
+        {{ include('common/breadcrumbs/_breadcrumbs_create_call.html.twig') }}
+
+    {% elseif page == 'update_call' %}
+
+        {{ include('common/breadcrumbs/_breadcrumbs_update_call.html.twig') }}
+
+    {% elseif page == 'display_calls' %}
+
+        {{ include('common/breadcrumbs/_breadcrumbs_display_calls.html.twig') }}
+
+    {% elseif page == 'student_incident' %}
+
+        {{ include('common/breadcrumbs/_breadcrumbs_student_incident.html.twig') }}
+
+    {% elseif page == 'discipline' and app.user.student is not empty %}
+
+        {{ include('common/breadcrumbs/_breadcrumbs_discipline.html.twig') }}
+
+    {% elseif app.request.attributes.get('_route') == 'student_discipline' %}
+
+        {{ include('common/breadcrumbs/_breadcrumbs_student_discipline.html.twig') }}
+
+    {% elseif page == 'careers' %}
+
+        {{ include('common/breadcrumbs/_breadcrumbs_careers.html.twig') }}
+
+    {% elseif page == 'career' %}
+
+        {{ include('common/breadcrumbs/_breadcrumbs_career.html.twig') }}
+
+    {% elseif page == 'discipline_career' %}
+
+        {{ include('common/breadcrumbs/_breadcrumbs_discipline_career.html.twig') }}
+
+    {% elseif page == 'useful' %}
+
+        <i class="fas fa-hammer"></i>
+        <span>Utilitaires</span>
+
+    {% elseif page == 'back_up' %}
+
+        <i class="fas fa-backward"></i>
+        <a href="{{ path('useful') }}">Revenir en arrière</a>
+
+    {% elseif page == 'students_without_account' %}
+
+        <i class="fas fa-user-plus"></i>
+        <span>Étudiants sans compte utilisateur</span>
+
+    {% elseif page == 'disable_students' %}
+
+        <i class="fas fa-user-minus"></i>
+        <span>Désactiver des étudiants  (étudiant + compte utilisateur)</span>
+
+    {% elseif page == 'feed' %}
+
+        <i class="fas fa-pen"></i>
+        <span>Ajouter un message au flux d'informations</span>
+    {% endif %}
+
+</div>

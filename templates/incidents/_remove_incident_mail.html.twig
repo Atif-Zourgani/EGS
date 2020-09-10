@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        body {
+            color: #172c3b;
+        }
+        .good {
+            color: #12906c;
+        }
+        .medium {
+            color: #db743c;
+        }
+        .bad {
+            color: #bc4627;
+        }
+        .underline {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+    <body>
+
+          <p>Bonne nouvelle {{ student.firstname }} !</p>
+
+          <p>Ta dernière absence a été justifiée, le dernier incident lié à tes trop nombreuses absences injustifiées vient donc d'être retiré.</p>
+          <p>Tu récupères alors 5 points, et ta note globale de fiabilité est maintenant de :
+              <span class="student-points
+                {% if points >= 16 %} good {% elseif points < 16 and points >= 10 %} medium {% else %} bad {% endif %}">
+                  {{ points }} points.
+              </span>
+          </p><br>
+
+          <p>Attention à tes absences, la prochaine demi-journée non justifiée te vaudra à nouveau 5 points en moins.</p>
+
+          <p class="underline">Pour rappel :</p>
+          <ul>
+              <li>Entre 11 et 15 points (inclus) : plus accès aux permanences et évènements jeux à l'école.</li>
+              <li>Entre 6 et 10 points (inclus) : projet supplémentaire à rendre avec évaluation comptant dans la moyenne.</li>
+              <li>Entre 0 et 5 points (inclus) : exclusion temporaire.</li>
+          </ul>
+
+          <br>
+          <p>Bonne journée, <br>
+              L'équipe
+          </p>
+
+
+    </body>
+</html>
+
+

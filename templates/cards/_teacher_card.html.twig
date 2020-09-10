@@ -1,0 +1,36 @@
+<li class="card card--user flex flex--align-center" data-id="{{ teacher.id }}">
+    <div class="user user--teacher">
+        {% if teacher.image != "" %}
+            <div class="user-photo" style="background: url('{{ asset('uploads/teachers/photos/' ~ teacher.image)|imagine_filter('user_photo') }}')">
+                <i class="fas fa-glasses"></i>
+            </div>
+        {% else %}
+            <div class="user-photo user-photo--null" style="background: url('{{ asset('logos/user-astronaut-solid.svg')}}')">
+                <i class="fas fa-glasses"></i>
+            </div>
+        {% endif %}
+    </div>
+    <div class="user-infos">
+        <span class="user-name">{{ teacher.fullname }}</span>
+        <div class="user-links flex">
+            {% if teacher.phone != "" %}
+                <a href="{{ teacher.phone }}" title="{{ teacher.phone }}">
+                    <i class="fas fa-sms"></i>
+                </a>
+            {% endif %}
+            {% if teacher.phone != "" %}
+                <a href="{{ teacher.email }}" title="{{ teacher.email }}">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            {% endif %}
+        </div>
+
+        {% if teacher.discipline != "" %}
+            <ul class="teacher-discipline">
+                {% for discipline in teacher.discipline %}
+                    <li>{{ discipline.name }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+</li>

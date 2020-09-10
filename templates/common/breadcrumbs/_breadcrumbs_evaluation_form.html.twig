@@ -1,0 +1,15 @@
+{% if is_mobile() == true and is_tablet() == false %}
+    <i class="fas fa-trophy"></i>
+    <a href="{{ path('evaluation') }}">Évaluation</a>
+    <i class="fas fa-angle-right"></i>
+    <span>{{ student.firstname }} {{ student.lastname|first }}.</span>
+{% else %}
+    <i class="fas fa-trophy"></i>
+    <a href="{{ path('evaluation') }}">Évaluation</a>
+    <i class="fas fa-angle-right"></i>
+    <span>{{ section }}</span>
+    <i class="fas fa-angle-right"></i>
+    <span>{{ discipline }}</span>
+    <i class="fas fa-angle-right"></i>
+    <span>{{ student }}</span>
+{% endif %}

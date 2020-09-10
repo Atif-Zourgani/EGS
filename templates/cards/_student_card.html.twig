@@ -1,0 +1,53 @@
+<li class="flex flex--align-center card card--user"  data-id="{{ student.id }}">
+    <a class="user user--student" href="{{ path('student', {'student': student.id, 'firstname': student.firstname, 'lastname': student.lastname}) }}">
+        {% if student.image != "" %}
+            <div class="user-photo" style="background: url('{{ asset('uploads/students/photos/' ~ student.image)|imagine_filter('user_photo') }}')">
+                <i class="fas fa-glasses"></i>
+            </div>
+        {% else %}
+            <div class="user-photo user-photo--null" style="background: url('{{ asset('logos/user-secret-solid.svg')}}')">
+                <i class="fas fa-glasses"></i>
+            </div>
+        {% endif %}
+    </a>
+    <div class="user-infos">
+        <a id="student-name" href="{{ path('student', {'student': student.id, 'firstname': student.firstname, 'lastname': student.lastname}) }}" title="{{ student.fullname }}">
+            <span class="user-name">{{ student.firstname }} {{ student.lastname|first }}. </span>
+        </a>
+        <span class="user-section">{{ student.section }}</span>
+        <div class="user-links flex">
+            {% if student.phone != "" and is_granted('ROLE_ADMIN') %}
+                <a href="{{ student.phone }}" title="{{ student.phone }}">
+                    <i class="fas fa-sms"></i>
+                </a>
+            {% endif %}
+            {% if student.email != "" %}
+                <a href="{{ student.email }}" title="{{ student.email }}">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            {% endif %}
+            {% if student.discord != "" %}
+                <a href="{{ student.discord }}" title="{{ student.discord }}">
+                    <i class="fab fa-discord"></i>
+                </a>
+            {% endif %}
+            {% if student.twitter != "" %}
+                <a href="{{ student.twitter }}" title="{{ student.twitter }}">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            {% endif %}
+            {% if student.elite == 1 %}
+                <img class="gamer-label-trophy-card" src="{{ asset('logos/elite-trophy.png') }}"
+                     alt="Trophée Elite">
+            {% endif %}
+            {% if student.challenger == 1 %}
+                <img class="gamer-label-trophy-card" src="{{ asset('logos/challenger-trophy.png') }}"
+                     alt="Trophée Challenger">
+            {% endif %}
+            {% if student.elite == 0 and student.challenger == 0 %}
+                <img class="gamer-label-trophy-card" src="{{ asset('logos/gamer-trophy.png') }}"
+                     alt="Trophée Gamer">
+            {% endif %}
+        </div>
+    </div>
+</li>

@@ -1,0 +1,32 @@
+{% if is_mobile() == true and is_tablet() == false %}
+    <i class="fas fa-bullhorn"></i>
+    <span>Appel</span>
+    <i class="fas fa-angle-right"></i>
+    <span>{{ section.shortname }}</span>
+{% elseif is_tablet() == true %}
+    <i class="fas fa-bullhorn"></i>
+    <span>Faire l'appel</span>
+    <i class="fas fa-angle-right"></i>
+    <span>{{ date|date('d/m/y') }}</span>
+    <i class="fas fa-angle-right"></i>
+    {% if halfDay == 'am' %}
+        <span>Matin</span>
+    {% else %}
+        <span>Après-midi</span>
+    {% endif %}
+    <i class="fas fa-angle-right"></i>
+    <span>{{ section.name }}</span>
+{% else %}
+    <i class="fas fa-bullhorn"></i>
+    <span>Faire l'appel</span>
+    <i class="fas fa-angle-right"></i>
+    <span>{{ date|localizeddate('full', 'none')|capitalize }}</span>
+    <i class="fas fa-angle-right"></i>
+    {% if halfDay == 'am' %}
+        <span>Matin</span>
+    {% else %}
+        <span>Après-midi</span>
+    {% endif %}
+    <i class="fas fa-angle-right"></i>
+    <span>{{ section.name }}</span>
+{% endif %}

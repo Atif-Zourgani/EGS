@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Evaluations{% endblock %}
+
+
+{% set bodyClass='evaluation evaluation-first-step' %}
+
+
+{% block body %}
+
+    <div class="main">
+        {% include 'common/_breadcrumbs.html.twig' %}
+
+        <div class="main-scrollable">
+
+            <div class="block-filters flex flex--align-center flex--wrap">
+
+                <form id="" action="{{ path('evaluation_find_student') }}" method="get" class="{% if is_mobile() == true and is_tablet() == false %}{% else %}flex flex--space-between{% endif %}">
+
+                    <div class="block-select flex flex--align-center">
+                        <div class="select-designed">
+
+                            <select name="section" id="select-section" class="filters filters--section">
+                                <option value="none">Choisir une classe</option>
+                                {% for section in sections %}
+                                    <option value="{{ section.shortname }}" class="flex flex--align-center">{{ section.name }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <input name="discipline" type="text" id="select-discipline" {#class="filters filters--discipline"#} placeholder="Choisir une discipline"/>
+
+                       {# <div class="select-designed">
+                            <input name="discipline" type="text" id="select-discipline" #}{#class="filters filters--discipline"#}{# placeholder="Choisir une discipline"/>
+                        </div>#}
+                    </div>
+
+                    <div class="block-buttons">
+                        <button type="submit" class="flex flex--align-center">
+                            <i class="fas fa-check"></i>
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+    {% block javascripts %}
+
+        <script src="{{ asset('build/js/jquery-ui.js') }}"></script>
+
+        <script>
+            var disciplinesA = {{ disciplineNames|json_encode|raw }};
+        </script>
+
+        <script src="{{ asset('build/js/evaluation.js') }}"></script>
+
+    {% endblock %}
+
+{% endblock %}
+

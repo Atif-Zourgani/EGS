@@ -1,0 +1,132 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Tous les parcours{% endblock %}
+
+{% set bodyClass='careers' %}
+{% block body %}
+
+    <div class="main">
+
+        {% include 'common/_breadcrumbs.html.twig' %}
+
+        <div class="main-scrollable">
+
+            {% if app.user.student and app.user.student.id == student.id %}
+                <div class="back-to-profile flex flex--align-center">
+                    <i class="fas fa-backward"></i>
+                    <a href="{{ path('student_profile', {'student': student.id}) }}"> Revenir à mon profil</a>
+                </div>
+            {% endif %}
+
+            {% for pathway in pathways %}
+
+                <div class="career-block">
+
+                    {% if is_mobile() == true and is_tablet() == false %}
+                        <h3>Années / Filière {{ pathway.name }}</h3>
+                    {% else %}
+                        <h3>Années / Filière {{ pathway.name }}<span> - Compétences requises par année</span></h3>
+                    {% endif %}
+
+                    <div class="flex flex--wrap {% if is_mobile() == true and is_tablet() == false %} flex--space-around {% endif %}">
+
+                        {% for grade in pathway.grades %}
+
+                            {% if (grade.id == 1 or grade.id == 2 or grade.id == 3 ) and (student is defined and grade.percentage is not defined ) %}
+
+                                <div class="career">
+                                    {% include 'careers/_career_circle.html.twig' %}
+                                </div>
+
+                            {% else %}
+
+                                {% if grade.career is defined %}
+                                    <a class="career"
+
+                                        {% if app.request.attributes.get('_route') == 'student_careers' %}
+
+                                            {% if grade.id == 4 or grade.id == 5 %}
+                                                href="{{ path('student_specialism_career', {'career': grade.career.id, 'student': student.id, 'specialism': 1 }) }}"
+                                            {% else %}
+                                                href="{{ path('student_career', {'career': grade.career.id, 'student': student.id }) }}"
+                                            {% endif %}
+
+                                        {% else %}
+
+                                            {% if grade.id == 4 or grade.id == 5 %}
+                                                href="{{ path('specialism_career', {'career': grade.career.id, 'specialism': 1 }) }}"
+                                            {% else %}
+                                                href="{{ path('career', {'career': grade.career.id}) }}"
+                                            {% endif %}
+
+                                        {% endif %}
+                                    >
+
+                                    {% include 'careers/_career_circle.html.twig' %}
+
+                                    </a>
+
+                                {% else %}
+
+                                    <div class="career">
+                                        {% include 'careers/_career_circle.html.twig' %}
+                                    </div>
+
+                                {% endif %}
+
+                            {% endif %}
+
+                        {% endfor %}
+
+                    </div>
+
+                </div>
+
+            {% endfor %}
+
+            <div class="career-block">
+
+                {% if is_mobile() == true and is_tablet() == false %}
+                    <h3>Métiers</h3>
+                {% else %}
+                    <h3>Métiers / <span> Compétences requises par métier</span></h3>
+                {% endif %}
+
+                <div class="flex flex--wrap {% if is_mobile() == true and is_tablet() == false %} flex--space-around {% endif %}">
+
+                    {% for profession in professions %}
+
+                        <a class="career"
+                            {% if app.request.attributes.get('_route') == 'student_careers' %}
+                                href="{{ path('student_pro_career', {'student': student.id, 'career': profession.academicCareer.id, 'profession': profession.name|replace({' ': '-', 'é': 'e', 'è':'e'})}) }}"
+                            {% else %}
+                                href="{{ path('pro_career', {'career': profession.academicCareer.id, 'profession': profession.name|replace({' ': '-', 'é': 'e', 'è':'e'})}) }}"
+                            {% endif %}
+                        >
+
+                            <div class="circle circle--profession">
+                                {{ profession.shortname }}
+                                {% if profession.percentage is defined %}
+                                    <div class="student-percentage absolute-middle">
+                                        {{ profession.percentage|round(1, 'floor') }} %
+                                    </div>
+                                {% endif %}
+                            </div>
+
+                            <div class="career-details">
+                                <span>Parcours</span>
+                                <h4 class="career-name">{{ profession.name }}</h4>
+                            </div>
+                        </a>
+
+                    {% endfor %}
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+{% endblock %}

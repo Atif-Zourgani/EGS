@@ -1,0 +1,115 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Sauvegarde des données{% endblock %}
+{% block metaDescriptionContent %}{% endblock %}
+
+{% set bodyClass='back-up' %}
+{% block body %}
+
+    <div class="main">
+
+        {% include 'common/_breadcrumbs.html.twig' %}
+
+        <div class="main-scrollable">
+
+            {# FLASH MESSAGES FOR ROLL CALLS DOWNLOAD/DELETE #}
+
+            {% for message in app.flashes('rollCallsDownload') %}
+                <div class="flash-message flash-message--back-up">
+                    <i class="close-flash-modal far fa-times-circle"></i>
+                    {% if message != '' %}
+                        <p class="flash-message--back-up--msg">{{ message }}</p>
+                        <p>Voulez-vous supprimer les appels ?</p>
+                        <div class="flex flex--space-around flash-message--back-up--action">
+                            <p class="js-delete-datas green">Oui</p>
+                            <p class="cancel-delete-datas red">Non</p>
+                        </div>
+                    {% endif %}
+                    <div class="modal-security-before-remove">
+                        <p>Etes-vous sûr de vouloir supprimer les appels ?</p>
+                        <div class="flex flex--space-around flash-message--back-up--action">
+                            <a class="js-delete-datas" href="{{ path('delete_roll_calls') }}"><p class="green">Oui</p></a>
+                            <p class="cancel-delete-datas red">Non</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+
+            {% for message in app.flashes('errorBackUp') %}
+                <div class="flash-message flash-message--back-up">
+                    <i class="close-flash-modal far fa-times-circle"></i>
+                    {% if message != '' %}
+                        <p class="flash-message--back-up--msg">{{ message }}</p>
+                    {% endif %}
+                </div>
+            {% endfor %}
+
+            {% for message in app.flashes('rollCallsDeleted') %}
+                <div class="flash-message flash-message--back-up">
+                    <i class="close-flash-modal far fa-times-circle"></i>
+                    {% if message != '' %}
+                        <p>{{ message }}</p>
+                    {% endif %}
+                </div>
+            {% endfor %}
+
+            {# FLASH MESSAGES FOR STUDENTS INCIDENTS DOWNLOAD/DELETE #}
+
+            {% for message in app.flashes('studentsIncidentsDownload') %}
+                <div class="flash-message flash-message--back-up">
+                    <i class="close-flash-modal far fa-times-circle"></i>
+                    {% if message != '' %}
+                        <p class="flash-message--back-up--msg">{{ message }}</p>
+                        <p>Voulez-vous supprimer les incidents des étudiants ?</p>
+                        <div class="flex flex--space-around flash-message--back-up--action">
+                            <p class="js-delete-datas green">Oui</p>
+                            <p class="cancel-delete-datas red">Non</p>
+                        </div>
+                    {% endif %}
+                    <div class="modal-security-before-remove">
+                        <p>Etes-vous sûr de vouloir supprimer les incidents des étudiants ?</p>
+                        <div class="flex flex--space-around flash-message--back-up--action">
+                            <a class="js-delete-datas" href="{{ path('delete_students_incidents') }}"><p class="green">Oui</p></a>
+                            <p class="cancel-delete-datas red">Non</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+
+            {% for message in app.flashes('studentsIncidentsDeleted') %}
+                <div class="flash-message flash-message--back-up">
+                    <i class="close-flash-modal far fa-times-circle"></i>
+                    {% if message != '' %}
+                        <p>{{ message }}</p>
+                    {% endif %}
+                </div>
+            {% endfor %}
+
+            <ul class="usefull-list flex flex--wrap {% if is_mobile() == true %}flex--center{% endif %}">
+                <li class="back-up flex flex--center">
+                    <a href="{{ path('download_roll_calls') }}">
+                        <i class="fas fa-bullhorn"></i>
+                        Sauvegarder les appels
+                    </a>
+
+                </li>
+
+                <li class="back-up flex flex--center">
+                    <a href="{{ path('download_student_incidents') }}">
+                        <i class="fas fa-hand-paper"></i>
+                        Sauvegarder les incidents
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+    </div>
+
+    {% block javascripts %}
+        <script src="{{ asset('build/js/admin.js') }}"></script>
+    {% endblock %}
+
+{% endblock %}

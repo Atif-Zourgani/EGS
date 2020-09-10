@@ -1,0 +1,55 @@
+
+/* ROBOTO */
+
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 100;
+  font-style: italic;
+  src: url("../../fonts/Roboto-ThinItalic.eot");
+  src: url("../../fonts/Roboto-ThinItalic.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 300;
+  src: url("../../fonts/Roboto-Light.eot");
+  src: url("../../fonts/Roboto-Light.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-style: italic;
+  src: url("../../fonts/Roboto-LightItalic.eot");
+  src: url("../../fonts/Roboto-LightItalic.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 400;
+  src: url("../../fonts/Roboto-Regular.eot");
+  src: url("../../fonts/Roboto-Regular.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 500;
+  src: url("../../fonts/Roboto-Medium.eot");
+  src: url("../../fonts/Roboto-Medium.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 700;
+  src: url("../../fonts/Roboto-Bold.eot");
+  src: url("../../fonts/Roboto-Bold.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 900;
+  src: url("../../fonts/Roboto-Black.eot");
+  src: url("../../fonts/Roboto-Black.ttf") format('truetype');
+}
+
+
+/* FONT AWESOME */
+
+@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+@import "~@fortawesome/fontawesome-free/scss/regular.scss";
+@import "~@fortawesome/fontawesome-free/scss/brands.scss";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";

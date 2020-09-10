@@ -1,0 +1,174 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {% if profession is defined %}
+        Parcours {{ profession }}
+    {% else %}
+        Parcours {{ career.pathway.name }} / {{ career.grade.name }}
+    {% endif %}
+{% endblock %}
+
+{% set bodyClass='career' %}
+{% block body %}
+
+    <div class="main">
+
+        {% include 'common/_breadcrumbs.html.twig' %}
+
+        <div class="main-scrollable">
+
+            {% if percentage is defined %}
+                {% set per = percentage|round(1, 'floor') %}
+            {% else %}
+                {% set per = 0 %}
+            {% endif %}
+
+            {% if is_mobile() == true and is_tablet() == false %}
+
+                <h3>{% if profession is defined %} {{ profession }} {% else %} {{ career.pathway.name }} {% endif %}/
+                    {% if specialism is defined %}
+                        <span> {{ specialism.name }}</span>
+                    {% else %}
+                        <span>Les compétences à obtenir</span>
+                    {% endif %}
+                </h3>
+
+                {% if student is defined %}
+                    <div class="progress-wrap progress" data-progress-percent="{{ per }}">
+                        <div class="progress-bar progress"></div>
+                        <p class="progress-percentage">{{ per }} %</p>
+                    </div>
+                {% endif %}
+
+            {% else %}
+
+                <div class="flex flex--space-between flex--align-center">
+
+                    <h3>{% if profession is defined %} {{ profession }} {% else %} {{ career.pathway.name }} - {{ career.grade.name }}  {% endif %}/ <span> Les compétences à obtenir</span></h3>
+
+                    {% if student is defined %}
+                        <div class="progress-wrap progress" data-progress-percent="{{ per }}">
+                            <div class="progress-bar progress"></div>
+                            <p class="progress-percentage">{{ per }} %</p>
+                        </div>
+                    {% endif %}
+                </div>
+
+            {% endif %}
+
+            {% if student is defined %}
+
+                {% if app.request.attributes.get('_route') == 'student_specialism_career' %}
+                    <div class="specialisms flex flex--align-center">
+                        <div class="select-designed">
+                            <select class="select-spe" name="specialism" onchange="if (this.value) window.location.href=this.value">
+                                <option value="">Choisir une autre spécialité</option>
+                                {% for spe in specialisms %}
+                                    <option value="{{ path('student_specialism_career', {'student': student.id, 'career': spe.academicCareers[0].id, 'specialism': spe.id }) }}">{{ spe.name }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+                {% endif %}
+
+            {% else %}
+
+                {% if app.request.attributes.get('_route') == 'specialism_career' %}
+                    <div class="specialisms flex flex--align-center">
+                        <div class="select-designed">
+                            <select class="select-spe" name="specialism" onchange="if (this.value) window.location.href=this.value">
+                                <option value="">Choisir une autre spécialité</option>
+                                {% for spe in specialisms %}
+                                    <option value="{{ path('specialism_career', {'career': spe.academicCareers[0].id, 'specialism': spe.id }) }}">{{ spe.name }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+                {% endif %}
+
+            {% endif %}
+
+            <ul class="discipline-career flex flex--wrap {% if is_mobile() == true and is_tablet() == false %}flex--center{% endif %}">
+                {% for discipline in disciplines %}
+
+                    <li class="card card--discipline">
+
+                        {% if is_granted('ROLE_ADMIN') or is_granted('ROLE_STUDENT') or is_granted('ROLE_PARENT') or (is_granted('ROLE_TEACHER') and discipline.id in teacherDisciplines) %}
+                            <a class="discipline"
+
+                                {# GLOBAL CAREER #}
+                                {% if app.request.attributes.get('_route') == 'career' %}
+
+                                    href="{{ path('discipline_career', {'discipline': discipline.id, 'career': career.id }) }}"
+
+                                {% elseif app.request.attributes.get('_route') == 'specialism_career' %}
+
+                                    href="{{ path('discipline_specialism_career', {'discipline': discipline.id, 'career': career.id, 'specialism': specialism.id }) }}"
+
+                                {% elseif app.request.attributes.get('_route') == 'pro_career' %}
+
+                                    href="{{ path('discipline_pro_career', {'discipline': discipline.id, 'career': career.id }) }}"
+
+                                    {# STUDENT'S CAREER #}
+                                {% elseif app.request.attributes.get('_route') == 'student_career' %}
+
+                                    href="{{ path('student_discipline_career', {'student': student.id, 'discipline': discipline.id, 'career': career.id }) }}"
+
+                                {% elseif app.request.attributes.get('_route') == 'student_specialism_career' %}
+
+                                    href="{{ path('student_discipline_specialism_career', {'student': student.id, 'discipline': discipline.id, 'career': career.id, 'specialism': specialism.id }) }}"
+
+                                {% elseif app.request.attributes.get('_route') == 'student_pro_career' %}
+
+                                    href="{{ path('student_discipline_pro_career', {'student': student.id,'discipline': discipline.id, 'career': career.id }) }}"
+
+                                {% endif %}
+                            >
+                        {% else %}
+                            <a class="discipline cursor-disabled" disabled>
+                        {% endif %}
+
+                            {% if discipline.image != "" %}
+                                <img src="{{ asset('uploads/disciplines/logos/' ~ discipline.image) }}">
+                            {% else %}
+                                <i class="fas fa-award"></i>
+                            {% endif %}
+
+                            <span>{{ discipline.name }}</span>
+
+                            <span class="discipline-levels">
+
+                                {% if student is defined %}
+
+                                    {% for level in discipline.levels %}
+                                        {% if level.studentSkills == level.levelSkills %}
+                                            <i class="fas fa-star"></i>
+                                        {% elseif level.studentSkills > 0 %}
+                                            <i class="fas fa-star-half-alt"></i>
+                                        {% else %}
+                                            <i class="far fa-star"></i>
+                                        {% endif %}
+                                    {% endfor %}
+
+                                {% else %}
+
+                                    {% for level in discipline.disciplineLevels %}
+                                        <i class="fas fa-star"></i>
+                                    {% endfor %}
+
+                                {% endif %}
+
+                            </span>
+
+                        </a>
+                    </li>
+
+                {% endfor %}
+            </ul>
+
+        </div>
+
+    </div>
+
+
+{% endblock %}

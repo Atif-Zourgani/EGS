@@ -1,0 +1,402 @@
+easy_admin:
+    formats:
+        date:     'd/m/Y'
+        time:     'H:i'
+        datetime: 'd/m/Y H:i:s'
+
+    design:
+        menu:
+            - label: 'Utilisateurs'
+              children: ['User', 'Team', 'Teacher', 'Student', 'Parent']
+
+            - label: 'Parcours'
+              children: ['AcademicCareer', 'SectionLevel', 'Pathway', 'PathwaySpecialism', 'Profession']
+
+            - label: 'Disciplines'
+              children: ['DisciplineCategorie', 'Discipline', 'DisciplineLevel', 'Level', 'Skill', 'Exercice']
+
+            - 'Section'
+            - 'StudentSkill'
+            - 'Comment'
+            - 'Incident'
+            - 'Semestre'
+            - 'Year'
+
+    entities:
+
+        User:
+            label: 'Utilisateurs'
+            class: App\Entity\User
+            form:
+                title: "Tous les utilisateurs de la plateforme"
+                fields:
+                    - { type: 'tab' , label: 'Informations', icon: 'user' }
+                    - { property: 'username', label: 'Identifiant' }
+                    - { property: 'email', label: 'Adresse e-mail' }
+                    #- lastLogin
+                    # if administrators are allowed to edit users' passwords and roles, add this:
+                    - { property: 'plainPassword', label: "Mot de passe temporaire", type: 'text', type_options: { required: false } }
+                    - { type: 'tab', label: 'Associer à un utilisateur', icon: 'user' }
+                    - { property: "team", label: "Administration" }
+                    - { property: "teacher", label: "Intervenant" }
+                    - { property: "student", label: "Élève" }
+                    - { property: "studentParent", label: "Parent d'élève" }
+                    - { type: 'tab', label: 'Role', icon: '' }
+                    - enabled
+                    - { property: 'roles', type: 'choice', type_options: { multiple: true, choices: { 'Etudiant': 'ROLE_STUDENT', 'Parent': 'ROLE_PARENT', 'Intervenant': 'ROLE_TEACHER', 'Administration': 'ROLE_ADMIN', 'Super Admin': 'ROLE_SUPER_ADMIN', 'Diffusion': 'ROLE_DIFFUSION' } } }
+
+
+        Team:
+            label: 'Equipe'
+            class: App\Entity\Team
+            list:
+                title: "Tous les membres de l'équipe"
+                fields:
+                    - id
+                    - { property: "firstname", label: "Prénom" }
+                    - { property: "lastname", label: "Nom" }
+                    - { property: "email", label: "Email" }
+            form:
+                title: "Créer un nouveau membre"
+                fields:
+                    - { property: "firstname", label: "Prénom" }
+                    - { property: "lastname", label: "Nom" }
+                    - { property: "email", label: "Email" }
+
+        Teacher:
+            label: 'Intervenants'
+            class: App\Entity\Teacher
+            list:
+                title: "Tous les intervenants"
+                fields:
+                    - id
+                    - { property: "firstname", label: "Prénom"}
+                    - { property: "lastname", label: "Nom"}
+                    - { property: "email", label: "Email"}
+                    - { property: "phone", label: "Numéro de téléphone" }
+                    - { property: "discipline", label: "Discipline/s" }
+                    - { property: "image", type: 'image', label: "Photo",  base_path: 'uploads/teachers/photos'}
+            form:
+                title: "Créer un nouvel intervenant"
+                fields:
+                    - { property: 'firstname', label: 'Prénom' }
+                    - { property: 'lastname', label: 'Nom' }
+                    - { property: "email", label: "Email" }
+                    - { property: "phone", label: "Numéro de téléphone" }
+                    - { property: "discipline", label: "Discipline/s" }
+                    - { property: 'imageFile', type: 'vich_image', label: 'Photo', base_path: 'uploads/teachers/photos', type_options: { required: false, allow_delete: true} }
+                    - { property: "email", label: "Email" }
+
+        Student:
+            label: 'Etudiants'
+            class: App\Entity\Student
+            list:
+                title: "Tous les étudiants"
+                fields:
+                    - id
+                    - { property: "firstname", label: "Prénom" }
+                    - { property: "lastname", label: "Nom" }
+                    - { property: "enabled", label: 'Activé', type: "toggle"}
+                    - { property: "image", type: 'Image', label: "Photo",  base_path: 'uploads/students/photos' }
+                    - { property: "section", label: "Classe" }
+                    - { property: "email", label: "Email" }
+                    - { property: "phone", label: "Tel" }
+                    - { property: "twitter", label: "Twitter" }
+                    - { property: "discord", label: "Discord" }
+            form:
+                title: "Créer un nouvel étudiant"
+                fields:
+                    - { property: 'firstname', label: 'Prénom' }
+                    - { property: 'lastname', label: 'Nom' }
+                    - { property: "enabled", label: 'Activé' }
+                    - { property: 'imageFile', type: 'vich_image', label: 'Photo', base_path: 'uploads/students/photos', type_options: { required: false, allow_delete: true} }
+                    - { property: "section", label: "Classe" }
+                    - { property: "email", label: "Email" }
+                    - { property: "phone", label: "Numéro de téléphone" }
+                    - { property: "twitter", label: "Twitter" }
+                    - { property: "discord", label: "Discord" }
+            edit:
+                title: "Modifier une fiche étudiant"
+                fields:
+                    - { property: 'fullname', label: 'Nom entier' }
+
+
+
+        Parent:
+            label: 'Parents des étudiants'
+            class: App\Entity\StudentParent
+            list:
+                title: "Tous les parents des étudiants"
+                fields:
+                    - id
+                    - { property: "firstname", label: "Prénom"}
+                    - { property: "lastname", label: "Nom"}
+                    - { property: "student", label: "Enfants"}
+                    - { property: "email", label: "Email"}
+                    - { property: "phone", label: "Tel"}
+            form:
+                title: "Créer un nouveau parent"
+                fields:
+                    - { property: 'firstname', label: 'Prénom' }
+                    - { property: 'lastname', label: 'Nom' }
+                    - { property: "student", label: "Enfants" }
+                    - { property: "email", label: "Email" }
+                    - { property: "phone", label: "Numéro de téléphone" }
+
+        Section:
+            label: 'Classes'
+            class: App\Entity\Section
+            list:
+                title: "Toutes les classes"
+                fields:
+                    - id
+                    - { property: "name", label: "Nom" }
+                    - { property: "shortname", label: "Nom court" }
+                    - { property: "grade", label: "Niveau" }
+                    - { property: "pathway", label: "Filière" }
+                    - { property: "image", type: 'image', label: "Image",  base_path: 'uploads/sections/photos' }
+            form:
+                title: "Créer une nouvelle classe"
+                fields:
+                    - { property: "name", label: "Nom" }
+                    - { property: "shortname", label: "Nom court"}
+                    - { property: "grade", label: "Niveau" }
+                    - { property: "pathway", label: "Filière" }
+                    - { property: 'imageFile', type: 'vich_image', label: 'Image', base_path: 'uploads/sections/photos', type_options: { required: false, allow_delete: true} }
+
+
+        SectionLevel:
+            label: 'Niveaux'
+            class: App\Entity\Grade
+            list:
+                title: "Tous les niveaux des classes"
+                fields:
+                    - id
+                    - { property: "name", label: "Nom" }
+                    - { property: "shortname", label: "Nom court"}
+            form:
+                title: "Créer un nouveau niveau"
+                fields:
+                    - { property: "name", label: "Nom" }
+                    - { property: "shortname", label: "Nom court"}
+
+        Discipline:
+            class: App\Entity\Discipline
+            list:
+                title: "Toutes les disciplines"
+                fields:
+                    - id
+                    - { property: "name", label: "Nom"}
+                    - { property: "description", label: "Description"}
+                    - { property: "category", label: "Catégorie"}
+                    - { property: "image", type: 'image', label: "Image",  base_path: 'uploads/disciplines/logos'}
+            form:
+                title: "Créer une nouveau discipline"
+                fields:
+                    - { property: "name", label: "Nom"}
+                    - { property: "description", label: "Description"}
+                    - { property: "category", label: "Catégorie"}
+                    - { property: 'imageFile', type: 'vich_image', label: 'Image', base_path: 'uploads/disciplines/logos', type_options: { required: false, allow_delete: true} }
+
+        Exercice:
+            class: App\Entity\Exercise
+            list:
+                title: "Tous les exercices"
+                fields:
+                    - id
+                    - { property: "name", label: "Nom"}
+                    - { property: "disciplineLevel", label: "Discipline / Niveau" }
+                    - { property: "link", label: "Lien"}
+
+            form:
+                title: "Créer un nouvel exercice"
+                fields:
+                    - { property: "name", label: "Nom"}
+                    - { property: "disciplineLevel", label: "Discipline / Niveau" }
+                    - { property: "link", label: "Lien"}
+
+        DisciplineCategorie:
+            label: 'Catégories'
+            class: App\Entity\DisciplineCat
+            list:
+                title: "Toutes les catégories des disciplines"
+                fields:
+                    - id
+                    - { property: "name", label: "Nom"}
+                    - { property: "description", label: "Description"}
+            form:
+                title: "Associer une catégorie à une discipline"
+                fields:
+                    - { property: "name", label: "Nom"}
+                    - { property: "description", label: "Description"}
+
+
+        DisciplineLevel:
+            label: 'Niveaux de disciplines'
+            class: App\Entity\DisciplineLevel
+            list:
+                title: "Tous les niveaux des disciplines"
+                fields:
+                    - id
+                    - { property: "discipline", label: "Discipline"}
+                    - { property: "level", label: "Niveau"}
+            form:
+                title: "Associer un niveau à une discipline"
+                fields:
+                    - { property: "discipline", label: "Discipline"}
+                    - { property: "level", label: "Niveau"}
+
+        Level:
+            label: 'Niveaux'
+            class: App\Entity\Level
+            list:
+                title: "Tous les niveaux"
+                fields:
+                    - id
+                    - { property: "name", label: "Nom"}
+            form:
+                title: "Créer un nouveau niveau"
+                fields:
+                    - { property: "name", label: "Nom"}
+
+        Pathway:
+            label: 'Filières'
+            class: App\Entity\Pathway
+            list:
+                title: "Toutes les filières"
+                fields:
+                    - id
+                    - { property: "name", label: "Nom"}
+            form:
+                title: "Créer une nouvelle filière"
+                fields:
+                    - { property: "name", label: "Nom"}
+
+        PathwaySpecialism:
+            label: 'Spécialités'
+            class: App\Entity\PathwaySpecialism
+            list:
+                title: "Toutes les spécialités"
+                fields:
+                    - id
+                    - { property: "name", label: "Nom"}
+            form:
+                title: "Créer une nouvelle spécialité"
+                fields:
+                    - { property: "name", label: "Nom"}
+
+        Profession:
+            label: 'Métiers'
+            class: App\Entity\Profession
+            list:
+                title: "Tous les métiers"
+                fields:
+                    - id
+                    - { property: "name", label: "Nom"}
+                    - { property: "shortname", label: "Nom court"}
+            form:
+                title: "Créer un nouveau métier"
+                fields:
+                    - { property: "name", label: "Nom"}
+                    - { property: "shortname", label: "Nom court"}
+
+        AcademicCareer:
+            label: 'Parcours'
+            class: App\Entity\AcademicCareer
+            list:
+                title: "Tous les parcours"
+                fields:
+                    - id
+                    - { property: "pathway", label: "Filière"}
+                    - { property: "specialism", label: "Spécialité"}
+                    - { property: "grade", label: "Année"}
+                    - { property: "profession", label: "Métier"}
+                    - { property: "disciplineLevel", label: "Niveau de disciplines"}
+            form:
+                title: "Créer un nouveau parcours"
+                fields:
+                    - { property: "pathway", label: "Filière"}
+                    - { property: "specialism", label: "Spécialité"}
+                    - { property: "grade", label: "Année"}
+                    - { property: "profession", label: "Métier"}
+                    - { property: "disciplineLevel", label: "Niveau de disciplines"}
+
+        Skill:
+            label: 'Compétences'
+            class: App\Entity\Skill
+            list:
+                title: "Toutes les compétences"
+                fields:
+                    - id
+                    - { property: "description", label: "Description"}
+                    - { property: "disciplineLevel", label: "Niveau" }
+            form:
+                title: "Créer une nouvelle compétence correspondant à un niveau de discipline"
+                fields:
+                    - { property: "description", label: "Description"}
+                    - { property: "disciplineLevel", label: "Niveau" }
+
+
+        StudentSkill:
+            label: 'Annuler des skills'
+            class: App\Entity\StudentSkill
+            disabled_actions: ['new']
+            form:
+                title: "Editer une compétence"
+                fields: ['teacher', 'team', 'student', 'skills']
+
+        Comment:
+            label: 'Modifier un commentaire'
+            class: App\Entity\Comment
+            disabled_actions: ['new']
+            form:
+                title: "Modifier un commentaire"
+                fields: ['student', 'teacher', 'team', 'content', 'discipline', 'rating']
+
+
+        Incident:
+            class: App\Entity\Incident
+            list:
+                title: "Tous les incidents"
+                fields:
+                    - id
+                    - { property: "name", label: "Nom" }
+                    - { property: "points", label: "Nombre de points" }
+                    - { property: "icon", label: "Classe FontAwesome" }
+                    - { property: "incidentType", label: "Nature de l'incident" }
+            form:
+                title: "Créer un nouvel incident"
+                fields:
+                    - { property: "name", label: "Nom" }
+                    - { property: "points", label: "Nombre de points" }
+                    - { property: "icon", label: "Classe FontAwesome" }
+                    - { property: 'incidentType', label: "Nature de l'incident", type: 'choice', type_options: { choices: { 'Positif': 'positive', 'Negatif': 'negative' } } }
+
+        Semestre:
+            class: App\Entity\Semester
+            list:
+                title: "Tous les semestres"
+                fields:
+                    - id
+                    - { property: "startDate", label: "Date de départ" }
+                    - { property: "endDate", label: "Date de fin" }
+            form:
+                title: "Créer un nouveau semestre"
+                fields:
+                    - { property: "startDate", label: "Date de départ" }
+                    - { property: "endDate", label: "Date de fin" }
+
+
+        Year:
+            class: App\Entity\AcademicYear
+            list:
+                title: "Toutes les années scolaires"
+                fields:
+                    - id
+                    - { property: "startDate", label: "Date de début" }
+                    - { property: "endDate", label: "Date de fin" }
+            form:
+                title: "Créer un nouveau semestre"
+                fields:
+                    - { property: "startDate", label: "Date de début" }
+                    - { property: "endDate", label: "Date de fin" }

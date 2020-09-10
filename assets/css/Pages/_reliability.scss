@@ -1,0 +1,160 @@
+/* RELIABILITY'S PAGES */
+/***********************************************/
+
+body.students-points {
+  background-color: $darkBlue;
+  > * {
+    color: $lightGrey;
+  }
+  .fa-thumbs-up, .fa-skull-crossbones {
+    margin: 0 15px;
+  }
+  .reliability-title {
+    i:last-of-type {
+      transform: rotateY(-180deg);
+    }
+  }
+}
+
+.reliability-title {
+  text-align: center;
+  padding: 30px 0 60px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.reliability-points {
+  font-size: 24px;
+  font-weight: $bold;
+  background-color: white;
+  padding: 6px;
+  border-radius: 50%;
+  border: 1px solid;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+
+/*  &.green {
+    color: $green;
+  }
+  &.red {
+    color: $red;
+  }*/
+}
+
+.reliability-student {
+  padding: 30px;
+}
+
+.reliability-student-name {
+  text-align: center;
+  line-height: 1.3;
+  margin-top: 10px;
+}
+
+
+
+/* ATTENDANCE'S PAGE */
+/***********************************************/
+
+body.attendance {
+  overflow: hidden;
+  margin-right: -1px;
+}
+
+.slide-title {
+  text-align: center;
+  font-size: 26px;
+  text-transform: uppercase;
+  height: 60px;
+  line-height: 60px;
+}
+
+.attendance-card {
+  width: 25%;
+  height: 33.33%;
+  padding: 30px;
+  color: $white;
+  text-align: center;
+  box-sizing: border-box;
+  border-right: 1px solid $darkBlue;
+  margin-bottom: 2px;
+  &.bg-red {
+    background-color: $lightRed;
+  }
+  &.bg-orange {
+    background-color: $orange;
+  }
+  &.bg-green {
+    background-color: $altGreen;
+  }
+  &.bg-grey {
+    background-color: rgba($grey, 0.6);
+  }
+}
+
+.attendance-section {
+  margin-bottom: 10%;
+  min-height: 45px;
+  line-height: 1.4;
+  i {
+    margin-right: 10px;
+  }
+}
+
+.attendance-percentage {
+  font-weight: $thin;
+  position: relative;
+}
+
+.js-percentage {
+  font-size: 60px;
+}
+
+.span-presence {
+  font-size: 24px;
+  line-height: 1.3;
+  display: block;
+}
+
+
+// SLIDER
+.slideshow {
+  width: calc(100vw - 6px);
+  height: calc(100vh - 6px);
+  overflow: hidden;
+  border: 3px solid $white;
+  .flex {
+    height: calc(100vh - 66px);
+  }
+}
+
+.slider {
+  width: 400%;
+  height: calc(100vh - 6px);
+  padding:0;
+  margin:0;
+  list-style: none;
+}
+
+.attendance-grade {
+  float: left;
+  width: 100vw;
+  height: calc(100vh - 6px);
+}
+
+
+.slideshow-students-points {
+  width: 100vw;
+  height: calc(100vh - 122px);
+  overflow: hidden;
+}
+
+.reliability-list {
+  height: 100%;
+  float: left;
+  width: 100vw;
+}
+
+

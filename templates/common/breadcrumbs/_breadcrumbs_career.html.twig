@@ -1,0 +1,55 @@
+<i class="fas fa-sliders-h"></i>
+
+{% if is_mobile() == true and is_tablet() == false %}
+    {% set title = 'Parcours' %}
+{% else %}
+    {% set title = 'Parcours de formation' %}
+{% endif %}
+
+{% if student is defined %}
+    <a href="{{ path('student_careers', {'student': student.id}) }}">{{ title }}</a>
+{% else %}
+    <a href="{{ path('all_careers') }}">{{ title }}</a>
+{% endif %}
+
+
+{% if (is_mobile() == false or student is not defined) and (app.request.attributes.get('_route') == 'student_pro_career' or app.request.attributes.get('_route') == 'pro_career') %}
+    <i class="fas fa-angle-right"></i>
+    {{ profession.name }}
+{% endif %}
+
+{% if is_mobile() == false or student is not defined %}
+    {% if career.grade != '' %}
+        <i class="fas fa-angle-right"></i>
+        {% if career.grade.id == 1 %}
+            <span>1ère année</span>
+        {% elseif career.grade.id == 2 %}
+            <span>2ème année</span>
+        {% elseif career.grade.id == 3 %}
+            <span>3ème année</span>
+        {% elseif career.grade.id == 4 %}
+            <span>4ème année</span>
+        {% elseif career.grade.id == 5 %}
+            <span>5ème année</span>
+        {% endif %}
+    {% endif %}
+{% endif %}
+
+
+{% if is_mobile() == false %}
+    {% if specialism is defined %}
+        <i class="fas fa-angle-right"></i>
+        <span>{{ specialism.name }}</span>
+    {% endif %}
+{% endif %}
+
+{% if student is defined %}
+    <i class="fas fa-angle-right"></i>
+    <a href="{{ path('student', {'student': student.id, 'firstname': student.firstname, 'lastname': student.lastname}) }}">
+        {% if is_mobile() == true %}
+            {{ student.firstname }} {{ student.lastname|first }}.
+        {% else %}
+            {{ student.firstname }} {{ student.lastname }}
+        {% endif %}
+    </a>
+{% endif %}

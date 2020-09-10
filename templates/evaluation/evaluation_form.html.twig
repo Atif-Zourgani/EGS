@@ -1,0 +1,194 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Evaluer{% endblock %}
+{% block metaDescriptionContent %}{% endblock %}
+
+{% set bodyClass='evaluation evaluation-form' %}
+
+{% form_theme skillsForm _self %}
+
+{% block body %}
+
+    <div class="main">
+        {% include 'common/_breadcrumbs.html.twig' %}
+
+        <div class="main-scrollable">
+
+            <div class="block-filters flex flex--align-center flex--wrap">
+
+                <form id="form-select-student" action="{{ path('evaluation_form', {'disciplineId' : disciplineId.id}) }}" method="get" class="{% if is_mobile() == false %}flex flex--space-between{% endif %}">
+
+                    <div class="block-select flex flex--align-center flex--wrap">
+                        <div class="select-designed">
+                            <select name="section" id="select-section" class="filters filters--section">
+                                {% for section in sections %}
+                                    <option value="{{ section.shortname }}" class="flex flex--align-center">{{ section.name }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <input name="discipline" type="text" id="select-discipline" {#class="filters filters--discipline"#}/>
+
+                        <div class="select-designed">
+                            <select name="student" id="select-student" class="filters filters--student">
+                                {% for student in students %}
+                                    <option value="{{ student.id }}" class="flex flex--align-center">{{ student.fullname }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        {% if is_tablet() %}
+                            <a class="change-section change-section--tablet" href="{{ path('evaluation') }}" title="Réinitialiser la sélection">
+                                <i class="fas fa-times-circle"></i>
+                                <span>Réinitialiser la sélection</span>
+                            </a>
+                        {% endif %}
+                    </div>
+
+                    <div class="block-buttons">
+                        {#<button type="submit">
+                            <i class="fas fa-check"></i>
+                        </button>#}
+                        {% if is_tablet() %}
+
+                        {% else %}
+                            <a class="change-section flex flex--center flex--align-center" id="reboot-evaluation" href="{{ path('evaluation') }}">
+                                <i class="fas fa-times-circle"></i>
+                                Réinitialiser la sélection
+                            </a>
+                        {% endif %}
+
+                    </div>
+
+                </form>
+
+            </div>
+
+            {% if studentSkillsToEarn is not empty %}
+                <h3 class="current-level">
+                    {% set skill = skillsForm.skills.vars.choices|first.data.disciplineLevel %}
+                    {{ skill.level }} <span>/ Compétences</span>
+                </h3>
+
+                <div class="block-skills">
+                    <ul class="student-skills">
+                        {% for skill in skills %}
+                            <li class="skill flex flex--align-center">
+                                <i class="far fa-check-square"></i>
+                                <span>{{ skill.description }}</span>
+                            </li>
+                        {% endfor %}
+                    </ul>
+
+                    {{ form_start(skillsForm) }}
+
+                    <div class="all-skills">
+                        <ul id="student_skill_skills">
+                            {% for skillForm in skillsForm.skills %}
+                                {% set skill = skillsForm.skills.vars.choices[skillForm.vars.value].data %}
+                                <li class="skill flex flex--align-center">
+                                    {{ form_widget(skillForm) }}
+                                    <i class="far fa-minus-square"></i>
+                                    <label for="{{ skill.id }}">
+                                        <span>{{ skill.description }}</span><br>
+                                    </label>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+                    {{ form_widget(skillsForm.comment) }}
+
+                </div>
+
+                <button type="submit" class="submit-skills flex flex--align-center flex--center">
+                    <i class="fas fa-check"></i>
+                    {% if is_mobile() == true and is_tablet() == false %}
+                        <span>Valider les compétences</span>
+                    {% else %}
+                        <span>Valider les compétences de {{ student.firstname }}</span>
+                    {% endif %}
+                </button>
+
+                {% do skillsForm.skills.setRendered(true) %}
+
+                {{ form_end(skillsForm) }}
+
+            {% else %}
+
+                <p class="all-skills-assigned">Toutes les compétences en {{ discipline }} ont été attribuées à {{ student.firstname }}.</p>
+
+                <h3 class="current-level">
+                    {% set lastLevel = disciplineLevels|last %}
+                    {{ lastLevel.level.name }} <span>/ Compétences</span>
+                </h3>
+
+                <div class="block-skills">
+                    <ul class="student-skills">
+                        {% for skill in lastLevel.skills %}
+                            <li class="skill flex flex--align-center">
+                                <i class="far fa-check-square"></i>
+                                <span>{{ skill.description }}</span>
+                            </li>
+                        {% endfor %}
+                    </ul>
+
+                    {{ form_start(skillsForm) }}
+                    {{ form_widget(skillsForm.comment) }}
+                </div>
+
+                <button type="submit" class="submit-skills flex flex--align-center flex--center">
+                    <i class="fas fa-check"></i>
+                    <span>Rajouter un commentaire</span>
+                </button>
+                {{ form_end(skillsForm) }}
+
+            {% endif %}
+
+        </div>
+
+    </div>
+
+    {% block javascripts %}
+
+        <script src="{{ asset('build/js/jquery-ui.js') }}"></script>
+
+        <script>
+            var disciplinesA = {{ disciplineNames|json_encode|raw }};
+        </script>
+
+        <script src="{{ asset('build/js/evaluation.js') }}"></script>
+
+    {% endblock %}
+
+{% endblock %}
+
+
+{% block _student_evaluation_comment_entry_row %}
+
+    <div class="form-comment">
+        <div class="flex flex--align-center flex--wrap">
+            <label for="comment" class="form-comment-label">Ajouter un commentaire</label>
+            <div class="rating">
+                {{ form_widget(form.rating) }}
+            </div>
+        </div>
+
+        {% if is_granted('ROLE_ADMIN') or is_granted('ROLE_SUPER_ADMIN') %}
+            <div class="{#flex #}form-comment-teacher select-designed">
+                {#{{ form_label(form.teacher, 'Choisir un intervenant', {'label_attr': {'class':
+                    'form-comment-teacher-label'}}) }}#}
+                {{ form_widget(form.teacher, {'attr': {'class': 'form-comment-teacher-select'}}) }}
+            </div>
+        {% endif %}
+
+        {{ form_widget(form.content) }}
+    </div>
+
+{% endblock %}
+
+{% block _student_evaluation_comment_entry_widget %}
+
+    {{ form_errors(form) }}
+    {{ form_widget(form) }}
+
+{% endblock %}

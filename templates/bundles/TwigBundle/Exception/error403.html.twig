@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accès non autorisé{% endblock %}
+
+{% set bodyClass='error error-403' %}
+{% block body %}
+
+    <div class="main">
+        <h1>Vous n'avez pas le droit d'accéder à cette page !</h1>
+        <img src="{{ asset('logos/logo-egs.png') }}" alt="">
+        <a href="{{ path('home') }}">Retour à l'accueil</a>
+    </div>
+
+{% endblock %}

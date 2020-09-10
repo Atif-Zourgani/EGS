@@ -1,0 +1,111 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Appel / Choisir une classe{% endblock %}
+
+{% block metaDescriptionContent %}{% endblock %}
+
+{% set bodyClass='select-call' %}
+
+{% block body %}
+
+
+<div class="main">
+
+    {{ include ('common/_breadcrumbs.html.twig') }}
+
+    <div class="main-scrollable">
+
+        <form id="js-form-call" action="{{ path('call') }}" method="get" class="{% if is_mobile() == false %}flex flex--space-between{% endif %}">
+
+            {% if is_mobile() == true and is_tablet() == false %}
+
+                <div class="select-designed">
+                    <input name="date" type="text" id="{% if app.user.teacher %}datepicker-teacher{% else %}datepicker{% endif %}" placeholder="Date">
+                </div>
+
+                <div class="select-designed">
+                    <select name="halfDay" id="">
+                        <option value="am">Matin</option>
+                        <option value="pm">Après-midi</option>
+                    </select>
+                </div>
+
+                <div class="select-designed">
+                    <select name="section" id="">
+                        {% for section in sections %}
+                            <option value="{{ section.shortname }}">{{ section.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div class="block-buttons">
+                    <button type="submit" class="flex flex--center flex--align-center">
+                        <i class="fas fa-check"></i>
+                        <span>Faire l'appel</span>
+                    </button>
+
+                    <a class="update-call flex flex--center flex--align-center" href="{{ path('display_calls') }}" title="Voir ou modifier un appel">
+                        <i class="fas fa-cog"></i>
+                        <span>Voir/modifier un appel</span>
+                    </a>
+                </div>
+
+            {% else %}
+
+                <div class="flex flex--center">
+
+                    <div class="flex flex--align-center">
+                        <i class="fas fa-calendar-alt"></i>
+                        <input name="date" type="text" id="{% if app.user.teacher %}datepicker-teacher{% else %}datepicker{% endif %}" placeholder="Date">
+                    </div>
+
+                    <div class="select-designed flex">
+                        <select name="halfDay" id="">
+                            <option value="am">Matin</option>
+                            <option value="pm">Après-midi</option>
+                        </select>
+                    </div>
+
+                    <div class="select-designed flex">
+                        <select name="section" id="">
+                            {% for section in sections %}
+                                <option value="{{ section.shortname }}">{{ section.name }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                </div>
+
+                {% if is_tablet() %}
+                    <div class="flex block-buttons">
+                        <button type="submit" class="flex flex--center flex--align-center">
+                            <i class="fas fa-check"></i>
+                            <span>Faire l'appel</span>
+                        </button>
+                        <a class="update-call flex flex--center flex--align-center" href="{{ path('display_calls') }}" title="Voir ou modifier un appel">
+                            <i class="fas fa-cog"></i>
+                            <span>Voir/modifier un appel</span>
+                        </a>
+                    </div>
+                {% else %}
+                    <div class="flex block-buttons">
+                        <button type="submit"><i class="fas fa-check"></i></button>
+
+                        <a class="update-call" href="{{ path('display_calls') }}" title="Voir ou modifier un appel">
+                            <i class="fas fa-cog"></i>
+                        </a>
+                    </div>
+                {% endif %}
+            {% endif %}
+
+        </form>
+    </div>
+
+</div>
+
+    {% block javascripts %}
+        <script src="{{ asset('build/js/jquery-ui.js') }}"></script>
+        <script src="{{ asset('build/js/call.js') }}"></script>
+    {% endblock %}
+
+{% endblock %}

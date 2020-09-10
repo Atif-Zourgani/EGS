@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Flux d'informations{% endblock %}
+
+{% set bodyClass='feed-page' %}
+
+{% block body %}
+
+    <div class="main">
+        {% include 'common/_breadcrumbs.html.twig' %}
+
+        <div class="main-scrollable">
+
+            <div class="feed-form">
+
+                {{ form_start(form) }}
+
+
+
+                <div class="flex flex--align-center flex--wrap">
+                    <div class="feed-form-item flex flex--align-center">
+                        {{ form_label(form.category, 'Catégorie :') }}
+                        <div class="select-designed">
+                            {{ form_widget(form.category, {'attr': {'class': 'select-feed-cat'}}) }}
+                        </div>
+                    </div>
+                    <div class="feed-form-item">
+                        {{ form_label(form.sharedToAll, 'Partager à tous') }}
+                        {{ form_widget(form.sharedToAll, {'attr': {'class': 'feed-input-all'}}) }}
+                    </div>
+                    <div class="feed-form-item">
+                        {{ form_label(form.student, 'Choisir un étudiant : ') }}
+                        {{ form_widget(form.student, {'attr': {'class': 'input-student-feed'}}) }}
+                    </div>
+                </div>
+
+
+                {{ form_widget(form.comment, {'attr': {'class': 'ckeditor'}}) }}
+
+                <button type="submit" class="flex flex--align-center flex--center feed-form-btn">
+                    <i class="fas fa-check"></i>
+                    <span>Enregistrer</span>
+                </button>
+                {{ form_end(form) }}
+            </div>
+
+        </div>
+
+    </div>
+
+{% endblock %}
+

@@ -1,0 +1,32 @@
+liip_imagine:
+    # valid drivers options include "gd" or "gmagick" or "imagick"
+    driver: "gd"
+
+    resolvers:
+        default:
+            web_path:
+                web_root: "%kernel.project_dir%/public"
+                cache_prefix: resized_images
+
+    filter_sets:
+
+        user_photo:
+            jpeg_quality:          75
+            png_compression_level: 8
+            filters:
+                thumbnail:
+                    size:          [150, 150]
+
+        student_photo:
+            jpeg_quality:          75
+            png_compression_level: 8
+            filters:
+                thumbnail:
+                    size:          [260, 260]
+
+        section_photo:
+            jpeg_quality:          75
+            png_compression_level: 8
+            filters:
+                thumbnail:
+                    size:          [250, 250]

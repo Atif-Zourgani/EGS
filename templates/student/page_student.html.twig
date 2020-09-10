@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ student.firstname }} {{ student.lastname }}{% endblock %}
+{% block metaDescriptionContent %}{% endblock %}
+
+{% set bodyClass='student' %}
+{% block body %}
+
+    <div class="main {% if is_granted('ROLE_STUDENT') %}main--student{% endif %}">
+        {% include 'common/_breadcrumbs.html.twig' %}
+
+        <div class="main-scrollable {% if is_granted('ROLE_STUDENT') %}main-scrollable--student{% endif %}">
+
+            {% include('student/_student_infos.html.twig') %}
+
+            {% if is_mobile() %}
+                <section class="student-behaviour-responsive">
+                    {% include('student/_student_behaviour.html.twig') %}
+                </section>
+            {% endif %}
+
+            {% include('student/_student_competences.html.twig') %}
+
+            {#{% include('student/_student_skills.html.twig') %}#}
+
+            {% include('student/_student_reliability.html.twig') %}
+
+            {% include('student/_student_comments.html.twig') %}
+
+            {% include('student/_student_feed.html.twig') %}
+
+        </div>
+
+        {% include('student/_modal_badges.html.twig') %}
+
+    </div>
+
+    {% block javascripts %}
+        <script src="{{ asset('build/js/chart.js') }}"></script>
+    {% endblock %}
+
+{% endblock %}

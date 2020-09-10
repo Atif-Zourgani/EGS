@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les parents{% endblock %}
+{% block metaDescriptionContent %}{% endblock %}
+
+{% set bodyClass='parents' %}
+{% block body %}
+
+    <div class="main">
+
+        {% include 'common/_searchbar.html.twig' %}
+
+        <div class="main-scrollable">
+
+            <img id="loader" src="{{ asset('logos/loader-pacman.gif') }}" style="display: none"/>
+
+            <div id="no-result"></div>
+
+            <ul class="flex flex--wrap flex--center cards-container">
+                {% for parent in parents %}
+                    {{ include ('cards/_parent_card.html.twig') }}
+                {% endfor %}
+            </ul>
+
+            {% if parents|length > 50 %}
+                <div id="load-more">Charger plus de parents</div>
+            {% endif %}
+        </div>
+    </div>
+
+{% endblock %}

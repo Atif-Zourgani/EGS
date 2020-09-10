@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Désactiver des étudiants{% endblock %}
+
+
+{% set bodyClass='disable-students' %}
+{% block body %}
+
+    <div class="main">
+
+        {% include 'common/_breadcrumbs.html.twig' %}
+
+        <div class="main-scrollable">
+
+            {% for message in app.flashes('success') %}
+                <div class="flash-message flash-message--back-up">
+                    <i class="close-flash-modal far fa-times-circle"></i>
+                    {% if message != '' %}
+                        <p>{{ message }}</p>
+                    {% endif %}
+                </div>
+            {% endfor %}
+
+            <div class="form-create-users">
+
+                <form action="{{ path('disable_students') }}">
+
+                    <div class="flex flex--align-center">
+                        <label class="select-student-to-disabled-label" for="select-student-to-disabled">Chercher un étudiant</label>
+                        <input type="text" id="select-student-to-disabled">
+                    </div>
+
+                    <div class="list-students-to-disable"></div>
+
+                    <button class="btn-disable-students" type="submit">Désactiver</button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    {% block javascripts %}
+
+        <script src="{{ asset('build/js/jquery-ui.js') }}"></script>
+
+        <script>
+            var studentsToDisable = {{ students|json_encode|raw }};
+        </script>
+
+        <script src="{{ asset('build/js/admin.js') }}"></script>
+
+    {% endblock %}
+
+{% endblock %}
+

@@ -1,0 +1,27 @@
+
+<div class="circle circle--grade">
+    {{ grade.id }}
+
+    {% if grade.percentage is defined %}
+        <div class="student-percentage absolute-middle">
+            {{ grade.percentage|round(1, 'floor') }} %
+        </div>
+    {% endif %}
+</div>
+
+<div class="career-details">
+    <span>Parcours</span>
+    <h4 class="career-name">
+        {% if grade.id == 1 %}
+            1ère année
+        {% elseif grade.id == 2 %}
+            2ème année
+        {% elseif grade.id == 3 %}
+            3ème année
+        {% elseif grade.id == 4 %}
+            4ème année
+        {% elseif grade.id == 5 %}
+            5ème année
+        {% endif %}
+    </h4>
+</div>

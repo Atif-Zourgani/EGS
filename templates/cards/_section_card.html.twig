@@ -1,0 +1,15 @@
+
+<li class="card card--section" data-id="{{ section.id }}">
+    <a class="flex flex--align-center" href="{{ path('section', {'shortname': section.shortname}) }}">
+        {% if section.image != null %}
+            <div class="section-image" style="background-image: url('{{ asset('uploads/sections/photos/' ~ section.image)|imagine_filter('user_photo') }}')"></div>
+        {% else %}
+            <img src="{{ asset('logos/users-solid.svg') }}" alt="">
+        {% endif %}
+        <div class="section-infos">
+            <p>{{ section.name }}</p>
+            <p>{{ section.grade.name }}</p>
+            <p>Nombre d'élèves : {{ section.students|length }} </p>
+        </div>
+    </a>
+</li>

@@ -1,0 +1,171 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ discipline.name }}{% endblock %}
+{% block metaDescriptionContent %}{% endblock %}
+
+{% if is_tablet() %}
+    {% set bodyClass='discipline responsive' %}
+{% elseif is_mobile() == true and is_tablet() == false %}
+    {% set bodyClass='discipline responsive mobile' %}
+{% else %}
+    {% set bodyClass='discipline' %}
+{% endif %}
+
+{% block body %}
+
+    <div class="main">
+
+        {% if student is defined or page == 'discipline_career' %}
+            {% include 'common/_breadcrumbs.html.twig' %}
+        {% endif %}
+
+        <div class="main-scrollable {% if is_granted('ROLE_STUDENT') %}main-scrollable--student{% endif %}">
+
+            <section class="discipline-infos flex flex--space-between">
+
+                <div class="discipline-infos-sum flex flex--align-center">
+
+                    {% if discipline.image != null %}
+                        <img src="{{ asset('uploads/disciplines/logos/' ~ discipline.image) }}">
+                    {% endif %}
+
+                    <div class="discipline-sum">
+
+                        <h1>{{ discipline.name }}</h1>
+                        <h2>Compétence {{ discipline.category }}</h2>
+
+                        <div class="flex block-items">
+
+                            <div class="item">
+                                <div class="item-circle">{{ discipline.disciplineLevels|length }}</div>
+                                <p>Niv.</p>
+                            </div>
+
+                            <div class="item">
+
+                                {% if page == 'discipline_career' %}
+                                    {% set skills = skills %}
+                                {% else %}
+                                    {% set skills = skills|length %}
+                                {% endif %}
+
+                                <div class="item-circle">{{ skills }}</div>
+                                <p>Checkpoints.</p>
+                            </div>
+
+                            {% if (page == 'career' or page == 'discipline_career') and student is defined %}
+
+                                <div class="item">
+
+                                    {% if studentPercentage is defined %}
+                                        {% set per = studentPercentage|round(1, 'floor') %}
+                                    {% else %}
+                                        {% set per = 0 %}
+                                    {% endif %}
+
+                                    <div class="item-prog progress-wrap progress" data-progress-percent="{{ per }}">
+                                        <div class="progress-bar progress"></div>
+                                        <p class="progress-percentage">{{ per }} %</p>
+                                    </div>
+
+                                    <p>Progression</p>
+
+                                </div>
+                            {% endif %}
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                {% if is_mobile() == true and is_tablet() == false %}
+                {% else %}
+                    <div class="discipline-infos-description">
+                        <p>{{ discipline.description }}</p>
+                    </div>
+                {% endif %}
+
+            </section>
+
+
+            <section class="discipline-levels">
+
+                {% if is_mobile() == true and is_tablet() == false %}
+
+                    <div class="select-designed">
+                        <select name="levels" id="" class="levels">
+                            {% for discipline in discipline.disciplineLevels %}
+                                <option value="{{ discipline.level }}" class="level" data-value="{{ discipline.level }}" data-id="{{ discipline.level|last }}">{{ discipline.level }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                {% else %}
+
+                    <div class="progress-bar"></div>
+                    <ul class="levels flex flex--align-center flex--space-around">
+                        {% for discipline in discipline.disciplineLevels %}
+                            <li class="level" data-value="{{ discipline.level }}" data-id="{{ discipline.level|last }}">
+                                <span class="circle"></span>
+                                {{ discipline.level }}
+                            </li>
+                        {% endfor %}
+                    </ul>
+
+                {% endif %}
+
+            </section>
+
+
+            <section class="discipline-skills">
+
+                {% for disciplineLevel in discipline.disciplineLevels %}
+
+                    <div class="block-skills" data-value="{{ disciplineLevel.level }}">
+                        <div class="skills">
+                            <h3>{{ disciplineLevel.level }} / <span>Compétences</span></h3>
+                            {% for skill in disciplineLevel.skills %}
+                                <p class="
+                                    {% for studentSkill in skill.studentSkills.owner.studentSkills %}
+                                        {% if student is defined %}
+                                            {% if (page == 'discipline_career' or page == 'discipline') and studentSkill.student.id == student.id  %}
+                                                active
+                                            {% endif %}
+                                        {% endif %}
+                                    {% endfor %} skill">
+                                    <i class="far fa-minus-square"></i>
+                                    {{ skill.description }}
+                                </p>
+                            {% endfor %}
+                        </div>
+
+                        <div class="improvement">
+                            {% if is_mobile() %}
+                                <h3>S'améliorer en {{ discipline.name }} / <span>Exercices</span></h3>
+                            {% else %}
+                                <h3>Comment m'améliorer en {{ discipline.name }} / <span>Exercices</span></h3>
+                            {% endif %}
+
+                            {% for exercise in disciplineLevel.exercises %}
+                                <p>
+                                    <i class="fas fa-link"></i>
+                                    <a href="{{ exercise.link }}" target="_blank">{{ exercise.name }}</a>
+                                </p>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                {% endfor %}
+
+            </section>
+
+        </div>
+    </div>
+
+    {% block javascripts %}
+        <script src="{{ asset('build/js/discipline.js') }}"></script>
+    {% endblock %}
+
+{% endblock %}
+

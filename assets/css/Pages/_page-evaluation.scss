@@ -1,0 +1,174 @@
+body.evaluation {
+  background-color: $lightGrey;
+  form {
+    width: 100%;
+  }
+  .block-buttons {
+    button[type="submit"], .change-section {
+      color: white;
+      letter-spacing: 0.7px;
+    }
+  }
+  .block-filters {
+    button, a, select {
+      font-size: 16px !important;
+    }
+    button {
+      display: block;
+      cursor: pointer;
+      background-color: $altGreen;
+      width: 200px;
+      height: 70px;
+    }
+    .fa-check {
+      color: $white;
+      font-size: 45px;
+      line-height: 70px;
+    }
+    border-bottom: 2px solid $blue;
+    .change-section {
+      background-color: #718091;
+      padding: 0 20px;
+      height: 70px;
+      text-align: center;
+      i {
+        margin-right: 10px;
+      }
+    }
+  }
+  .filters {
+    cursor: pointer;
+    position: relative;
+    -webkit-appearance: none;
+    background-color: transparent;
+
+    option {
+      font-size: 18px;
+      font-weight: $medium;
+      padding: 3px 0;
+      cursor: pointer;
+      &:first-of-type:after {
+        content: url("../Images/angle-down-solid.svg");
+        display: block;
+        width: 14px;
+        margin-left: 10px;
+      }
+    }
+    .fa-angle-down {
+      margin-left: 8px;
+      font-size: 20px;
+    }
+  }
+  .ctn-user {
+    padding: 20px;
+  }
+  .user.user--student .user-photo:before {
+    background: $altGreen;
+  }
+  .user-name {
+    margin-top: 10px;
+    p {
+      text-align: center;
+      font-size: 16px;
+      font-weight: $light;
+      &:last-child {
+        font-weight: $medium;
+        margin-top: 3px;
+      }
+    }
+  }
+  .filter-result .user--student {
+    cursor: pointer;
+  }
+  .filter-discipline {
+    cursor: pointer;
+    max-width: 150px;
+  }
+  .all-skills-assigned {
+    text-align: center;
+    border: 2px solid;
+    max-width: 500px;
+    margin: 30px auto 10px;
+    padding: 15px;
+    color: $red;
+    font-size: 18px;
+    line-height: 1.4;
+  }
+}
+
+#student_skill_skills {
+  input[type="checkbox"] {
+    opacity: 0;
+    cursor: pointer;
+    width: 100%;
+    height: 28px;
+    font-size: 0;
+    position: absolute;
+  }
+  i, span {
+    color: $darkBlue;
+  }
+  .skill.checked {
+    i, span {
+      color: $altGreen;
+    }
+  }
+}
+
+
+
+/* FORM */
+/***********************************************/
+
+body.evaluation-form {
+  form {
+    position: relative;
+  }
+  /*.main-scrollable {
+    height: calc(100vh - 137px);
+  }*/
+  .current-level {
+    margin: 30px 30px 10px 30px;
+  }
+  .block-skills {
+    padding: 20px;
+    li.skill {
+      padding: 10px;
+      cursor: pointer;
+      i {
+        font-size: 28px;
+        margin-right: 10px;
+        color: $altGreen;
+      }
+      span {
+        font-weight: $light;
+        color: $altGreen;
+      }
+      span.selected {
+        color: $altGreen;
+      }
+    }
+  }
+  .form-comment {
+    margin: 50px 0 50px 10px;
+    label {
+      font-size: 18px;
+      border-bottom: 2px solid #172c3b;
+      line-height: 1.5;
+      display: inline-block;
+      margin-right: 20px;
+    }
+    textarea {
+      border: 2px solid #172c3b;
+      width: 40%;
+      height: 150px;
+      padding: 10px;
+      box-shadow: 5px 5px 20px 0 rgba(9, 34, 57, 0.3);
+      margin-top: 20px;
+      border-radius: 5px;
+    }
+    .rating input {
+      -webkit-appearance: none;
+    }
+  }
+}

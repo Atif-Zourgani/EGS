@@ -1,0 +1,12 @@
+{% if is_mobile() == true and is_tablet() == false %}
+    <i class="fas fa-award"></i>
+    <span>Compétences</span>
+    <i class="fas fa-angle-right"></i>
+{% else %}
+    <i class="fas fa-award"></i>
+    <span>Compétences</span>
+    <i class="fas fa-angle-right"></i>
+    <span>{{ discipline.name }}</span>
+    <i class="fas fa-angle-right"></i>
+{% endif %}
+<a href="{{ path('student', {'student': student.id, 'firstname': student.firstname, 'lastname': student.lastname}) }}">{{ student.firstname }} {{ student.lastname }}</a>

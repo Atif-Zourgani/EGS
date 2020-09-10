@@ -1,0 +1,171 @@
+h3 {
+  font-size: 16px;
+}
+
+body {
+  height: auto;
+  overflow-y: scroll;
+  .main {
+    margin-bottom: 60px;
+    &.main--student {
+      margin-bottom: 0 !important;
+    }
+  }
+  .main-scrollable {
+    height: 100% !important;
+    &.main-scrollable--student {
+      height: 100% !important;
+    }
+  }
+}
+
+body.discipline, body.create-call, body.update-call, body.evaluation-form {
+  .main-scrollable {
+    height: 100% !important;
+  }
+}
+
+body.evaluation .select-designed.form-comment-teacher{
+  width: 220px;
+}
+
+.select-designed {
+  > * {
+    font-size: 14px;
+  }
+}
+
+.user-photo {
+  width: 100px;
+  height: 100px;
+  &.user-photo--null {
+    background-size: 70px !important;
+  }
+}
+
+#load-more {
+  font-size: 14px;
+}
+
+.flash-message {
+  padding: 15px;
+}
+
+.cards-container {
+  padding: 20px;
+}
+
+body.all-students, body.parents, body.section, body.teachers {
+  .card {
+    padding: 20px;
+  }
+  .user {
+    margin-right: 15px;
+  }
+  .user-infos {
+    min-width: 160px;
+    flex: 1;
+  }
+}
+
+/* BREADCRUMBS / SEARCH-BAR */
+/***********************************************/
+
+.breadcrumbs, .search-bar {
+  height: 60px;
+}
+
+.breadcrumbs, .search-bar, .block-gamer-label-search {
+  .fas {
+    font-size: 18px;
+    &.fa-angle-right {
+      font-size: 23px;
+    }
+  }
+  .gamer-label-trophy-search {
+    max-height: 22px;
+    width: auto;
+  }
+}
+
+
+/* NAVIGATION */
+/***********************************************/
+
+.nav-menu--responsive {
+  z-index: 30;
+  ul {
+    height: 60px;
+    overflow: scroll;
+    width: calc(100vw - 70px);
+    li {
+      height: 60px;
+      box-sizing: content-box;
+      a {
+        box-sizing: content-box;
+      }
+    }
+    li:not(.child) {
+      width: 60px;
+      height: 60px;
+      box-sizing: border-box;
+      a, .active-user, span {
+        width: 60px;
+      }
+    }
+  }
+  .active-user-short {
+    background-color: unset;
+    color: $lightGrey;
+    font-size: 20px;
+  }
+  .block-logo {
+    width: 70px;
+    height: 60px;
+    .logo-egs {
+      margin: 10px auto;
+      height: 40px;
+      position: relative;
+    }
+  }
+  .active-user {
+    height: 60px;
+  }
+}
+
+
+/* BTN SUBMIT */
+/***********************************************/
+
+.submit-skills, .submit-call {
+  bottom: unset;
+  position: relative;
+  border: 0;
+}
+
+
+
+/* JQUERY-UI AUTOCOMPLETE */
+/***********************************************/
+
+.ui-widget.ui-widget-content {
+  left: 50% !important;
+  transform: translatex(-50%) !important;
+  width: 60% !important;
+  text-align: center !important;
+}
+
+#select-discipline {
+  text-align: center;
+  margin: 20px auto;
+  display: block;
+  box-sizing: border-box;
+  border: 2px solid;
+  padding: 10px 22.5px;
+  width: 60%;
+  color: $darkBlue;
+}
+
+.select-designed {
+  box-sizing: border-box;
+}

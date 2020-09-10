@@ -1,0 +1,21 @@
+{% trans_default_domain 'FOSUserBundle' %}
+{% block subject %}
+{%- autoescape false -%}
+{{ 'resetting.email.subject'|trans({'%username%': user.username}) }}
+{%- endautoescape -%}
+{% endblock %}
+
+{% block body_text %}
+{% autoescape false %}
+
+    Bonjour {{ user.username }} !
+
+    Pour réinitialiser votre mot de passe, merci de vous rendre sur {{ confirmationUrl }}
+
+    Bonne journée,
+
+    L'équipe EGS
+{#{{ 'resetting.email.message'|trans({'%username%': user.username, '%confirmationUrl%': confirmationUrl}) }}#}
+{% endautoescape %}
+{% endblock %}
+{% block body_html %}{% endblock %}

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        body {
+            color: #172c3b;
+        }
+        a {
+            text-decoration: underline;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+</head>
+    <body>
+
+        <p>Trop {% if status == 'absent' %}d'absences{% else %}de retards{% endif %} pour {{ student.fullname }}.</p>
+
+        {% if status == 'absent' %}
+            <p>Nombre d'absences : {{ absences }}.</p>
+            <p>Si {{ student.firstname }} est à nouveau absent, un incident "trop de retards" sera créé.</p>
+        {% elseif status == 'late' %}
+            <p>Nombre de retards : {{ delays }}.</p>
+            <p>Si {{ student.firstname }} est à nouveau en retard, un incident "trop d'absences" sera créé.</p>
+        {% endif %}
+
+{#
+        <p>Cliquez <a href="http://pedagogie.egs.school/etudiant/{{ student.id }}/incident/negative">ici</a> pour déclarer un incident.</p>
+#}
+
+    </body>
+</html>
+
+

@@ -1,0 +1,35 @@
+<section class="reliability">
+    <div class="flex flex--align-center flex--space-between flex--wrap section-title">
+        <h3>Indicateur de fiabilité /
+            <span class="student-points ">
+                {% if currentPoints is not empty %}
+                    {{ currentPoints|last }}
+                {% else %}
+                    20
+                {% endif %}
+                points.
+            </span>
+        </h3>
+
+        {% if is_mobile() == true and is_tablet() == false %}
+            <div class="badges-menu flex flex--align-center">
+        {% endif %}
+                <div class="select-designed">
+                    <select name="semesters" id="js-semesters">
+                        {% for semester in semesters %}
+                            <option value="{{ semester.id }}">{{ semester.startDate|date('d/m/Y') }} - {{ semester.endDate|date('d/m/Y') }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+        {% if is_mobile() == true and is_tablet() == false %}
+            </div>
+        {% endif %}
+
+    </div>
+
+    <div class="chart-container" style="position: relative; height:40vh; width:75vw">
+        <canvas id="reliability-chart"></canvas>
+    </div>
+
+    <div id="studentIncidents" data-items="{{ studentIncidents|json_encode }}"></div>
+</section>

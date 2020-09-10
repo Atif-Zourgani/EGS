@@ -1,0 +1,51 @@
+<section class="student-skills">
+
+    {% if is_mobile() %}
+
+        <div class="flex flex--align-center flex--space-between flex--wrap">
+            <h3>Mes badges esportifs / <span>Skills</span></h3>
+
+            <div class="badges-menu flex flex--align-center">
+                <div class="select-designed">
+                    <select name="" id="">
+                        <option class="title" value="">Toutes les compétences</option>
+                        <option value="">HTML</option>
+                        <option value="">CSS</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        {% if is_tablet() %}
+            <div class="all-badges flex flex--end">
+                <i class="fas fa-trophy"></i>
+                <span id="js-badges">Voir tous les badges</span>
+            </div>
+        {% endif %}
+
+    {% else %}
+
+        <div class="flex flex--align-center flex--space-between">
+            <h3>Mes badges esportifs / <span>Skills</span></h3>
+            <div class="badges-menu flex flex--align-center">
+                <div class="all-badges">
+                    <i class="fas fa-trophy"></i>
+                    <span id="js-badges">Voir tous les badges</span>
+                </div>
+                <i class="fas fa-th-list"></i>
+                <i class="fas fa-chart-pie"></i>
+                <div class="select-designed">
+                    <select name="" id="">
+                        <option class="title" value="">Toutes les compétences</option>
+                        <option value="">HTML</option>
+                        <option value="">CSS</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+    {% endif %}
+
+    <span class="empty">Aucun badge enregistré pour le moment.</span>
+
+</section>

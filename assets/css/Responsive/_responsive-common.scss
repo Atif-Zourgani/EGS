@@ -1,0 +1,116 @@
+@import '../Common/vars';
+
+.main-scrollable {
+  height: calc(100vh - 140px) !important;
+  &.main-scrollable--student {
+    height: calc(100vh - 70px) !important;
+  }
+}
+
+body.evaluation-form, body.create-call,  body.update-call {
+  .main-scrollable {
+    height: calc(100vh - 207.5px) !important;
+  }
+}
+
+.cards-container {
+  justify-content: center;
+}
+
+.flash-message {
+  left: 50%;
+  padding: 20px;
+}
+
+
+
+/* NAVIGATION */
+/***********************************************/
+
+.nav-menu--responsive {
+  width: 100%;
+  height: auto;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  .active-user {
+    padding: 0;
+  }
+  .nav-ico, .active-user-short {
+    margin: auto;
+  }
+  ul {
+    background-color: $altBlue;
+    width: calc(100vw - 80px);
+    overflow: scroll;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+  }
+  &.nav-menu--teacher {
+    li {
+      width: 14.28%;
+    }
+  }
+  li {
+    width: 12.5%;
+    border-bottom: none !important;
+    &:not(:first-of-type) {
+      background-color: $altBlue;
+      a {
+        padding: 0;
+        &.nav-call.nav-active, &.nav-call:hover, &:hover {
+          border-bottom: none;
+          border-right: none;
+        }
+        &.nav-active {
+          border-right: none;
+        }
+        &.nav-active::after, &:hover::after {
+          top: 0;
+          left: 50%;
+          transform: rotate(45deg) translateX(-50%);
+        }
+      }
+    }
+    &.child {
+      width: 130px;
+      a {
+        width: 130px;
+        span {
+          width: 130px;
+          text-align: center;
+          display: block;
+        }
+      }
+    }
+    a {
+      top: 50%;
+      transform: translateY(-50%);
+      height: 100%;
+      border-bottom: none !important;
+    }
+  }
+  .block-logo {
+    width: 80px;
+    height : 70px;
+    background-color: $darkBlue;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    .logo-egs {
+      margin: 15px auto;
+      width: auto;
+      height: 40px;
+    }
+  }
+}
+
+
+/***** BTN SUBMIT (CALL / EVALUATION) ****/
+/*******************************************/
+
+.submit-skills, .submit-call {
+  bottom: 70px;
+  position: fixed;
+}

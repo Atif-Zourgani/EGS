@@ -1,0 +1,24 @@
+<div class="modal-badges">
+    <a class="js-close-modal" title="Fermer la fenêtre"><i class="fas fa-times"></i></a>
+    <div class="modal-badges-ctn">
+        <div class="flex flex--align-center flex--center flex--wrap">
+        {% for discipline in disciplinesAsc %}
+            {% if is_granted('ROLE_ADMIN') or is_granted('ROLE_STUDENT') or is_granted('ROLE_PARENT') or is_granted('ROLE_TEACHER') and discipline.id in teacherD %}
+                <a href="{{ path('student_discipline', {'discipline': discipline.id, 'student': student.id}) }}" title="{{ discipline.name }}">
+            {% else %}
+                <a class="cursor-disabled" disabled>
+            {% endif %}
+                    {% if discipline.image != "" %}
+                        <img class="discipline-image" src="{{ asset('uploads/disciplines/logos/' ~ discipline.image) }}">
+                        <span class="discipline-name">{{ discipline.name }}</span>
+                    {% else %}
+                        <div class="discipline-image--null">
+                            <span>{{ discipline.name }}</span>
+                            <i class="fas fa-award"></i>
+                        </div>
+                    {% endif %}
+                </a>
+        {% endfor %}
+        </div>
+    </div>
+</div>

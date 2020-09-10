@@ -1,0 +1,56 @@
+security:
+    encoders:
+        FOS\UserBundle\Model\UserInterface: bcrypt
+
+    role_hierarchy:
+        ROLE_STUDENT:     ROLE_STUDENT
+        ROLE_PARENT:      ROLE_PARENT
+        ROLE_TEACHER:     ROLE_TEACHER
+        ROLE_ADMIN:       ROLE_ADMIN
+        ROLE_SUPER_ADMIN: ROLE_ADMIN
+        ROLE_DIFFUSION:   ROLE_DIFFUSION
+
+    providers:
+        fos_userbundle:
+            id: fos_user.user_provider.username_email
+
+    firewalls:
+        main:
+            pattern: ^/
+            form_login:
+                #login_path: fos_user_security_login
+                #check_path: fos_user_security_check
+                provider: fos_userbundle
+                csrf_token_generator: security.csrf.token_manager
+                default_target_path: /
+                # if you are using Symfony < 2.8, use the following config instead:
+                # csrf_provider: form.csrf_provider
+
+            logout:
+              path: fos_user_security_logout
+              target: /login
+            anonymous:    true
+
+            remember_me:
+                secret:      "%kernel.secret%"
+                lifetime: 2592000
+
+    access_control:
+        # https on server
+        - { path: ^/, roles: IS_AUTHENTICATED_ANONYMOUSLY, requires_channel: https }
+        - { path: ^/login$, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/register, roles: ROLE_SUPER_ADMIN }
+        - { path: ^/resetting, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/admin, roles: ROLE_SUPER_ADMIN }
+        - { path: ^/etudiants, roles: [ROLE_ADMIN, ROLE_TEACHER, ROLE_DIFFUSION] }
+        - { path: ^/etudiant, roles: [ROLE_ADMIN, ROLE_TEACHER, ROLE_STUDENT, ROLE_PARENT] }
+        - { path: ^/classes, roles: [ROLE_ADMIN, ROLE_TEACHER] }
+        - { path: ^/classe, roles: [ROLE_ADMIN, ROLE_TEACHER] }
+        - { path: ^/intervenants, roles: [ROLE_ADMIN, ROLE_TEACHER] }
+        - { path: ^/parents, roles: ROLE_ADMIN }
+        - { path: ^/appel$, roles: [ROLE_ADMIN, ROLE_TEACHER] }
+        - { path: ^/appels, roles: [ROLE_ADMIN, ROLE_TEACHER] }
+        - { path: ^/modifier$, roles: [ROLE_ADMIN, ROLE_TEACHER] }
+        - { path: ^/evaluation$, roles: [ROLE_ADMIN, ROLE_TEACHER] }
+        - { path: ^/elite, roles: [ROLE_ADMIN, ROLE_TEACHER] }
+        - { path: ^/challenger, roles: [ROLE_ADMIN, ROLE_TEACHER] }

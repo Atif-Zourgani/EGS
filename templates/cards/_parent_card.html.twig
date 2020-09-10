@@ -1,0 +1,37 @@
+<li class="card card--user flex flex--align-center" data-id="{{ parent.id }}">
+    <div class="user user--parent">
+        <div class="user-photo user-photo--null" style="background: url('{{ asset('logos/user-solid.svg')}}')">
+            <i class="fas fa-glasses"></i>
+        </div>
+    </div>
+    <div class="user-infos">
+        <span class="user-name">{{ parent.fullname }}</span>
+
+        <div class="user-links flex">
+            {% if parent.phone != "" %}
+                <a href="{{ parent.phone }}" title="{{ parent.phone }}">
+                    <i class="fas fa-phone"></i>
+                </a>
+            {% endif %}
+            {% if parent.email != "" %}
+                <a href="{{ parent.email }}" title="{{ parent.email }}">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            {% endif %}
+        </div>
+
+        <div class="parent-children">
+            <span>Enfant/s :</span>
+            <ul class="parent-children">
+                {% for student in parent.student %}
+                    <li>
+                        <a href="{{ path('student', {'student': student.id, 'firstname': student.firstname, 'lastname': student.lastname}) }}" title="{{ student.fullname }}">
+                        {{ student.fullname }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+    </div>
+</li>

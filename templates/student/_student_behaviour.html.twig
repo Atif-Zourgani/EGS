@@ -1,0 +1,120 @@
+<div class="student-behaviour flex flex--align-end flex--center">
+
+    <div class="behaviour-item">
+        <div class="behaviour-length">{{ absences|length }}</div>
+        <span>Abs</span>
+    </div>
+    <div class="behaviour-item">
+        <div class="behaviour-length">{{ delays|length }}</div>
+        <span>Rtds</span>
+    </div>
+    {#<div class="item"><span></span><p>Pro</p></div>
+    <div class="item"><span></span><p>Esport</p></div>#}
+    <div class="behaviour-item">
+        {% set points = currentPoints|last %}
+        {% if points >= 16 or points is empty %}
+            <div class="behaviour-points good">{% if points is empty %}20 {% else %}{{ points }}{% endif %} pts.</div>
+        {% elseif points < 16 and points >= 10 %}
+            <div class="behaviour-points medium">{{ points }} pts.</div>
+        {% elseif points <= 9 %}
+            <div class="behaviour-points bad">{{ points }} pts.</div>
+        {% endif %}
+        <span>Indicateur de fiabilité</span>
+    </div>
+    {% if (is_granted('ROLE_ADMIN') or is_granted('ROLE_TEACHER')) and is_mobile() == false %}
+        <div class="gamer-labels">
+            <div class="behaviour-item flex flex--align-center">
+                <form action="{{ path('elite', {'student': student.id }) }}">
+                    <label class="switch">
+                        <input class="gamer-checkbox gamer-checkbox--elite" type="checkbox" data-elite="{{ elite }}">
+                        <span class="switch-slider round"></span>
+                    </label>
+                </form>
+                <span>Elite</span>
+            </div>
+            <div class="behaviour-item flex flex--align-center">
+                <form action="{{ path('challenger', {'student': student.id }) }}">
+                    <label class="switch">
+                        <input class="gamer-checkbox gamer-checkbox--challenger" type="checkbox" data-challenger="{{ challenger }}">
+                        <span class="switch-slider round"></span>
+                    </label>
+                </form>
+                <span>Challenger</span>
+            </div>
+            <div class="behaviour-item flex flex--align-center">
+                <form action="{{ path('gamer', {'student': student.id }) }}">
+                    <label class="switch">
+                        <input class="gamer-checkbox gamer-checkbox--gamer" type="checkbox">
+                        <span class="switch-slider round"></span>
+                    </label>
+                </form>
+                <span>Gamer</span>
+            </div>
+        </div>
+    {% endif %}
+
+</div>
+
+<div class="behaviour-rules">Voir les règles</div>
+{% if is_granted('ROLE_ADMIN') or is_granted('ROLE_TEACHER') %}
+    <div class="js-student-attendance">Voir les absences et les retards</div>
+    {% include 'student/_modal_attendance.html.twig' %}
+{% endif %}
+
+<div class="rules-modal absolute-middle">
+    <i class="close-rules-modal far fa-times-circle"></i>
+    <h4 class="rules-title">Les règles</h4>
+    <p>5 retards = - 3pts.</p>
+    <p>5 absences* non justifiées = - 5pts.</p>
+
+    <div class="rules-points">
+        <p class="bold">Rappel des points :</p>
+        <ul class="rules-list">
+            <li>Entre 11 et 15 points (inclus) : plus accès aux permanences et évènements jeux à l'école.</li>
+            <li>Entre 6 et 10 points (inclus) : projet supplémentaire à rendre avec évaluation comptant dans la moyenne.</li>
+            <li>Entre 0 et 5 points (inclus) : exclusion temporaire.</li>
+        </ul>
+    </div>
+
+    <p class="absence-precision">*1 absence = 1 demi-journée</p>
+
+    <div class="absence-precision-2 flex flex--align-center">
+        <i class="fas fa-info-circle"></i>
+        <p>Les points sont remis à zéro chaque semestre.</p>
+    </div>
+
+</div>
+
+
+{% if (is_granted('ROLE_ADMIN') or is_granted('ROLE_TEACHER')) and is_mobile() == true %}
+    <hr class="m-20">
+    <div class="gamer-labels">
+        <div class="behaviour-item flex flex--align-center">
+            <form action="{{ path('elite', {'student': student.id }) }}">
+                <label class="switch">
+                    <input class="gamer-checkbox gamer-checkbox--elite" type="checkbox" data-elite="{{ elite }}">
+                    <span class="switch-slider round"></span>
+                </label>
+            </form>
+            <span>Elite</span>
+        </div>
+        <div class="behaviour-item flex flex--align-center">
+            <form action="{{ path('challenger', {'student': student.id }) }}">
+                <label class="switch">
+                    <input class="gamer-checkbox gamer-checkbox--challenger" type="checkbox" data-challenger="{{ challenger }}">
+                    <span class="switch-slider round"></span>
+                </label>
+            </form>
+            <span>Challenger</span>
+        </div>
+        <div class="behaviour-item flex flex--align-center">
+            <form action="{{ path('gamer', {'student': student.id }) }}">
+                <label class="switch">
+                    <input class="gamer-checkbox gamer-checkbox--gamer" type="checkbox">
+                    <span class="switch-slider round"></span>
+                </label>
+            </form>
+            <span>Gamer</span>
+        </div>
+    </div>
+{% endif %}

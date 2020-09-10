@@ -1,0 +1,9 @@
+<i class="fas fa-bullhorn"></i>
+<span>Appel</span>
+{% if is_mobile() == false %}
+    <i class="fas fa-angle-right"></i>
+    <span>Choisissez la date, la demi-journée et la classe</span>
+{% else %}
+    <i class="fas fa-angle-right"></i>
+    <span>Faire un choix</span>
+{% endif %}

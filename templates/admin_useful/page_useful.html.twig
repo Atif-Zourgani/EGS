@@ -1,0 +1,71 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Utilitaires{% endblock %}
+{% block metaDescriptionContent %}{% endblock %}
+
+{% set bodyClass='usefull' %}
+{% block body %}
+
+    <div class="main">
+
+        {% include 'common/_breadcrumbs.html.twig' %}
+
+        <div class="main-scrollable">
+
+            <ul class="usefull-list flex flex--wrap {% if is_mobile() == true %}flex--center{% endif %}">
+                <li class="easyadmin flex flex--center">
+                    <a href="/admin" target="_blank">
+                        <i class="fas fa-database"></i>
+                        Modifier la base de données
+                    </a>
+                </li>
+                <li class="back-up flex flex--center">
+                    <a href="{{ path('back_up') }}">
+                        <i class="fas fa-save"></i>
+                        Sauvegarder les données
+                    </a>
+                </li>
+                <li class="new-users flex flex--center">
+                    <a href="{{ path('students_without_account') }}">
+                        <i class="fas fa-user-plus"></i>
+                        Créer des utilisateurs (étudiants)
+                    </a>
+                </li>
+                <li class="disable-student flex flex--center">
+                    <a href="{{ path('admin_list_students') }}">
+                        <i class="fas fa-user-minus"></i>
+                        Désactiver des étudiants
+                    </a>
+                </li>
+                <li class="password flex flex--center">
+                    <a href="{{ path('fos_user_change_password') }}">
+                        <i class="fas fa-key"></i>
+                        Modifier votre de passe
+                    </a>
+                </li>
+                <li class="attendance flex flex--center">
+                    <a href="{{ path('attendance_percentage') }}" target="_blank">
+                        <i class="fas fa-percentage"></i>
+                        Taux de présence
+                    </a>
+                </li>
+                <li class="best-reliability flex flex--center">
+                    <a href="{{ path('students_best_reliability') }}" target="_blank">
+                        <i class="fas fa-thumbs-up"></i>
+                        Elèves avec 20 pts ou plus
+                    </a>
+                </li>
+                <li class="bad-reliability flex flex--center">
+                    <a href="{{ path('students_bad_reliability') }}" target="_blank">
+                        <i class="fas fa-thumbs-down"></i>
+                        Elèves avec moins de 15 pts
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
+
+
+{% endblock %}

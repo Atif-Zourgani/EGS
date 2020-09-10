@@ -1,0 +1,39 @@
+<i class="fas fa-backward"></i>
+
+<a class="career"
+
+    {% if student is defined %}
+
+        {% if app.request.attributes.get('_route') == 'student_discipline_specialism_career' %}
+
+            href="{{ path('student_specialism_career', {'career': career, 'student': student.id, 'specialism': specialism.id }) }}"
+
+        {% elseif app.request.attributes.get('_route') == 'student_discipline_career' %}
+
+            href="{{ path('student_career', {'career': career, 'student': student.id }) }}"
+
+        {% elseif app.request.attributes.get('_route') == 'student_discipline_pro_career' %}
+        
+            href="{{ path('student_pro_career',{'student': student.id, 'career': career, 'profession': profession.name|replace({' ': '-', 'é': 'e', 'è':'e'})}) }}"
+
+        {% endif %}
+
+    {% else %}
+
+        {% if app.request.attributes.get('_route') == 'discipline_career' %}
+
+            href="{{ path('career', {'career': career }) }}"
+
+        {% elseif app.request.attributes.get('_route') == 'discipline_specialism_career' %}
+
+            href="{{ path('specialism_career', {'career': career, 'specialism': specialism.id }) }}"
+
+        {% else %}
+
+            href="{{ path('pro_career', {'career': career, 'profession': profession.name|replace({' ': '-', 'é': 'e', 'è':'e'})}) }}"
+
+        {% endif %}
+
+    {% endif %}
+
+>Revenir au parcours</a>

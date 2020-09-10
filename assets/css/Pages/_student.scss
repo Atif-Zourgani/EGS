@@ -1,0 +1,1064 @@
+@import '../Common/vars';
+
+.user {
+  position: relative;
+  display: block;
+  &.user--student {
+    &:hover {
+      .fa-glasses {
+        opacity: 1;
+        transition: opacity .35s;
+      }
+      .user-photo {
+        display: block;
+        &:before {
+          opacity: 0.8;
+          transition: opacity .35s;
+        }
+      }
+    }
+    .user-photo {
+      &:before {
+        content: "";
+        display: block;
+        width: 125px;
+        height: 125px;
+        background: $pink;
+        opacity: 0;
+        transition: opacity .35s;
+        border-radius: 50%;
+      }
+    }
+  }
+  .fa-glasses {
+    font-size: 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: $lightGrey;
+    z-index: 3;
+    opacity: 0;
+    transition: opacity .35s;
+  }
+}
+
+.user-photo {
+  position: relative;
+  border-radius: 50%;
+  width: 125px;
+  height: 125px;
+  overflow: hidden;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  &.user-photo--null {
+    background-size: 90px !important;
+    background-position: center bottom !important;
+    background-color: $lightGrey3 !important;
+  }
+}
+
+.user--teacher {
+  .user-photo.user-photo--null {
+    background-color: $altOrange;
+  }
+}
+
+.user-section {
+  font-style: italic;
+  font-weight: $light;
+  padding-bottom: 25px;
+}
+
+.user-links {
+  margin-bottom: 10px;
+  a {
+    cursor: help;
+  }
+  i {
+    font-size: 20px;
+    margin-right: 20px;
+  }
+}
+
+.active-user {
+  background-color: $darkBlue;
+  display: flex;
+  align-items: center;
+  height: 70px;
+  padding: 10px 20px 10px 15px;
+  box-sizing: border-box;
+  .flex {
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.active-user-short {
+  font-size: 14px;
+  background-color: $lightGrey;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  margin: 0 15px 0 7px;
+}
+.active-user-name {
+  color: $lightGrey;
+  font-size: 12px;
+}
+
+/**** SINGLE STUDENT ****/
+/*******************************************/
+
+body.student {
+  h1 {
+    color: $altPink;
+  }
+  .empty {
+    line-height: 2;
+  }
+  .all-badges {
+    cursor: pointer;
+    text-decoration: underline;
+    font-style: italic;
+    font-size: 12px;
+    font-weight: $regular;
+    margin-right: 20px;
+    .fa-trophy {
+      font-size: 12px;
+      margin-right: 10px;
+    }
+  }
+  .fa-th-list {
+    color: $purple;
+  }
+  .fa-th-list, .fa-chart-pie {
+    font-size: 25px;
+    padding: 0 7px;
+  }
+  /*.badges-menu { // remove
+    select {
+      border: none;
+      border-radius: unset;
+      background-color: unset;
+      -webkit-appearance: unset;
+      option {
+      }
+      option.title {
+        font-style: italic;
+      }
+    }
+  }*/
+  .js-all-disciplines button {
+    border: 2px solid;
+    padding: 8px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    display: block;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: $medium;
+    background-color: $blue;
+    color: $white;
+    i {
+      margin-right: 10px;
+    }
+  }
+  .student-photo {
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    width: 240px;
+    height: 100%;
+    position: relative;
+  }
+  .student-reliability {
+    height: 60px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    > * {
+      width: 50%;
+    }
+    i.far {
+      color: $white;
+      font-size: 45px;
+      line-height: 60px;
+      text-align: center;
+      display: block;
+    }
+    .reliability-good, .reliability-bad {
+      &:hover {
+        transition: all .3s linear;
+      }
+    }
+    .reliability-good {
+      background-color: rgba($green, 0.7);
+      &:hover {
+        background-color: rgba($green, 1);
+      }
+    }
+    .reliability-bad {
+      background-color: rgba($orange, 0.7);
+      &:hover {
+        background-color: rgba($orange, 1);
+      }
+    }
+  }
+
+  .student-infos-ctn {
+    padding: 0 30px;
+    flex: 1;
+  }
+
+  .modal-student-attendance-ctn {
+    z-index: 30;
+    padding: 30px;
+  }
+
+  .student-attendance-title {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+
+  .student-attendance-details {
+    padding: 5px 0;
+  }
+
+  .student-attendance-date {
+    margin-right: 5px;
+  }
+
+  .student-attendance-status {
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 10px;
+      height: 1px;
+      background-color: $red;
+      margin: 0 5px;
+    }
+    i {
+      margin-right: 5px;
+    }
+  }
+
+  .student-behaviour {
+    margin-top: 20px;
+    position: relative;
+    span {
+      font-size: 16px;
+      text-align: center;
+    }
+  }
+  .behaviour-item {
+    margin: 10px 15px 10px 0;
+    text-align: center;
+  }
+  .behaviour-length, .behaviour-points {
+    height: 65px;
+    line-height: 65px;
+    margin: 0 auto 10px;
+  }
+  .behaviour-length {
+    display: block;
+    width: 65px;
+    background-color: $blue;
+    border-radius: 50%;
+    font-size: 35px;
+    color: $altGreen;
+  }
+  .behaviour-points {
+    width: 130px;
+    border-radius: 70px;
+    overflow: hidden;
+    color: $white;
+    font-size: 22px;
+    &.good {
+      background-color: $altGreen;
+    }
+    &.medium {
+      background-color: $orange;
+    }
+    &.bad {
+      background-color: $pink;
+    }
+  }
+
+  .behaviour-rules, .js-student-attendance {
+    text-align: center;
+    font-size: 11px;
+    line-height: 1.4;
+    color: #ff2e2c;
+    cursor: pointer;
+  }
+
+  .rules-modal {
+    display: none;
+    width: calc(80% - 4px);
+    border: 2px solid;
+    background-color: #ff999f;
+    z-index: 10;
+    padding: 60px 40px;
+    line-height: 1.4;
+  }
+
+  .close-rules-modal {
+    font-size: 30px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+  }
+
+  .rules-title {
+    text-align: center;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .rules-points {
+    margin: 20px 0;
+  }
+
+  .rules-list {
+    padding-top: 5px;
+  }
+
+  .absence-precision {
+    margin-top: 5px;
+    font-size: 12px;
+  }
+
+  .absence-precision-2 {
+    margin-top: 10px;
+    i {
+      margin-right: 5px;
+    }
+  }
+
+  .student-contact {
+    p {
+      font-size: 20px;
+      padding: 10px 0;
+    }
+  }
+  .section-title {
+    margin-bottom: 30px;
+  }
+}
+
+/* GAMER LABEL SWITCH CHECKBOX */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-right: 10px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.switch-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $lightRed;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.switch-slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .switch-slider {
+  background-color: $altGreen;
+}
+
+input:focus + .switch-slider {
+  box-shadow: 0 0 1px $altGreen;
+}
+
+input:checked + .switch-slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.switch-slider.round {
+  border-radius: 34px;
+}
+
+.switch-slider.round:before {
+  border-radius: 50%;
+}
+
+
+.gamer-labels {
+  margin-left: 30px;
+}
+
+.gamer-label-trophy {
+  width: 25px;
+  height: 25px;
+  margin-left: 10px;
+}
+
+.gamer-label-trophy-card {
+  width: 20px;
+  height: 20px;
+}
+
+section.student-skills,
+section.reliability,
+section.comments {
+  padding: 30px;
+}
+
+.student-career {
+  text-align: center;
+  margin: 20px;
+  width: calc(100% - 40px);
+  border-bottom: none;
+  a {
+    background-color: $purple;
+    padding: 10px 20px;
+    color: $white;
+    border-radius: 10px;
+  }
+}
+
+
+/* SECTION STUDENT INFOS SUM */
+/*************************************************/
+section.student-infos {
+  width: 100%;
+  height: 260px;
+  background-color: $lightGrey;
+}
+
+/* SECTION COMPETENCE */
+/*************************************************/
+section.student-competence {
+  padding: 30px;
+  .student-disciplines ~ .student-disciplines {
+    .js-student-discipline {
+      display: none;
+    }
+  }
+  .student-disciplines.open {
+    .fa-caret-right {
+      transform: rotate(90deg);
+    }
+    margin-bottom: 30px;
+  }
+  .category-name {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-weight: $bold;
+    cursor: pointer;
+    i {
+      margin-right: 5px;
+    }
+  }
+  .discipline-image--null {
+    padding: 20px;
+    i {
+      font-size: 50px;
+      display: block;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  }
+  .discipline-stars {
+    i {
+      display: block;
+    }
+  }
+  .js-student-discipline {
+    padding: 20px;
+    img {
+      max-height: 100px;
+      margin: 0 auto 10px;
+      display: block;
+    }
+    span.discipline-name {
+      text-align: center;
+      display: block;
+      margin-bottom: 10px;
+      max-width: 150px;
+      line-height: 1.3;
+    }
+  }
+}
+
+
+/* SECTION RELIABILITY */
+/*************************************************/
+section.reliability {
+  background-color: $lightGrey;
+}
+
+/* SECTION COMMENTS */
+/*************************************************/
+section.comments {
+  .all-comments {
+    margin-top: 20px;
+    > * {
+      width: 50%;
+      padding: 20px 20px 20px 0;
+      box-sizing: border-box;
+    }
+    .user-photo {
+      width: 90px;
+      height: 90px;
+      margin-right: 20px;
+      &.user-photo--null {
+        background-size: 70px !important;
+      }
+    }
+  }
+  .comment-ctn {
+    width: 100%;
+  }
+  .comment-teacher {
+    font-weight: $bold;
+    margin-bottom: 5px;
+  }
+  .comment-discipline {
+    font-weight: $light;
+  }
+  .comment-discipline {
+    &:after {
+      content: '-';
+      display: inline-block;
+      margin: 0 10px;
+      font-weight: $light;
+      font-size: 14px;
+    }
+  }
+  .comment-date {
+    font-weight: $light;
+    font-size: 14px;
+    font-style: italic;
+  }
+  .comment-rating {
+    margin-right: 20px;
+    margin-left: auto;
+    i {
+      color: $golden;
+      margin: 0 -1.5px;
+    }
+  }
+  .comment-text {
+    display: inline-block;
+    margin-top: 20px;
+    line-height: 1.5;
+    .fas {
+      font-size: 10px;
+    }
+    .fa-quote-left {
+      vertical-align: text-top;
+    }
+  }
+}
+
+
+.discipline {
+  img {
+    max-width: 100px;
+    height: auto;
+    max-height: 100px;
+    display: block;
+    margin: 0 auto 10px;
+  }
+}
+
+
+/* MODALE BADGES */
+/*************************************************/
+
+.modal-badges, .modal-student-attendance {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($blue, 0.9);
+  .js-close-modal {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    i {
+      text-align: center;
+      line-height: 40px;
+      font-size: 30px;
+      display: block;
+    }
+  }
+}
+
+.modal-badges-ctn, .modal-student-attendance-ctn {
+  width: 80%;
+  height: calc(80% - 100px);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $white;
+  border-bottom: 1px solid white;
+  overflow-y: scroll;
+}
+
+.modal-badges-ctn {
+  .flex {
+    padding: 30px 20px;
+    > * {
+      margin: 20px;
+      width: 130px;
+      line-height: 1.2;
+    }
+  }
+  .discipline-image {
+    max-width: 60px;
+    margin: auto;
+    display: block;
+  }
+  .discipline-name {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+  }
+  .discipline-image--null {
+    > * {
+      display: block;
+      text-align: center;
+    }
+    span {
+      margin-bottom: 10px;
+      font-size: 14px;
+      font-weight: $medium;
+    }
+    i {
+      font-size: 50px;
+    }
+  }
+}
+
+
+/* STUDENT RELIABILITY */
+/*************************************************/
+
+body.student-reliability {
+  &.negative {
+    .incident {
+      &:hover, &.active {
+        > * {
+          color: $orange;
+        }
+      }
+    }
+    .submit-incident {
+      background-color: $orange;
+    }
+  }
+  h1 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: $medium;
+    &:after {
+      content: '';
+      background-color: $blue;
+      height: 2px;
+      width: 100%;
+      margin-bottom: 3px;
+    }
+  }
+  .all-incidents {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  form {
+    i, input {
+      font-size: 80px;
+      margin: 0 auto 15px;
+      cursor: pointer;
+    }
+    span {
+      font-size: 13px;
+      font-weight: $regular;
+      line-height: 1.2;
+    }
+  }
+  .incident {
+    width: 120px;
+    height: 200px;
+    padding: 10px;
+    cursor: pointer;
+    > * {
+      cursor: pointer;
+      display: block;
+      text-align: center;
+      color: $grey;
+    }
+    &:hover, &.active {
+      > * {
+        color: $altGreen;
+      }
+    }
+    &.incident-disable, &.incident-disable:hover {
+      cursor: not-allowed;
+      > * {
+        pointer-events: none;
+        cursor: not-allowed;
+        color: rgba($lightGrey3, 0.7);
+      }
+    }
+  }
+  .submit-incident {
+    color: $white;
+    background-color: $altGreen;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    i {
+      margin: 0 !important;
+      font-size: 40px;
+    }
+    span {
+      font-weight: $regular;
+      margin-left: 20px;
+      font-size: 18px;
+    }
+  }
+  input[type=checkbox] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 80px;
+    width: 100px;
+  }
+  .incident-error {
+    text-align: center;
+    display: block;
+    color: $red;
+    font-size: 16px;
+    font-weight: $medium;
+    margin-bottom: 10px;
+  }
+}
+
+.form-widget {
+  span {
+    color: $altGreen;
+  }
+}
+
+
+/* RELIABILITY CHART */
+/*********************************************/
+
+section.reliability {
+  input[type=button] {
+    cursor: pointer;
+  }
+  .fa-calendar-alt {
+    font-size: 18px;
+  }
+}
+
+#reliability-chart {
+  padding: 20px 0;
+}
+
+
+/* PAGE CREATE NEW STUDENTS ACCOUNT */
+/*********************************************/
+
+.form-create-users {
+  margin: 50px 30px;
+}
+
+.select-all-students {
+  margin-bottom: 20px;
+}
+
+.all-students-without-account {
+  padding: 5px 0;
+  input {
+    margin-right: 10px;
+  }
+}
+
+.btn-new-users, .btn-disable-students {
+  margin: 40px 20px;
+  background-color: $blue;
+  color: white;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+  &:hover {
+    background-color: rgba($blue, 0.9);
+  }
+}
+
+
+
+/* STUDENT FEED */
+
+.feed-overlay {
+  height: 100%;
+  width: 1000px;
+  position: absolute;
+  top: 0;
+  right: -1000px;
+  background-color: #141921;
+  transition: all 0.5s;
+  z-index: 22;
+}
+
+.feed-top {
+  .select-designed {
+    border: 1px solid $white;
+    margin-left: auto;
+    margin-right: 30px;
+  }
+}
+
+.feed-overlay-body {
+  height: calc(100% - 70px);
+  overflow: scroll;
+  .select-designed {
+    border: 1px solid $white;
+    > * {
+      color: $white;
+      font-size: 14px;
+    }
+  }
+}
+
+#feed-cat {
+  color: white;
+  font-style: italic;
+  font-size: 16px;
+  font-weight: 200;
+}
+
+.feed-top {
+  background-color: $altGreen;
+  height: 70px;
+  color: $white;
+  i {
+    font-size: 40px;
+    padding: 0 15px;
+    color: $lightGrey;
+  }
+  span {
+    font-size: 20px;
+    letter-spacing: 0.8px;
+    font-weight: 500;
+  }
+}
+
+.close-feed {
+  background-color: #e34d25;
+  height: 100%;
+  cursor: pointer;
+}
+
+.feed-img {
+  height: 40px;
+  margin: 0 10px;
+}
+
+.breadcrumbs .feed-img {
+  margin-left: auto;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.feed {
+  margin: 30px;
+  position: relative;
+}
+
+.feed-empty {
+  color: $white;
+  font-style: italic;
+  margin: 30px;
+}
+
+.feed-comment {
+  background-color: $white;
+  border-radius: 5px;
+  color: $darkBlue;
+  padding: 30px;
+  line-height: 1.3;
+  position: relative;
+}
+
+.feed-triangle {
+  position: absolute;
+  bottom: -40px;
+  right: 30px;
+  background-image: url("../Images/triangle.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 50px;
+}
+
+.feed-infos {
+  color: $white;
+  padding: 15px;
+}
+
+.feed-date {
+  font-weight: bold;
+}
+.feed-cat {
+  font-weight: lighter;
+  font-style: italic;
+}
+.feed-author {
+  font-weight: 500;
+  font-size: 20px;
+  margin-right: 70px;
+}
+
+.blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.6);
+  display: none;
+  z-index: 20;
+}
+
+
+/* FEED FORM */
+
+.feed-overlay {
+  label {
+      color: $white;
+  }
+  .ck-content {
+    height: 300px;
+  }
+}
+
+
+.feed-form {
+  margin: 30px;
+}
+
+.feed-form-item {
+  margin-bottom: 10px;
+}
+
+.feed-form-title {
+  color: $white;
+  text-align: center;
+  margin-bottom: 20px;
+  letter-spacing: 1.2px;
+  font-size: 22px;
+}
+
+
+.feed-form-btn {
+  display: block;
+  margin: 20px auto 100px;
+  background-color: $altGreen;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.feed-delete {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  button {
+    font-size: 14px;
+  }
+  i {
+    margin-left: 10px;
+  }
+}
+
+
+/* PAGE FEED */
+
+.feed-page {
+  background-color: $lightGrey;
+  .main-scrollable {
+    padding: 30px;
+    box-sizing: border-box;
+  }
+  .select2 {
+    width: 250px !important;
+  }
+  .ck-content {
+    height: 500px;
+  }
+  .ck-editor {
+    margin: 30px 0 30px !important;
+  }
+  .select-designed {
+    width: 150px;
+    padding: 0 35px 0 10px;
+    select {
+      width: calc(100% + 30px);
+      text-align: left;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  }
+  .feed-input-all, .select-designed {
+    margin-right: 50px;
+  }
+  label {
+    margin: 10px 0;
+    display: inline-block;
+  }
+}

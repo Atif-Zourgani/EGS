@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les étudiants{% endblock %}
+{% block metaDescriptionContent %}{% endblock %}
+
+{% set bodyClass = 'all-students' %}
+{% block body %}
+
+    <div class="main">
+
+        {% include 'common/_searchbar.html.twig' %}
+
+        <div class="main-scrollable">
+
+            <img id="loader" src="{{ asset('logos/loader-pacman.gif') }}" style="display: none"/>
+
+            <div id="no-result"></div>
+
+            <ul class="flex flex--wrap flex--center cards-container">
+
+                {% for student in students %}
+                    {{ include('cards/_student_card.html.twig') }}
+                {% endfor %}
+
+            </ul>
+
+            {% if students|length > 50 %}
+                <div id="load-more">Charger plus d'étudiants</div>
+            {% endif %}
+
+        </div>
+
+    </div>
+
+
+{% endblock %}

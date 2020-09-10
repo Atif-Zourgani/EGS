@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les étudiants en danger{% endblock %}
+
+{% block reload %}
+    <meta http-equiv="refresh" content="10800"/>
+{% endblock %}
+
+{% set bodyClass = 'students-points' %}
+
+{% block body %}
+
+    <h1 class="reliability-title flex flex--align-center flex--center">
+        <i class="fas fa-skull-crossbones"></i>
+        Les étudiants en danger
+        <i class="fas fa-skull-crossbones"></i>
+    </h1>
+
+    {% if is_mobile() == false %}
+    <div class="slideshow-students-points">
+        <div class="slider">
+    {% endif %}
+            <ul class="flex flex--wrap flex--center flex--align-content-start reliability-list">
+                {% for student in students %}
+                    <li class="reliability-student">
+                        <a class="user user--student" href="{{ path('student', {'student': student.id, 'firstname': student.firstname, 'lastname': student.lastname}) }}">
+                            {% if student.image != "" %}
+                                <div class="user-photo" style="background: url('{{ asset('uploads/students/photos/' ~ student.image)|imagine_filter('user_photo') }}')">
+                                    <i class="fas fa-glasses"></i>
+                                </div>
+                            {% else %}
+                                <div class="user-photo user-photo--null" style="background: url('{{ asset('logos/user-secret-solid.svg')}}')">
+                                    <i class="fas fa-glasses"></i>
+                                </div>
+                            {% endif %}
+                            <div class="reliability-points red absolute-top">{{ student.points }}</div>
+                        </a>
+                        <p class="reliability-student-name">{{ student.firstname }} <br> {{ student.lastname }}</p>
+                    </li>
+                {% endfor %}
+            </ul>
+    {% if is_mobile() == false %}
+        </div>
+    </div>
+    {% endif %}
+
+
+    {% block javascripts %}
+        <script src="{{ asset('build/js/diffusion.js') }}"></script>
+    {% endblock %}
+
+{% endblock %}

@@ -1,0 +1,235 @@
+
+/* PAGE TO SELECT A SECTION CALL */
+/*********************************************/
+
+body.select-call {
+  form {
+    border-bottom: 2px solid $darkBlue;
+    width: 100%;
+    .fa-calendar-alt {
+      margin: 0 20px;
+      font-size: 18px;
+    }
+  }
+  input[name="date"] {
+    width: 100px;
+    font-size: 18px;
+    font-weight: $medium;
+    cursor: pointer;
+  }
+  .block-buttons {
+    > * {
+      font-size: 40px;
+      color: $white;
+      width: 200px;
+      cursor: pointer;
+    }
+  }
+  button[type=submit] {
+    background-color: $altGreen;
+  }
+  .update-call {
+    background-color: $orange;
+    i {
+      text-align: center;
+      display: block;
+      padding: 20px 0;
+    }
+  }
+}
+
+
+/* PAGE TO CREATE / UPDATE A CALL */
+/*********************************************/
+
+body.create-call, body.update-call {
+  form {
+    padding: 20px;
+  }
+  input {
+    padding: 10px;
+    -webkit-appearance: none;
+    display: block;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    &:checked {
+      border-radius: 50%;
+      &:before {
+        color: $lightGrey;
+        font-size: 24px;
+      }
+    }
+  }
+  .input-status {
+    display: flex;
+    align-items: center;
+    input {
+      &:nth-of-type(1) {
+        color: $altGreen;
+        &:checked {
+          background-color: $altGreen;
+        }
+      }
+      &:nth-of-type(2) {
+        color: $orange;
+        &:checked {
+          background-color: $orange;
+        }
+      }
+      &:nth-of-type(3) {
+        color: $altOrange3;
+        &:checked {
+          background-color: $altOrange3;
+        }
+      }
+      &:nth-of-type(4) {
+        color: $darkRed;
+        &:checked {
+          background-color: $darkRed;
+        }
+      }
+      &:hover {
+        font-size: 24px;
+      }
+    }
+  }
+
+  #roll_call_studentCalls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px 0;
+    > * {
+      padding: 15px;
+    }
+  }
+  .user-name {
+    margin: 10px 0;
+    span {
+      text-align: center;
+      display: block;
+      line-height: 1.2;
+    }
+  }
+  .user-photo {
+    margin: auto;
+  }
+  .user.user--student .user-photo::before {
+    display: none;
+  }
+  .justified-call {
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: $lightGrey;
+    span {
+      margin-bottom: 5px;
+      text-align: center;
+      display: inline-block;
+      width: 100%;
+    }
+  }
+}
+
+/* PAGE TO DISPLAY ALL CALLS */
+/*********************************************/
+
+body.display-calls {
+  .no-result {
+    margin-top: 30px;
+  }
+  ul.list-call {
+    border-bottom: 2px solid $darkBlue;
+    padding: 20px;
+    li {
+      padding: 0 20px;
+      &:nth-of-type(1) {
+        width: 200px;
+      }
+      &:nth-of-type(2) {
+        width: 100px;
+      }
+      &:last-of-type {
+        color: $rust;
+      }
+    }
+  }
+  .call-details {
+    display: none;
+    border-bottom: 2px solid $darkBlue;
+    padding: 10px 0;
+    ul {
+      line-height: 1.8;
+      width: 100%;
+      &:not(:last-of-type) {
+        border-bottom: 1px dashed $darkBlue;
+      }
+    }
+    li {
+      &:first-of-type {
+        width: 250px;
+        padding-left: 20px;
+      }
+      &.status-present {
+        color: $altGreen;
+      }
+      &.status-late {
+        color: $altOrange2;
+      }
+      &.status-absent {
+        color: $altOrange3;
+      }
+      &.status-justified-absence {
+        color: $darkRed;
+      }
+    }
+  }
+  .js-see-call {
+    color: $green;
+    .fa-angle-down {
+      padding-left: 15px;
+    }
+  }
+  .call-filters {
+    padding: 40px;
+    border-bottom: 2px solid $darkBlue;
+    .select-designed, select {
+      width: 110px;
+    }
+  }
+  .no-calls {
+    display: block;
+    text-align: center;
+    margin-top: 50px;
+    color: $altPink;
+  }
+}
+
+
+/* LEGEND */
+/*********************************************/
+
+.legend-call {
+  padding: 20px;
+  div {
+    padding: 10px;
+  }
+  i {
+    margin-right: 5px;
+  }
+  .fa-check-circle {
+    color: $altGreen;
+  }
+  .fa-clock {
+    color: $altOrange;
+  }
+  .fa-times-circle {
+    color: $altOrange3
+  }
+  .fa-smile {
+    color: $darkRed;
+  }
+}

@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les classes{% endblock %}
+
+{% block metaDescriptionContent %}{% endblock %}
+
+
+{% set bodyClass='all-sections' %}
+
+{% block body %}
+
+    <div class="main">
+
+        {{  include ('common/_searchbar.html.twig') }}
+
+        <div class="main-scrollable">
+
+            <img id="loader" src="{{ asset('logos/loader-pacman.gif') }}" style="display: none"/>
+
+            <div id="no-result"></div>
+
+            <ul class="flex flex--wrap flex--center cards-container">
+                {% for section in sections %}
+                    {{ include ('cards/_section_card.html.twig') }}
+                {% endfor %}
+            </ul>
+
+            {% if sections|length > 50 %}
+                <div id="load-more">Charger plus de classes</div>
+            {% endif %}
+
+        </div>
+    </div>
+
+{% endblock %}

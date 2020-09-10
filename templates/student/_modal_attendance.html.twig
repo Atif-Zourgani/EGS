@@ -1,0 +1,48 @@
+<div class="modal-student-attendance">
+
+    <a class="js-close-modal" title="Fermer la fenêtre"><i class="fas fa-times"></i></a>
+
+    <div class="modal-student-attendance-ctn">
+
+        <h5 class="student-attendance-title">Absences et retards de {{ student.firstname }}</h5>
+
+        <ul class="student-attendance">
+
+            {% if attendance is empty %}
+                <p class="text-center">Aucune absence ou retard enregistrés.</p>
+            {% endif %}
+
+            {% for attendance in attendance %}
+                <li class="student-attendance-details flex flex--align-center">
+                    <span class="student-attendance-status red flex flex--align-center">
+                        {% if attendance.status  == 'late' %}
+                            <i class="far fa-times-circle"></i>
+                            Retard
+                        {% elseif attendance.status == 'absent' %}
+                            <i class="far fa-clock"></i>
+                            Absence
+                        {% elseif attendance.status == 'justified' %}
+                            <i class="far fa-smile"></i>
+                            Absence justifiée
+                        {% endif %}
+                    </span>
+
+                    {% if is_mobile() %}
+                        <span class="student-attendance-date">{{ attendance.rollCall.createdAt|date('d/m/y') }}</span>
+                    {% else %}
+                        <span class="student-attendance-date">{{ attendance.rollCall.createdAt|localizeddate('full', 'none')|capitalize }}</span>
+                    {% endif %}
+
+                    {% if attendance.rollCall.halfDay == 'am' %}
+                        <span> - Matin</span>
+                    {% else %}
+                        <span> - Après-midi</span>
+                    {% endif %}
+                </li>
+            {% endfor %}
+
+        </ul>
+
+    </div>
+
+</div>

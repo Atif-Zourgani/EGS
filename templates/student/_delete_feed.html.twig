@@ -1,0 +1,5 @@
+<form class="feed-delete flex flex--align-center" method="post" action="{{ path('feed_delete', {'id': feed.id, 'student': student.id}) }}" onsubmit="return confirm('Etes-vous sûr(e) de vouloir supprimer ce message ?');">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ feed.id) }}">
+    <button class="red">Supprimer<i class="fas fa-times"></i></button>
+</form>

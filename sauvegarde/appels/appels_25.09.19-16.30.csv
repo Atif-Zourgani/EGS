@@ -1,0 +1,562 @@
+Nom,Prénom,Classe,Date,Demi-journée,Statut
+Bardou,Théo,"Bachelor 1 A","09 05 2019",Après-midi,Absent
+Bardou,Théo,"Bachelor 1 A","10 05 2019",matin,Absent
+Bardou,Théo,"Bachelor 1 A","13 05 2019",matin,Absent
+Bardou,Théo,"Bachelor 1 A","15 05 2019",matin,Absent
+Bardou,Théo,"Bachelor 1 A","17 05 2019",matin,Absent
+Bardou,Théo,"Bachelor 1 A","20 05 2019",matin,Absent
+Bardou,Théo,"Bachelor 1 A","20 05 2019",Après-midi,Absent
+Bardou,Théo,"Bachelor 1 A","22 05 2019",Après-midi,Absent
+Bardou,Théo,"Bachelor 1 A","27 05 2019",Après-midi,Absent
+Barneoud,Thibaud-Antoine,"Bachelor 1 A","15 05 2019",matin,"En retard"
+Barneoud,Thibaud-Antoine,"Bachelor 1 A","16 05 2019",Après-midi,Absent
+Barneoud,Thibaud-Antoine,"Bachelor 1 A","17 05 2019",matin,Absent
+Barneoud,Thibaud-Antoine,"Bachelor 1 A","20 05 2019",matin,Absent
+Barneoud,Thibaud-Antoine,"Bachelor 1 A","20 05 2019",Après-midi,Absent
+Barneoud,Thibaud-Antoine,"Bachelor 1 A","22 05 2019",Après-midi,Absent
+Barneoud,Thibaud-Antoine,"Bachelor 1 A","23 05 2019",matin,Absent
+Barneoud,Thibaud-Antoine,"Bachelor 1 A","24 05 2019",matin,Absent
+Barneoud,Thibaud-Antoine,"Bachelor 1 A","27 05 2019",Après-midi,Absent
+Boëgler,Jean-Emmanuel,"Bachelor 1 A","15 05 2019",matin,Absent
+Boëgler,Jean-Emmanuel,"Bachelor 1 A","24 05 2019",matin,Absent
+Boukhari,Sofiane,"Bachelor 1 A","09 05 2019",Après-midi,Absent
+Boukhari,Sofiane,"Bachelor 1 A","15 05 2019",matin,Absent
+Boukhari,Sofiane,"Bachelor 1 A","16 05 2019",matin,Absent
+Boukhari,Sofiane,"Bachelor 1 A","16 05 2019",Après-midi,Absent
+Boukhari,Sofiane,"Bachelor 1 A","17 05 2019",matin,Absent
+Boukhari,Sofiane,"Bachelor 1 A","20 05 2019",matin,Absent
+Boukhari,Sofiane,"Bachelor 1 A","27 05 2019",Après-midi,Absent
+Butin,Léo,"Bachelor 1 A","13 05 2019",matin,"En retard"
+Butin,Léo,"Bachelor 1 A","15 05 2019",matin,Absent
+Butin,Léo,"Bachelor 1 A","27 05 2019",Après-midi,Absent
+Calon,Martin,"Bachelor 1 A","10 05 2019",matin,Absent
+Calon,Martin,"Bachelor 1 A","16 05 2019",matin,Absent
+Calon,Martin,"Bachelor 1 A","16 05 2019",Après-midi,Absent
+Deret,Kilian,"Bachelor 1 A","15 05 2019",matin,"En retard"
+Deret,Kilian,"Bachelor 1 A","27 05 2019",Après-midi,Absent
+Derly,Florentin,"Bachelor 1 A","17 05 2019",matin,"En retard"
+"Dupuis Markowski",Jimmy,"Bachelor 1 A","09 05 2019",Après-midi,Absent
+"Dupuis Markowski",Jimmy,"Bachelor 1 A","10 05 2019",matin,Absent
+"Dupuis Markowski",Jimmy,"Bachelor 1 A","13 05 2019",matin,Absent
+"Dupuis Markowski",Jimmy,"Bachelor 1 A","15 05 2019",matin,Absent
+"Dupuis Markowski",Jimmy,"Bachelor 1 A","16 05 2019",Après-midi,Absent
+"Dupuis Markowski",Jimmy,"Bachelor 1 A","17 05 2019",matin,Absent
+"Dupuis Markowski",Jimmy,"Bachelor 1 A","20 05 2019",matin,Absent
+"Dupuis Markowski",Jimmy,"Bachelor 1 A","20 05 2019",Après-midi,Absent
+"Dupuis Markowski",Jimmy,"Bachelor 1 A","22 05 2019",Après-midi,Absent
+"Dupuis Markowski",Jimmy,"Bachelor 1 A","23 05 2019",matin,Absent
+"Dupuis Markowski",Jimmy,"Bachelor 1 A","24 05 2019",matin,Absent
+"Dupuis Markowski",Jimmy,"Bachelor 1 A","27 05 2019",Après-midi,Absent
+Godo,Valentin,"Bachelor 1 A","09 05 2019",Après-midi,Absent
+Godo,Valentin,"Bachelor 1 A","10 05 2019",matin,Absent
+Godo,Valentin,"Bachelor 1 A","20 05 2019",matin,Absent
+Godo,Valentin,"Bachelor 1 A","24 05 2019",matin,Absent
+Godo,Valentin,"Bachelor 1 A","27 05 2019",Après-midi,Absent
+Goncalves,Julian,"Bachelor 1 A","16 05 2019",matin,Absent
+Goncalves,Julian,"Bachelor 1 A","24 05 2019",matin,Absent
+Ithurriague,Jokin,"Bachelor 1 A","09 05 2019",Après-midi,Absent
+Ithurriague,Jokin,"Bachelor 1 A","15 05 2019",matin,Absent
+Ithurriague,Jokin,"Bachelor 1 A","16 05 2019",matin,Absent
+Ithurriague,Jokin,"Bachelor 1 A","16 05 2019",Après-midi,Absent
+Ithurriague,Jokin,"Bachelor 1 A","20 05 2019",matin,Absent
+Ithurriague,Jokin,"Bachelor 1 A","20 05 2019",Après-midi,Absent
+Ithurriague,Jokin,"Bachelor 1 A","24 05 2019",matin,Absent
+Ithurriague,Jokin,"Bachelor 1 A","27 05 2019",Après-midi,"En retard"
+Levacher,Scott,"Bachelor 1 A","09 05 2019",Après-midi,Absent
+Levacher,Scott,"Bachelor 1 A","10 05 2019",matin,Absent
+Levacher,Scott,"Bachelor 1 A","13 05 2019",matin,Absent
+Levacher,Scott,"Bachelor 1 A","15 05 2019",matin,Absent
+Levacher,Scott,"Bachelor 1 A","16 05 2019",matin,Absent
+Levacher,Scott,"Bachelor 1 A","16 05 2019",Après-midi,Absent
+Levacher,Scott,"Bachelor 1 A","17 05 2019",matin,Absent
+Levacher,Scott,"Bachelor 1 A","20 05 2019",matin,Absent
+Levacher,Scott,"Bachelor 1 A","20 05 2019",Après-midi,Absent
+Levacher,Scott,"Bachelor 1 A","22 05 2019",Après-midi,Absent
+Levacher,Scott,"Bachelor 1 A","23 05 2019",matin,Absent
+Levacher,Scott,"Bachelor 1 A","24 05 2019",matin,Absent
+Levacher,Scott,"Bachelor 1 A","27 05 2019",Après-midi,Absent
+Loualiche,Benjamin,"Bachelor 1 A","10 05 2019",matin,Absent
+Machuret,Paul,"Bachelor 1 A","16 05 2019",Après-midi,Absent
+Machuret,Paul,"Bachelor 1 A","20 05 2019",Après-midi,Absent
+Mengual,Loic,"Bachelor 1 A","16 05 2019",Après-midi,Absent
+Mengual,Loic,"Bachelor 1 A","20 05 2019",Après-midi,Absent
+Moulherat,Kévin,"Bachelor 1 A","09 05 2019",Après-midi,Absent
+Moulherat,Kévin,"Bachelor 1 A","10 05 2019",matin,Absent
+Moulherat,Kévin,"Bachelor 1 A","16 05 2019",Après-midi,Absent
+Moulherat,Kévin,"Bachelor 1 A","17 05 2019",matin,Absent
+Moulherat,Kévin,"Bachelor 1 A","20 05 2019",matin,Absent
+Moulherat,Kévin,"Bachelor 1 A","20 05 2019",Après-midi,Absent
+Moulherat,Kévin,"Bachelor 1 A","22 05 2019",Après-midi,Absent
+Moulherat,Kévin,"Bachelor 1 A","23 05 2019",matin,Absent
+Moulherat,Kévin,"Bachelor 1 A","24 05 2019",matin,Absent
+Moulherat,Kévin,"Bachelor 1 A","27 05 2019",Après-midi,Absent
+Muzrukov,Boris,"Bachelor 1 A","09 05 2019",Après-midi,Absent
+Muzrukov,Boris,"Bachelor 1 A","10 05 2019",matin,Absent
+Muzrukov,Boris,"Bachelor 1 A","17 05 2019",matin,"En retard"
+Muzrukov,Boris,"Bachelor 1 A","20 05 2019",matin,Absent
+Muzrukov,Boris,"Bachelor 1 A","20 05 2019",Après-midi,Absent
+Muzrukov,Boris,"Bachelor 1 A","23 05 2019",matin,Absent
+Muzrukov,Boris,"Bachelor 1 A","24 05 2019",matin,Absent
+Vignali,Patrick,"Bachelor 1 A","16 05 2019",matin,Absent
+Vignali,Patrick,"Bachelor 1 A","24 05 2019",matin,Absent
+Vivier,Jérémie,"Bachelor 1 A","24 05 2019",matin,Absent
+Zenateri,Yannis,"Bachelor 1 A","09 05 2019",Après-midi,Absent
+Zenateri,Yannis,"Bachelor 1 A","10 05 2019",matin,Absent
+Zenateri,Yannis,"Bachelor 1 A","13 05 2019",matin,Absent
+Zenateri,Yannis,"Bachelor 1 A","15 05 2019",matin,Absent
+Zenateri,Yannis,"Bachelor 1 A","16 05 2019",matin,Absent
+Zenateri,Yannis,"Bachelor 1 A","16 05 2019",Après-midi,Absent
+Zenateri,Yannis,"Bachelor 1 A","17 05 2019",matin,Absent
+Zenateri,Yannis,"Bachelor 1 A","20 05 2019",matin,Absent
+Zenateri,Yannis,"Bachelor 1 A","20 05 2019",Après-midi,Absent
+Zenateri,Yannis,"Bachelor 1 A","22 05 2019",Après-midi,Absent
+Zenateri,Yannis,"Bachelor 1 A","23 05 2019",matin,Absent
+Zenateri,Yannis,"Bachelor 1 A","24 05 2019",matin,Absent
+Zenateri,Yannis,"Bachelor 1 A","27 05 2019",Après-midi,Absent
+Belloeil,Hugo,"Bachelor 1 B","09 05 2019",Après-midi,Absent
+Belloeil,Hugo,"Bachelor 1 B","10 05 2019",Après-midi,Absent
+Belloeil,Hugo,"Bachelor 1 B","10 05 2019",matin,Absent
+Belloeil,Hugo,"Bachelor 1 B","13 05 2019",matin,Absent
+Belloeil,Hugo,"Bachelor 1 B","13 05 2019",Après-midi,Absent
+Belloeil,Hugo,"Bachelor 1 B","14 05 2019",matin,Absent
+Belloeil,Hugo,"Bachelor 1 B","15 05 2019",matin,Absent
+Belloeil,Hugo,"Bachelor 1 B","15 05 2019",Après-midi,Absent
+Belloeil,Hugo,"Bachelor 1 B","16 05 2019",matin,Absent
+Belloeil,Hugo,"Bachelor 1 B","16 05 2019",Après-midi,Absent
+Belloeil,Hugo,"Bachelor 1 B","17 05 2019",matin,Absent
+Belloeil,Hugo,"Bachelor 1 B","17 05 2019",Après-midi,Absent
+Belloeil,Hugo,"Bachelor 1 B","20 05 2019",matin,Absent
+Belloeil,Hugo,"Bachelor 1 B","20 05 2019",Après-midi,Absent
+Belloeil,Hugo,"Bachelor 1 B","21 05 2019",matin,Absent
+Belloeil,Hugo,"Bachelor 1 B","21 05 2019",Après-midi,Absent
+Belloeil,Hugo,"Bachelor 1 B","22 05 2019",matin,Absent
+Belloeil,Hugo,"Bachelor 1 B","22 05 2019",Après-midi,Absent
+Belloeil,Hugo,"Bachelor 1 B","23 05 2019",matin,Absent
+Belloeil,Hugo,"Bachelor 1 B","23 05 2019",Après-midi,Absent
+Belloeil,Hugo,"Bachelor 1 B","24 05 2019",matin,Absent
+Belloeil,Hugo,"Bachelor 1 B","24 05 2019",Après-midi,Absent
+Belloeil,Hugo,"Bachelor 1 B","27 05 2019",Après-midi,Absent
+Belloeil,Hugo,"Bachelor 1 B","28 05 2019",matin,Absent
+Belloeil,Hugo,"Bachelor 1 B","28 05 2019",Après-midi,Absent
+Belloeil,Hugo,"Bachelor 1 B","29 05 2019",matin,Absent
+Belloeil,Hugo,"Bachelor 1 B","29 05 2019",Après-midi,Absent
+Bérard,Adrien,"Bachelor 1 B","09 05 2019",Après-midi,Absent
+Bérard,Adrien,"Bachelor 1 B","10 05 2019",matin,"En retard"
+Bérard,Adrien,"Bachelor 1 B","15 05 2019",matin,"En retard"
+Bérard,Adrien,"Bachelor 1 B","16 05 2019",Après-midi,Absent
+Bérard,Adrien,"Bachelor 1 B","22 05 2019",matin,Absent
+Bérard,Adrien,"Bachelor 1 B","22 05 2019",Après-midi,Absent
+Bérard,Adrien,"Bachelor 1 B","27 05 2019",Après-midi,Absent
+Bérard,Adrien,"Bachelor 1 B","28 05 2019",matin,"En retard"
+Bérard,Adrien,"Bachelor 1 B","29 05 2019",matin,Absent
+Bérard,Adrien,"Bachelor 1 B","29 05 2019",Après-midi,Absent
+Boulanger,Hugo,"Bachelor 1 B","16 05 2019",matin,"En retard"
+Boulanger,Hugo,"Bachelor 1 B","17 05 2019",matin,"En retard"
+Boulanger,Hugo,"Bachelor 1 B","22 05 2019",matin,Absent
+Boulanger,Hugo,"Bachelor 1 B","24 05 2019",matin,"En retard"
+Boulanger,Hugo,"Bachelor 1 B","27 05 2019",Après-midi,Absent
+Boulanger,Hugo,"Bachelor 1 B","28 05 2019",matin,Absent
+Boulanger,Hugo,"Bachelor 1 B","28 05 2019",Après-midi,Absent
+Boulanger,Hugo,"Bachelor 1 B","29 05 2019",matin,Absent
+Boulanger,Hugo,"Bachelor 1 B","29 05 2019",Après-midi,Absent
+Cancalon,Léo,"Bachelor 1 B","09 05 2019",Après-midi,"Absence justifiée"
+Cancalon,Léo,"Bachelor 1 B","10 05 2019",matin,"Absence justifiée"
+Cancalon,Léo,"Bachelor 1 B","10 05 2019",Après-midi,"Absence justifiée"
+Cancalon,Léo,"Bachelor 1 B","13 05 2019",matin,"Absence justifiée"
+Cancalon,Léo,"Bachelor 1 B","13 05 2019",Après-midi,"Absence justifiée"
+Cancalon,Léo,"Bachelor 1 B","14 05 2019",matin,"Absence justifiée"
+Cancalon,Léo,"Bachelor 1 B","15 05 2019",matin,"Absence justifiée"
+Cancalon,Léo,"Bachelor 1 B","15 05 2019",Après-midi,"Absence justifiée"
+Cancalon,Léo,"Bachelor 1 B","16 05 2019",Après-midi,"Absence justifiée"
+Cancalon,Léo,"Bachelor 1 B","16 05 2019",matin,"Absence justifiée"
+Cancalon,Léo,"Bachelor 1 B","17 05 2019",matin,"Absence justifiée"
+Cancalon,Léo,"Bachelor 1 B","17 05 2019",Après-midi,"Absence justifiée"
+Cancalon,Léo,"Bachelor 1 B","20 05 2019",matin,"Absence justifiée"
+Cancalon,Léo,"Bachelor 1 B","20 05 2019",Après-midi,"Absence justifiée"
+Cancalon,Léo,"Bachelor 1 B","21 05 2019",matin,"Absence justifiée"
+Cancalon,Léo,"Bachelor 1 B","21 05 2019",Après-midi,"Absence justifiée"
+Cancalon,Léo,"Bachelor 1 B","22 05 2019",matin,"Absence justifiée"
+Cancalon,Léo,"Bachelor 1 B","22 05 2019",Après-midi,"Absence justifiée"
+Cancalon,Léo,"Bachelor 1 B","23 05 2019",matin,"Absence justifiée"
+Cancalon,Léo,"Bachelor 1 B","23 05 2019",Après-midi,"Absence justifiée"
+Cancalon,Léo,"Bachelor 1 B","24 05 2019",matin,"Absence justifiée"
+Cancalon,Léo,"Bachelor 1 B","24 05 2019",Après-midi,"Absence justifiée"
+Cancalon,Léo,"Bachelor 1 B","27 05 2019",Après-midi,"Absence justifiée"
+Cancalon,Léo,"Bachelor 1 B","28 05 2019",matin,"Absence justifiée"
+Cancalon,Léo,"Bachelor 1 B","28 05 2019",Après-midi,"Absence justifiée"
+Cancalon,Léo,"Bachelor 1 B","29 05 2019",matin,"Absence justifiée"
+Cancalon,Léo,"Bachelor 1 B","29 05 2019",Après-midi,"Absence justifiée"
+Cardetas,Julien,"Bachelor 1 B","10 05 2019",matin,"En retard"
+Cardetas,Julien,"Bachelor 1 B","13 05 2019",matin,Absent
+Cardetas,Julien,"Bachelor 1 B","13 05 2019",Après-midi,Absent
+Cardetas,Julien,"Bachelor 1 B","16 05 2019",matin,Absent
+Cardetas,Julien,"Bachelor 1 B","17 05 2019",matin,"En retard"
+Cardetas,Julien,"Bachelor 1 B","21 05 2019",matin,"En retard"
+Cardetas,Julien,"Bachelor 1 B","22 05 2019",matin,Absent
+Cardetas,Julien,"Bachelor 1 B","22 05 2019",Après-midi,Absent
+Cardetas,Julien,"Bachelor 1 B","23 05 2019",matin,"En retard"
+Cardetas,Julien,"Bachelor 1 B","24 05 2019",matin,"En retard"
+Cardetas,Julien,"Bachelor 1 B","27 05 2019",Après-midi,Absent
+Cardetas,Julien,"Bachelor 1 B","28 05 2019",matin,Absent
+Cardetas,Julien,"Bachelor 1 B","28 05 2019",Après-midi,Absent
+Cardetas,Julien,"Bachelor 1 B","29 05 2019",Après-midi,Absent
+Cardetas,Julien,"Bachelor 1 B","29 05 2019",matin,Absent
+Carlo,Nicola,"Bachelor 1 B","14 05 2019",matin,Absent
+Carlo,Nicola,"Bachelor 1 B","15 05 2019",matin,Absent
+Carlo,Nicola,"Bachelor 1 B","15 05 2019",Après-midi,Absent
+Carlo,Nicola,"Bachelor 1 B","16 05 2019",matin,Absent
+Carlo,Nicola,"Bachelor 1 B","16 05 2019",Après-midi,Absent
+Carlo,Nicola,"Bachelor 1 B","17 05 2019",matin,Absent
+Carlo,Nicola,"Bachelor 1 B","17 05 2019",Après-midi,Absent
+Carlo,Nicola,"Bachelor 1 B","20 05 2019",matin,Absent
+Carlo,Nicola,"Bachelor 1 B","20 05 2019",Après-midi,Absent
+Carlo,Nicola,"Bachelor 1 B","22 05 2019",Après-midi,Absent
+Carlo,Nicola,"Bachelor 1 B","22 05 2019",matin,Absent
+Carlo,Nicola,"Bachelor 1 B","23 05 2019",matin,Absent
+Carlo,Nicola,"Bachelor 1 B","23 05 2019",Après-midi,"En retard"
+Carlo,Nicola,"Bachelor 1 B","24 05 2019",matin,Absent
+Carlo,Nicola,"Bachelor 1 B","27 05 2019",Après-midi,Absent
+Carlo,Nicola,"Bachelor 1 B","28 05 2019",matin,Absent
+Carlo,Nicola,"Bachelor 1 B","29 05 2019",matin,Absent
+Carlo,Nicola,"Bachelor 1 B","29 05 2019",Après-midi,Absent
+Charruyer,Dylan,"Bachelor 1 B","09 05 2019",Après-midi,Absent
+Charruyer,Dylan,"Bachelor 1 B","10 05 2019",Après-midi,Absent
+Charruyer,Dylan,"Bachelor 1 B","10 05 2019",matin,Absent
+Charruyer,Dylan,"Bachelor 1 B","13 05 2019",matin,Absent
+Charruyer,Dylan,"Bachelor 1 B","13 05 2019",Après-midi,Absent
+Charruyer,Dylan,"Bachelor 1 B","14 05 2019",matin,Absent
+Charruyer,Dylan,"Bachelor 1 B","15 05 2019",matin,Absent
+Charruyer,Dylan,"Bachelor 1 B","15 05 2019",Après-midi,Absent
+Charruyer,Dylan,"Bachelor 1 B","16 05 2019",matin,Absent
+Charruyer,Dylan,"Bachelor 1 B","16 05 2019",Après-midi,Absent
+Charruyer,Dylan,"Bachelor 1 B","17 05 2019",matin,Absent
+Charruyer,Dylan,"Bachelor 1 B","17 05 2019",Après-midi,Absent
+Charruyer,Dylan,"Bachelor 1 B","20 05 2019",Après-midi,Absent
+Charruyer,Dylan,"Bachelor 1 B","20 05 2019",matin,Absent
+Charruyer,Dylan,"Bachelor 1 B","21 05 2019",matin,Absent
+Charruyer,Dylan,"Bachelor 1 B","21 05 2019",Après-midi,Absent
+Charruyer,Dylan,"Bachelor 1 B","22 05 2019",matin,Absent
+Charruyer,Dylan,"Bachelor 1 B","22 05 2019",Après-midi,Absent
+Charruyer,Dylan,"Bachelor 1 B","23 05 2019",matin,Absent
+Charruyer,Dylan,"Bachelor 1 B","23 05 2019",Après-midi,Absent
+Charruyer,Dylan,"Bachelor 1 B","24 05 2019",matin,Absent
+Charruyer,Dylan,"Bachelor 1 B","24 05 2019",Après-midi,Absent
+Charruyer,Dylan,"Bachelor 1 B","27 05 2019",Après-midi,Absent
+Charruyer,Dylan,"Bachelor 1 B","28 05 2019",Après-midi,Absent
+Charruyer,Dylan,"Bachelor 1 B","28 05 2019",matin,Absent
+Charruyer,Dylan,"Bachelor 1 B","29 05 2019",matin,Absent
+Charruyer,Dylan,"Bachelor 1 B","29 05 2019",Après-midi,Absent
+Chasson,Pierre,"Bachelor 1 B","09 05 2019",Après-midi,Absent
+Chasson,Pierre,"Bachelor 1 B","13 05 2019",matin,Absent
+Chasson,Pierre,"Bachelor 1 B","13 05 2019",Après-midi,Absent
+Chasson,Pierre,"Bachelor 1 B","14 05 2019",matin,Absent
+Chasson,Pierre,"Bachelor 1 B","15 05 2019",matin,Absent
+Chasson,Pierre,"Bachelor 1 B","15 05 2019",Après-midi,Absent
+Chasson,Pierre,"Bachelor 1 B","16 05 2019",Après-midi,Absent
+Chasson,Pierre,"Bachelor 1 B","16 05 2019",matin,Absent
+Chasson,Pierre,"Bachelor 1 B","17 05 2019",matin,Absent
+Chasson,Pierre,"Bachelor 1 B","17 05 2019",Après-midi,Absent
+Chasson,Pierre,"Bachelor 1 B","20 05 2019",matin,Absent
+Chasson,Pierre,"Bachelor 1 B","20 05 2019",Après-midi,Absent
+Chasson,Pierre,"Bachelor 1 B","22 05 2019",matin,Absent
+Chasson,Pierre,"Bachelor 1 B","22 05 2019",Après-midi,Absent
+Chasson,Pierre,"Bachelor 1 B","23 05 2019",Après-midi,Absent
+Chasson,Pierre,"Bachelor 1 B","24 05 2019",matin,Absent
+Chasson,Pierre,"Bachelor 1 B","24 05 2019",Après-midi,Absent
+Chasson,Pierre,"Bachelor 1 B","27 05 2019",Après-midi,Absent
+Chasson,Pierre,"Bachelor 1 B","28 05 2019",matin,Absent
+Chasson,Pierre,"Bachelor 1 B","28 05 2019",Après-midi,Absent
+Chasson,Pierre,"Bachelor 1 B","29 05 2019",matin,Absent
+Chasson,Pierre,"Bachelor 1 B","29 05 2019",Après-midi,Absent
+Decap,Valentin,"Bachelor 1 B","10 05 2019",matin,"En retard"
+Decap,Valentin,"Bachelor 1 B","14 05 2019",matin,"En retard"
+Decap,Valentin,"Bachelor 1 B","15 05 2019",matin,"En retard"
+Decap,Valentin,"Bachelor 1 B","22 05 2019",matin,"En retard"
+Decap,Valentin,"Bachelor 1 B","23 05 2019",matin,Absent
+Decap,Valentin,"Bachelor 1 B","24 05 2019",matin,"En retard"
+Decap,Valentin,"Bachelor 1 B","28 05 2019",matin,"En retard"
+Decap,Valentin,"Bachelor 1 B","29 05 2019",matin,"En retard"
+Diot,Quentin,"Bachelor 1 B","10 05 2019",matin,"En retard"
+Diot,Quentin,"Bachelor 1 B","13 05 2019",matin,Absent
+Diot,Quentin,"Bachelor 1 B","13 05 2019",Après-midi,Absent
+Diot,Quentin,"Bachelor 1 B","15 05 2019",matin,Absent
+Diot,Quentin,"Bachelor 1 B","15 05 2019",Après-midi,Absent
+Diot,Quentin,"Bachelor 1 B","16 05 2019",matin,Absent
+Diot,Quentin,"Bachelor 1 B","17 05 2019",matin,"En retard"
+Diot,Quentin,"Bachelor 1 B","21 05 2019",matin,"En retard"
+Diot,Quentin,"Bachelor 1 B","22 05 2019",Après-midi,Absent
+Diot,Quentin,"Bachelor 1 B","22 05 2019",matin,Absent
+Diot,Quentin,"Bachelor 1 B","23 05 2019",matin,"En retard"
+Diot,Quentin,"Bachelor 1 B","24 05 2019",matin,"En retard"
+Diot,Quentin,"Bachelor 1 B","27 05 2019",Après-midi,Absent
+Diot,Quentin,"Bachelor 1 B","28 05 2019",matin,Absent
+Diot,Quentin,"Bachelor 1 B","28 05 2019",Après-midi,Absent
+Diot,Quentin,"Bachelor 1 B","29 05 2019",matin,Absent
+Diot,Quentin,"Bachelor 1 B","29 05 2019",Après-midi,Absent
+Dussert,Alexandre,"Bachelor 1 B","09 05 2019",Après-midi,Absent
+Dussert,Alexandre,"Bachelor 1 B","10 05 2019",matin,Absent
+Dussert,Alexandre,"Bachelor 1 B","10 05 2019",Après-midi,Absent
+Dussert,Alexandre,"Bachelor 1 B","13 05 2019",matin,Absent
+Dussert,Alexandre,"Bachelor 1 B","13 05 2019",Après-midi,Absent
+Dussert,Alexandre,"Bachelor 1 B","14 05 2019",matin,Absent
+Dussert,Alexandre,"Bachelor 1 B","16 05 2019",matin,Absent
+Dussert,Alexandre,"Bachelor 1 B","17 05 2019",matin,Absent
+Dussert,Alexandre,"Bachelor 1 B","20 05 2019",matin,Absent
+Dussert,Alexandre,"Bachelor 1 B","20 05 2019",Après-midi,Absent
+Dussert,Alexandre,"Bachelor 1 B","21 05 2019",matin,Absent
+Dussert,Alexandre,"Bachelor 1 B","22 05 2019",matin,Absent
+Dussert,Alexandre,"Bachelor 1 B","22 05 2019",Après-midi,Absent
+Dussert,Alexandre,"Bachelor 1 B","23 05 2019",Après-midi,Absent
+Dussert,Alexandre,"Bachelor 1 B","24 05 2019",matin,Absent
+Dussert,Alexandre,"Bachelor 1 B","24 05 2019",Après-midi,Absent
+Dussert,Alexandre,"Bachelor 1 B","27 05 2019",Après-midi,Absent
+Dussert,Alexandre,"Bachelor 1 B","28 05 2019",matin,Absent
+Dussert,Alexandre,"Bachelor 1 B","28 05 2019",Après-midi,Absent
+Dussert,Alexandre,"Bachelor 1 B","29 05 2019",matin,Absent
+Dussert,Alexandre,"Bachelor 1 B","29 05 2019",Après-midi,Absent
+Fonchy,Clément,"Bachelor 1 B","09 05 2019",Après-midi,Absent
+Fonchy,Clément,"Bachelor 1 B","10 05 2019",matin,"En retard"
+Fonchy,Clément,"Bachelor 1 B","13 05 2019",Après-midi,Absent
+Fonchy,Clément,"Bachelor 1 B","13 05 2019",matin,Absent
+Fonchy,Clément,"Bachelor 1 B","14 05 2019",matin,Absent
+Fonchy,Clément,"Bachelor 1 B","15 05 2019",matin,"En retard"
+Fonchy,Clément,"Bachelor 1 B","16 05 2019",matin,Absent
+Fonchy,Clément,"Bachelor 1 B","16 05 2019",Après-midi,Absent
+Fonchy,Clément,"Bachelor 1 B","17 05 2019",matin,"En retard"
+Fonchy,Clément,"Bachelor 1 B","20 05 2019",matin,Absent
+Fonchy,Clément,"Bachelor 1 B","20 05 2019",Après-midi,Absent
+Fonchy,Clément,"Bachelor 1 B","21 05 2019",matin,"En retard"
+Fonchy,Clément,"Bachelor 1 B","22 05 2019",matin,Absent
+Fonchy,Clément,"Bachelor 1 B","22 05 2019",Après-midi,Absent
+Fonchy,Clément,"Bachelor 1 B","23 05 2019",matin,Absent
+Fonchy,Clément,"Bachelor 1 B","23 05 2019",Après-midi,Absent
+Fonchy,Clément,"Bachelor 1 B","24 05 2019",matin,"En retard"
+Fonchy,Clément,"Bachelor 1 B","27 05 2019",Après-midi,Absent
+Fonchy,Clément,"Bachelor 1 B","28 05 2019",matin,Absent
+Fonchy,Clément,"Bachelor 1 B","28 05 2019",Après-midi,Absent
+Fonchy,Clément,"Bachelor 1 B","29 05 2019",matin,Absent
+Fonchy,Clément,"Bachelor 1 B","29 05 2019",Après-midi,Absent
+Frisch,Thomas,"Bachelor 1 B","09 05 2019",Après-midi,Absent
+Frisch,Thomas,"Bachelor 1 B","10 05 2019",matin,Absent
+Frisch,Thomas,"Bachelor 1 B","10 05 2019",Après-midi,Absent
+Frisch,Thomas,"Bachelor 1 B","13 05 2019",matin,Absent
+Frisch,Thomas,"Bachelor 1 B","13 05 2019",Après-midi,Absent
+Frisch,Thomas,"Bachelor 1 B","14 05 2019",matin,Absent
+Frisch,Thomas,"Bachelor 1 B","15 05 2019",matin,Absent
+Frisch,Thomas,"Bachelor 1 B","15 05 2019",Après-midi,Absent
+Frisch,Thomas,"Bachelor 1 B","17 05 2019",matin,Absent
+Frisch,Thomas,"Bachelor 1 B","17 05 2019",Après-midi,Absent
+Frisch,Thomas,"Bachelor 1 B","20 05 2019",matin,Absent
+Frisch,Thomas,"Bachelor 1 B","20 05 2019",Après-midi,Absent
+Frisch,Thomas,"Bachelor 1 B","21 05 2019",Après-midi,Absent
+Frisch,Thomas,"Bachelor 1 B","21 05 2019",matin,Absent
+Frisch,Thomas,"Bachelor 1 B","22 05 2019",matin,Absent
+Frisch,Thomas,"Bachelor 1 B","22 05 2019",Après-midi,Absent
+Frisch,Thomas,"Bachelor 1 B","23 05 2019",matin,"En retard"
+Frisch,Thomas,"Bachelor 1 B","24 05 2019",matin,Absent
+Frisch,Thomas,"Bachelor 1 B","24 05 2019",Après-midi,Absent
+Frisch,Thomas,"Bachelor 1 B","27 05 2019",Après-midi,Absent
+Frisch,Thomas,"Bachelor 1 B","29 05 2019",matin,Absent
+Frisch,Thomas,"Bachelor 1 B","29 05 2019",Après-midi,Absent
+Guillard,Rémi,"Bachelor 1 B","10 05 2019",matin,"En retard"
+Guillard,Rémi,"Bachelor 1 B","14 05 2019",matin,"En retard"
+Guillard,Rémi,"Bachelor 1 B","17 05 2019",matin,"En retard"
+Guillard,Rémi,"Bachelor 1 B","21 05 2019",matin,"En retard"
+Guillard,Rémi,"Bachelor 1 B","22 05 2019",matin,"En retard"
+Guillard,Rémi,"Bachelor 1 B","24 05 2019",matin,Absent
+Guillard,Rémi,"Bachelor 1 B","24 05 2019",Après-midi,Absent
+Guillard,Rémi,"Bachelor 1 B","27 05 2019",Après-midi,Absent
+Guillard,Rémi,"Bachelor 1 B","28 05 2019",matin,Absent
+Guillard,Rémi,"Bachelor 1 B","28 05 2019",Après-midi,Absent
+Guillard,Rémi,"Bachelor 1 B","29 05 2019",matin,Absent
+Legavre,Raphaël,"Bachelor 1 B","13 05 2019",matin,Absent
+Legavre,Raphaël,"Bachelor 1 B","13 05 2019",Après-midi,Absent
+Legavre,Raphaël,"Bachelor 1 B","16 05 2019",matin,"En retard"
+Legavre,Raphaël,"Bachelor 1 B","17 05 2019",matin,"En retard"
+Legavre,Raphaël,"Bachelor 1 B","22 05 2019",matin,Absent
+Legavre,Raphaël,"Bachelor 1 B","22 05 2019",Après-midi,Absent
+Legavre,Raphaël,"Bachelor 1 B","28 05 2019",matin,"En retard"
+Legavre,Raphaël,"Bachelor 1 B","29 05 2019",matin,Absent
+Legavre,Raphaël,"Bachelor 1 B","29 05 2019",Après-midi,Absent
+Lemaitre,Brendan,"Bachelor 1 B","10 05 2019",matin,Absent
+Lemaitre,Brendan,"Bachelor 1 B","21 05 2019",matin,Absent
+Lemaitre,Brendan,"Bachelor 1 B","21 05 2019",Après-midi,Absent
+Lemaitre,Brendan,"Bachelor 1 B","22 05 2019",matin,Absent
+Lemaitre,Brendan,"Bachelor 1 B","22 05 2019",Après-midi,Absent
+Lemaitre,Brendan,"Bachelor 1 B","24 05 2019",matin,"En retard"
+Lemaitre,Brendan,"Bachelor 1 B","27 05 2019",Après-midi,Absent
+Lemaitre,Brendan,"Bachelor 1 B","28 05 2019",matin,Absent
+Lemaitre,Brendan,"Bachelor 1 B","28 05 2019",Après-midi,Absent
+Lemaitre,Brendan,"Bachelor 1 B","29 05 2019",matin,Absent
+Lemaitre,Brendan,"Bachelor 1 B","29 05 2019",Après-midi,Absent
+Lemoine,Quentin,"Bachelor 1 B","13 05 2019",matin,Absent
+Lemoine,Quentin,"Bachelor 1 B","13 05 2019",Après-midi,Absent
+Lemoine,Quentin,"Bachelor 1 B","15 05 2019",Après-midi,Absent
+Lemoine,Quentin,"Bachelor 1 B","15 05 2019",matin,Absent
+Lemoine,Quentin,"Bachelor 1 B","17 05 2019",matin,Absent
+Lemoine,Quentin,"Bachelor 1 B","17 05 2019",Après-midi,Absent
+Lemoine,Quentin,"Bachelor 1 B","21 05 2019",matin,Absent
+Lemoine,Quentin,"Bachelor 1 B","21 05 2019",Après-midi,Absent
+Lemoine,Quentin,"Bachelor 1 B","22 05 2019",matin,Absent
+Lemoine,Quentin,"Bachelor 1 B","22 05 2019",Après-midi,Absent
+Lemoine,Quentin,"Bachelor 1 B","23 05 2019",Après-midi,Absent
+Lemoine,Quentin,"Bachelor 1 B","24 05 2019",matin,Absent
+Lemoine,Quentin,"Bachelor 1 B","24 05 2019",Après-midi,Absent
+Lemoine,Quentin,"Bachelor 1 B","27 05 2019",Après-midi,Absent
+Lemoine,Quentin,"Bachelor 1 B","28 05 2019",matin,Absent
+Lemoine,Quentin,"Bachelor 1 B","28 05 2019",Après-midi,Absent
+Lemoine,Quentin,"Bachelor 1 B","29 05 2019",Après-midi,Absent
+Lesage,Nicolas,"Bachelor 1 B","09 05 2019",Après-midi,Absent
+Lesage,Nicolas,"Bachelor 1 B","10 05 2019",matin,Absent
+Lesage,Nicolas,"Bachelor 1 B","10 05 2019",Après-midi,Absent
+Lesage,Nicolas,"Bachelor 1 B","13 05 2019",matin,Absent
+Lesage,Nicolas,"Bachelor 1 B","13 05 2019",Après-midi,Absent
+Lesage,Nicolas,"Bachelor 1 B","14 05 2019",matin,Absent
+Lesage,Nicolas,"Bachelor 1 B","15 05 2019",Après-midi,Absent
+Lesage,Nicolas,"Bachelor 1 B","15 05 2019",matin,Absent
+Lesage,Nicolas,"Bachelor 1 B","16 05 2019",matin,Absent
+Lesage,Nicolas,"Bachelor 1 B","16 05 2019",Après-midi,Absent
+Lesage,Nicolas,"Bachelor 1 B","17 05 2019",matin,Absent
+Lesage,Nicolas,"Bachelor 1 B","17 05 2019",Après-midi,Absent
+Lesage,Nicolas,"Bachelor 1 B","20 05 2019",matin,Absent
+Lesage,Nicolas,"Bachelor 1 B","21 05 2019",matin,Absent
+Lesage,Nicolas,"Bachelor 1 B","21 05 2019",Après-midi,Absent
+Lesage,Nicolas,"Bachelor 1 B","22 05 2019",matin,Absent
+Lesage,Nicolas,"Bachelor 1 B","22 05 2019",Après-midi,Absent
+Lesage,Nicolas,"Bachelor 1 B","23 05 2019",Après-midi,Absent
+Lesage,Nicolas,"Bachelor 1 B","23 05 2019",matin,"En retard"
+Lesage,Nicolas,"Bachelor 1 B","24 05 2019",matin,Absent
+Lesage,Nicolas,"Bachelor 1 B","24 05 2019",Après-midi,Absent
+Lesage,Nicolas,"Bachelor 1 B","27 05 2019",Après-midi,Absent
+Lesage,Nicolas,"Bachelor 1 B","28 05 2019",matin,Absent
+Lesage,Nicolas,"Bachelor 1 B","28 05 2019",Après-midi,Absent
+Lesage,Nicolas,"Bachelor 1 B","29 05 2019",matin,Absent
+Lesage,Nicolas,"Bachelor 1 B","29 05 2019",Après-midi,Absent
+Lucmaret,Baptiste,"Bachelor 1 B","28 05 2019",matin,"En retard"
+Magliulo,Corentin,"Bachelor 1 B","15 05 2019",matin,"En retard"
+Magliulo,Corentin,"Bachelor 1 B","17 05 2019",matin,"En retard"
+Magliulo,Corentin,"Bachelor 1 B","20 05 2019",matin,Absent
+Magliulo,Corentin,"Bachelor 1 B","29 05 2019",matin,Absent
+Magliulo,Corentin,"Bachelor 1 B","29 05 2019",Après-midi,Absent
+Pujo,Tanguy,"Bachelor 1 B","10 05 2019",Après-midi,Absent
+Pujo,Tanguy,"Bachelor 1 B","24 05 2019",Après-midi,Absent
+Tachoueres,Lucas,"Bachelor 1 B","09 05 2019",Après-midi,Absent
+Tachoueres,Lucas,"Bachelor 1 B","10 05 2019",matin,Absent
+Tachoueres,Lucas,"Bachelor 1 B","10 05 2019",Après-midi,Absent
+Tachoueres,Lucas,"Bachelor 1 B","13 05 2019",Après-midi,Absent
+Tachoueres,Lucas,"Bachelor 1 B","13 05 2019",matin,Absent
+Tachoueres,Lucas,"Bachelor 1 B","14 05 2019",matin,Absent
+Tachoueres,Lucas,"Bachelor 1 B","15 05 2019",matin,Absent
+Tachoueres,Lucas,"Bachelor 1 B","15 05 2019",Après-midi,Absent
+Tachoueres,Lucas,"Bachelor 1 B","16 05 2019",matin,Absent
+Tachoueres,Lucas,"Bachelor 1 B","16 05 2019",Après-midi,Absent
+Tachoueres,Lucas,"Bachelor 1 B","17 05 2019",matin,Absent
+Tachoueres,Lucas,"Bachelor 1 B","17 05 2019",Après-midi,Absent
+Tachoueres,Lucas,"Bachelor 1 B","20 05 2019",matin,Absent
+Tachoueres,Lucas,"Bachelor 1 B","20 05 2019",Après-midi,Absent
+Tachoueres,Lucas,"Bachelor 1 B","21 05 2019",matin,Absent
+Tachoueres,Lucas,"Bachelor 1 B","21 05 2019",Après-midi,Absent
+Tachoueres,Lucas,"Bachelor 1 B","22 05 2019",matin,Absent
+Tachoueres,Lucas,"Bachelor 1 B","22 05 2019",Après-midi,Absent
+Tachoueres,Lucas,"Bachelor 1 B","23 05 2019",matin,Absent
+Tachoueres,Lucas,"Bachelor 1 B","23 05 2019",Après-midi,Absent
+Tachoueres,Lucas,"Bachelor 1 B","24 05 2019",matin,Absent
+Tachoueres,Lucas,"Bachelor 1 B","24 05 2019",Après-midi,Absent
+Tachoueres,Lucas,"Bachelor 1 B","27 05 2019",Après-midi,Absent
+Tachoueres,Lucas,"Bachelor 1 B","28 05 2019",matin,Absent
+Tachoueres,Lucas,"Bachelor 1 B","28 05 2019",Après-midi,Absent
+Tachoueres,Lucas,"Bachelor 1 B","29 05 2019",matin,Absent
+Tachoueres,Lucas,"Bachelor 1 B","29 05 2019",Après-midi,Absent
+Tardy,Thomas,"Bachelor 1 B","09 05 2019",Après-midi,Absent
+Tardy,Thomas,"Bachelor 1 B","10 05 2019",matin,Absent
+Tardy,Thomas,"Bachelor 1 B","10 05 2019",Après-midi,Absent
+Tardy,Thomas,"Bachelor 1 B","13 05 2019",matin,Absent
+Tardy,Thomas,"Bachelor 1 B","13 05 2019",Après-midi,Absent
+Tardy,Thomas,"Bachelor 1 B","14 05 2019",matin,Absent
+Tardy,Thomas,"Bachelor 1 B","15 05 2019",matin,Absent
+Tardy,Thomas,"Bachelor 1 B","15 05 2019",Après-midi,Absent
+Tardy,Thomas,"Bachelor 1 B","16 05 2019",Après-midi,Absent
+Tardy,Thomas,"Bachelor 1 B","16 05 2019",matin,Absent
+Tardy,Thomas,"Bachelor 1 B","17 05 2019",matin,Absent
+Tardy,Thomas,"Bachelor 1 B","17 05 2019",Après-midi,Absent
+Tardy,Thomas,"Bachelor 1 B","20 05 2019",matin,Absent
+Tardy,Thomas,"Bachelor 1 B","20 05 2019",Après-midi,Absent
+Tardy,Thomas,"Bachelor 1 B","21 05 2019",matin,Absent
+Tardy,Thomas,"Bachelor 1 B","21 05 2019",Après-midi,Absent
+Tardy,Thomas,"Bachelor 1 B","22 05 2019",matin,Absent
+Tardy,Thomas,"Bachelor 1 B","22 05 2019",Après-midi,Absent
+Tardy,Thomas,"Bachelor 1 B","23 05 2019",Après-midi,Absent
+Tardy,Thomas,"Bachelor 1 B","23 05 2019",matin,Absent
+Tardy,Thomas,"Bachelor 1 B","24 05 2019",matin,Absent
+Tardy,Thomas,"Bachelor 1 B","24 05 2019",Après-midi,Absent
+Tardy,Thomas,"Bachelor 1 B","27 05 2019",Après-midi,Absent
+Tardy,Thomas,"Bachelor 1 B","28 05 2019",matin,Absent
+Tardy,Thomas,"Bachelor 1 B","28 05 2019",Après-midi,Absent
+Tardy,Thomas,"Bachelor 1 B","29 05 2019",matin,Absent
+Tardy,Thomas,"Bachelor 1 B","29 05 2019",Après-midi,Absent
+Thomas,Marcelin,"Bachelor 1 B","09 05 2019",Après-midi,Absent
+Thomas,Marcelin,"Bachelor 1 B","13 05 2019",matin,Absent
+Thomas,Marcelin,"Bachelor 1 B","13 05 2019",Après-midi,Absent
+Thomas,Marcelin,"Bachelor 1 B","14 05 2019",matin,Absent
+Thomas,Marcelin,"Bachelor 1 B","15 05 2019",matin,Absent
+Thomas,Marcelin,"Bachelor 1 B","15 05 2019",Après-midi,Absent
+Thomas,Marcelin,"Bachelor 1 B","16 05 2019",Après-midi,Absent
+Thomas,Marcelin,"Bachelor 1 B","16 05 2019",matin,Absent
+Thomas,Marcelin,"Bachelor 1 B","17 05 2019",matin,Absent
+Thomas,Marcelin,"Bachelor 1 B","17 05 2019",Après-midi,Absent
+Thomas,Marcelin,"Bachelor 1 B","20 05 2019",matin,Absent
+Thomas,Marcelin,"Bachelor 1 B","20 05 2019",Après-midi,Absent
+Thomas,Marcelin,"Bachelor 1 B","22 05 2019",matin,Absent
+Thomas,Marcelin,"Bachelor 1 B","22 05 2019",Après-midi,Absent
+Thomas,Marcelin,"Bachelor 1 B","23 05 2019",matin,Absent
+Thomas,Marcelin,"Bachelor 1 B","23 05 2019",Après-midi,Absent
+Thomas,Marcelin,"Bachelor 1 B","24 05 2019",matin,Absent
+Thomas,Marcelin,"Bachelor 1 B","24 05 2019",Après-midi,Absent
+Thomas,Marcelin,"Bachelor 1 B","27 05 2019",Après-midi,Absent
+Thomas,Marcelin,"Bachelor 1 B","28 05 2019",matin,Absent
+Thomas,Marcelin,"Bachelor 1 B","28 05 2019",Après-midi,Absent
+Thomas,Marcelin,"Bachelor 1 B","29 05 2019",matin,Absent
+Thomas,Marcelin,"Bachelor 1 B","29 05 2019",Après-midi,Absent
+Blanchard,Guillaume,"Bachelor 1 C","10 05 2019",matin,Absent
+Blanchard,Guillaume,"Bachelor 1 C","15 05 2019",matin,Absent
+Blanchard,Guillaume,"Bachelor 1 C","16 05 2019",Après-midi,Absent
+Blanchard,Guillaume,"Bachelor 1 C","16 05 2019",matin,Absent
+Blanchard,Guillaume,"Bachelor 1 C","20 05 2019",matin,Absent
+Blanchard,Guillaume,"Bachelor 1 C","20 05 2019",Après-midi,Absent
+Blanchard,Guillaume,"Bachelor 1 C","21 05 2019",matin,Absent
+Blanchard,Guillaume,"Bachelor 1 C","21 05 2019",Après-midi,Absent
+Blanchard,Guillaume,"Bachelor 1 C","27 05 2019",matin,Absent
+Dauphin,Hugo,"Bachelor 1 C","20 05 2019",Après-midi,Absent
+Dauphin,Hugo,"Bachelor 1 C","27 05 2019",matin,Absent
+Dauphin,Hugo,"Bachelor 1 C","12 06 2019",matin,Absent
+Debeer,Alexandre,"Bachelor 1 C","15 05 2019",matin,Absent
+Debeer,Alexandre,"Bachelor 1 C","20 05 2019",matin,Absent
+Debeer,Alexandre,"Bachelor 1 C","27 05 2019",matin,Absent
+Debray,Jonathan,"Bachelor 1 C","27 05 2019",matin,Absent
+Dupont,Chloé,"Bachelor 1 C","09 05 2019",Après-midi,Absent
+Dupont,Chloé,"Bachelor 1 C","14 05 2019",matin,Absent
+Dupont,Chloé,"Bachelor 1 C","15 05 2019",matin,Absent
+Dupont,Chloé,"Bachelor 1 C","16 05 2019",matin,Absent
+Dupont,Chloé,"Bachelor 1 C","16 05 2019",Après-midi,Absent
+Dupont,Chloé,"Bachelor 1 C","17 05 2019",matin,Absent
+Dupont,Chloé,"Bachelor 1 C","27 05 2019",matin,Absent
+Melous,Thomas,"Bachelor 1 C","12 06 2019",matin,Absent
+Poitevin,Yannick,"Bachelor 1 C","20 05 2019",matin,"En retard"
+Poitevin,Yannick,"Bachelor 1 C","27 05 2019",matin,Absent
+Ragazzi,Aymeric,"Bachelor 1 C","15 05 2019",matin,Absent
+Ragazzi,Aymeric,"Bachelor 1 C","27 05 2019",matin,Absent
+Sallaberry,Thibault,"Bachelor 1 C","15 05 2019",matin,Absent
+Tavernier,Jordan,"Bachelor 1 C","09 05 2019",Après-midi,Absent
+Tavernier,Jordan,"Bachelor 1 C","10 05 2019",matin,Absent
+Tavernier,Jordan,"Bachelor 1 C","14 05 2019",matin,Absent
+Tavernier,Jordan,"Bachelor 1 C","14 05 2019",Après-midi,Absent
+Tavernier,Jordan,"Bachelor 1 C","15 05 2019",matin,Absent
+Tavernier,Jordan,"Bachelor 1 C","16 05 2019",matin,Absent
+Tavernier,Jordan,"Bachelor 1 C","16 05 2019",Après-midi,Absent
+Tavernier,Jordan,"Bachelor 1 C","17 05 2019",matin,Absent
+Tavernier,Jordan,"Bachelor 1 C","20 05 2019",matin,Absent
+Tavernier,Jordan,"Bachelor 1 C","20 05 2019",Après-midi,Absent
+Tavernier,Jordan,"Bachelor 1 C","21 05 2019",matin,Absent
+Tavernier,Jordan,"Bachelor 1 C","21 05 2019",Après-midi,Absent
+Tavernier,Jordan,"Bachelor 1 C","27 05 2019",matin,Absent
+Tavernier,Jordan,"Bachelor 1 C","12 06 2019",matin,Absent

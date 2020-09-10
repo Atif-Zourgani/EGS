@@ -1,0 +1,16 @@
+@import "Common/reset";
+@import "Common/fonts";
+@import "Common/vars";
+@import "Common/global";
+@import "FOSUser/log.scss";
+@import "Pages/student";
+@import "Pages/sections";
+@import "Pages/discipline";
+@import "Pages/evaluation";
+@import "Pages/call";
+@import "Pages/reliability";
+@import "Pages/careers";
+@import "Pages/errors";
+@import "jquery-ui.scss";
+@import "~chart.js/dist/Chart.css";
+@import '~select2/dist/css/select2.min.css';

@@ -1,0 +1,139 @@
+/* PAGE CAREERS - HOME */
+/**********************************************/
+
+.back-to-profile {
+  font-size: 20px;
+  font-weight: $medium;
+  color: $purple;
+  i {
+    margin-right: 10px;
+  }
+  padding: 40px 0 0 40px;
+}
+
+body.careers, body.career {
+  background-color: $lightGrey;
+  h2 {
+    font-weight: $bold;
+    span {
+      font-weight: $thin;
+    }
+  }
+}
+
+body.careers {
+  .career {
+    margin: 25px 25px 25px 0;
+    text-align: center;
+    &:hover {
+      .student-percentage {
+        opacity: 1;
+        transition: opacity .35s;
+      }
+    }
+  }
+  .circle {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    line-height: 130px;
+    font-size: 60px;
+    font-weight: $bold;
+    color: $lightGrey;
+    position: relative;
+  }
+  .circle--grade {
+    background-color: $lightPurple;
+  }
+  .circle--profession {
+    background-color: $darkPurple;
+    font-size: 40px;
+  }
+  .career-details {
+    font-weight: $thin;
+  }
+  .career-name {
+    font-weight: $medium;
+    line-height: 1.4;
+  }
+  .student-percentage {
+    opacity: 0;
+    width: 100%;
+    border-radius: 50%;
+    font-size: 30px;
+    background-color: $alt2Blue;
+  }
+}
+
+.career-block {
+  padding: 40px 40px 0 40px;
+}
+
+body.career {
+  h3 {
+    margin: 30px;
+  }
+  .progress-wrap {
+    margin-right: 30px;
+  }
+}
+
+.discipline-career {
+  padding: 10px;
+}
+
+.specialisms {
+  padding: 0 30px;
+  .select-designed {
+    margin: 0;
+  }
+}
+
+.select-spe {
+  font-size: 18px;
+}
+
+// PROGRESS BAR FOR STUDENT
+.progress {
+  width: 100%;
+  height: 50px;
+}
+
+.progress-wrap {
+  width: 150px;
+  height: 40px;
+  background: $altGreen;
+  overflow: hidden;
+  position: relative;
+  border-radius: 20px;
+  border: 2px solid $darkBlue;
+  &.item-prog {
+    width: 120px;
+    height: 61px; // 65px - 4px of border
+    .progress {
+      height: 65px;
+    }
+  }
+  .progress-bar {
+    background: #b7dfd9;
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+}
+
+@keyframes progress {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.progress-percentage {
+  line-height: 40px;
+  text-align: center;
+  z-index: 10;
+  position: relative;
+  font-size: 20px;
+  font-weight: $bold;
+  animation: progress 2.5s;
+}

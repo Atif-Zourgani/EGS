@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+{% block metaDescriptionContent %}{% endblock %}
+
+
+{% block body %}
+
+    {% if is_mobile() == true and is_tablet() == false %}
+    {% else %}
+    {% endif %}
+
+{% endblock %}

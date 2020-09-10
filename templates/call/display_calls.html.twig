@@ -1,0 +1,103 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Afficher tous les appels{% endblock %}
+{% block metaDescriptionContent %}{% endblock %}
+
+{% set bodyClass='display-calls' %}
+
+{% block body %}
+
+    <div class="main">
+        {% include 'common/_breadcrumbs.html.twig' %}
+
+        <div class="main-scrollable">
+
+            {% if is_granted ('ROLE_ADMIN') %}
+                <div class="call-filters flex flex--align-center flex--center flex--wrap">
+                    <span>Filtrer les résultats :</span>
+                    <div class="select-designed">
+                        <select class="call-filter-section">
+                            <option class="title" value="all">Toutes les classes</option>
+                            {% for section in sections %}
+                                <option value="{{ section.shortname }}">{{ section.shortname }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="select-designed">
+                        <select class="call-filter-date">
+                            <option class="title" value="all">Toutes les dates</option>
+                            {% for date in dates %}
+                                <option value="{{ date.createdAt|date('d/m/Y') }}">{{ date.createdAt|date('d/m/Y') }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+            {% endif %}
+
+            {% if calls|length <= 0 %}
+                <span class="no-calls">Aucun appel en cours aujourd'hui.</span>
+            {% endif %}
+
+            <p class="no-result">Aucun résultat trouvé pour cette recherche.</p>
+
+            <div class="block-calls">
+
+                {% for call in calls %}
+
+                <div class="block-call">
+                      <ul class="list-call flex {% if is_mobile() == true and is_tablet() == false %} flex--space-around {% else %} flex--space-between {% endif %}" data-section="{{ call.section.shortname }}" data-date="{{ call.createdAt|date('d/m/Y') }}">
+                          {% if is_mobile() == true and is_tablet() == false %}
+                              <li>{{ call.createdAt|date('d/m/y') }}</li>
+                              <li>{{ call.halfDay|upper }}</li>
+                              <li>{{ call.section.shortname }}</li>
+                              <li><a class="js-see-call" href="">Voir</a></li>
+                              <li><a href="{{ path('update_call', {'id' : call.id}) }}">Modifier</a></li>
+                          {% else %}
+                              <li>{{ call.createdAt|localizeddate('full', 'none')|capitalize }}</li>
+                              <li>
+                                  {% if call.halfDay == 'am' %}
+                                      <span>Matin</span>
+                                  {% else %}
+                                      <span>Après-midi</span>
+                                  {% endif %}
+                              </li>
+                              <li>{{ call.section.name }}</li>
+                              <li><a class="js-see-call" href="">Voir l'appel
+                                      <i class="fas fa-angle-down"></i>
+                                  </a>
+                              </li>
+                              <li><a href="{{ path('update_call', {'id' : call.id}) }}">Modifier l'appel</a></li>
+                          {% endif %}
+                      </ul>
+
+                      <div class="call-details">
+                          {% for studentCall in call.studentCalls %}
+                              <ul class="flex">
+                                  <li>{{ studentCall.student.fullname }}</li>
+                                  {% if studentCall.status == 'present' %}
+                                      <li class="status-present">Présent</li>
+                                  {% elseif studentCall.status == 'late' %}
+                                      <li class="status-late">En retard</li>
+                                  {% elseif studentCall.status == 'absent' %}
+                                      <li class="status-absent">Absent</li>
+                                  {% elseif studentCall.status == 'justified' %}
+                                      <li class="status-justified-absence">Absence justifiée</li>
+                                  {% endif %}
+                              </ul>
+                          {% endfor %}
+                      </div>
+                </div>
+
+            {% endfor %}
+
+          </div>
+
+
+        </div>
+    </div>
+
+    {% block javascripts %}
+        <script src="{{ asset('build/js/call.js') }}"></script>
+    {% endblock %}
+
+{% endblock %}

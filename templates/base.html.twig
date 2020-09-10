@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}{% endblock %}</title>
+        {% block reload %}{% endblock %}
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+        <link rel="icon" type="image/png" href="{{ asset('logos/favicon-color.png') }}"/>
+        <link rel="stylesheet" href="{{ asset('build/js/app.css') }}">
+        {% if is_mobile() %}
+            <link rel="stylesheet" href="{{ asset('build/css/responsive.css') }}">
+        {% endif %}
+        {% if is_mobile() == true and is_tablet() == false %}
+            <link rel="stylesheet" href="{{ asset('build/css/mobile.css') }}">
+        {% endif %}
+        {% block stylesheet %}{% endblock %}
+
+    </head>
+
+    {% set bodyClass = bodyClass is defined ? bodyClass : '' %}
+    <body class="{{ bodyClass }}">
+
+        <div class="blur"></div>
+
+        {% if page is defined %}
+            <div class="{% if is_mobile() == false %}flex{% endif %}">
+        {% endif %}
+
+            {% if is_mobile() == false %}
+                {% if is_granted("IS_AUTHENTICATED_REMEMBERED") and page is defined %}
+                    {% include 'common/_nav_menu.html.twig' %}
+                {% endif %}
+            {% endif %}
+
+            {% block body %}
+
+            {% endblock %}
+
+            {% if is_mobile() %}
+                {% if is_granted("IS_AUTHENTICATED_REMEMBERED") and page is defined %}
+                    {% include 'common/_responsive_nav_menu.html.twig' %}
+                {% endif %}
+            {% endif %}
+
+            {% if page is defined and page != 'back_up' %}
+                {% for label, messages in app.flashes %}
+                    <div class="js-flash-message flash-message">
+                        {% if messages != '' %}
+                            {% for message in messages %}
+                                <p>{{ message }}</p>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            {% endif %}
+
+        {% if page is defined %}
+            </div>
+        {% endif %}
+
+        <script src="{{ asset('build/runtime.js') }}"></script>
+        <script src="{{ asset('build/js/app.js') }}"></script>
+        <script src="{{ asset('build/js/search.js') }}"></script>
+
+        {% block javascripts %}{% endblock %}
+
+    </body>
+</html>

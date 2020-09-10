@@ -1,0 +1,62 @@
+<section class="student-infos flex flex--align-center">
+    <div class="student-photo"
+        {% if student.image == null %}
+            style="background: url('{{ asset('logos/user-secret-solid.svg') }}'); background-size:contain!importants;"
+        {% else %}
+         style="background-image: url('{{ asset('uploads/students/photos/' ~ student.image)|imagine_filter('student_photo') }}')"
+         {% endif %}
+    >
+        {% if is_granted('ROLE_ADMIN') or is_granted('ROLE_TEACHER') %}
+            <div class="student-reliability flex">
+                <a href="{{ path('student_incident', {'id': student.id, 'type' : 'positive'}) }}" title="Déclarer un incident" class="reliability-good"><i class="far fa-thumbs-up"></i></a>
+                <a href="{{ path('student_incident', {'id': student.id, 'type' : 'negative'}) }}" title="Déclarer un incident" class="reliability-bad"><i class="far fa-thumbs-down"></i></a>
+            </div>
+        {% endif %}
+
+    </div>
+
+    <div class="student-infos-ctn flex flex--align-center flex--space-between">
+        <div class="student-sum">
+            <div class="flex flex--align-center">
+            <h1>{{ student.fullname }}</h1>
+                {% if elite == 1 %}
+                    <img class="gamer-label-trophy" src="{{ asset('logos/elite-trophy.png') }}"
+                         alt="Trophée Elite">
+                {% endif %}
+                {% if challenger == 1 %}
+                    <img class="gamer-label-trophy" src="{{ asset('logos/challenger-trophy.png') }}"
+                         alt="Trophée Challenger">
+                {% endif %}
+                {% if elite == 0 and challenger == 0 %}
+                    <img class="gamer-label-trophy" src="{{ asset('logos/gamer-trophy.png') }}"
+                         alt="Trophée Gamer">
+                {% endif %}
+            </div>
+            <h2><a href="{{ path('section', {'shortname': student.section.shortname}) }}">{{ student.section }}</a></h2>
+
+            {% if is_mobile() == false %}
+                {% include 'student/_student_behaviour.html.twig' %}
+            {% endif %}
+
+        </div>
+
+        <div class="student-contact">
+            {% if student.phone != "" and (is_granted('ROLE_ADMIN') or is_granted('ROLE_STUDENT') or is_granted('ROLE_PARENT')) %}
+                <p><i class="fas fa-sms"></i> {{ student.phone }}</p>
+            {% endif %}
+            {% if student.email != "" %}
+                <p><i class="fas fa-envelope"></i> {{ student.email }}</p>
+            {% endif %}
+            {% if student.discord != "" %}
+                <p><i class="fab fa-discord"></i> {{ student.discord }}</p>
+            {% endif %}
+            {% if student.twitter != "" %}
+                <p><i class="fab fa-twitter"></i> {{ student.twitter }}</p>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+<script type="text/javascript">
+    var studentId = {{ student.id }};
+</script>

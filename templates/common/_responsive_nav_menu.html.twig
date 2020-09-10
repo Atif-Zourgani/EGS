@@ -1,0 +1,121 @@
+{% if is_granted('ROLE_STUDENT') == false %}
+
+    <nav class="nav-menu nav-menu--responsive {% if is_granted('ROLE_TEACHER') and is_granted('ROLE_ADMIN') == false %} nav-menu--teacher {% endif %}">
+        <ul class="flex {% if is_granted('ROLE_PARENT') == false %}flex--space-between{% endif %}">
+            <li>
+                <div class="active-user">
+                    <div class="active-user-short">
+                        {% if app.user.team != "" %}
+                            {{ app.user.team.firstname|upper|first }}{{ app.user.team.lastname|upper|first }}
+                        {% elseif app.user.teacher != "" %}
+                            {{ app.user.teacher.firstname|upper|first }}{{ app.user.teacher.lastname|upper|first }}
+                        {% elseif app.user.student != "" %}
+                            {{ app.user.student.firstname|upper|first }}{{ app.user.student.lastname|upper|first }}
+                        {% elseif app.user.studentParent != "" %}
+                            {{ app.user.studentParent.firstname|upper|first }}{{ app.user.studentParent.lastname|upper|first }}
+                        {% endif %}
+                    </div>
+                    <div class="logout">
+                        <a href="{{ path('fos_user_security_logout') }}">
+                            {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
+                        </a>
+                    </div>
+                </div>
+            </li>
+
+            {% if is_granted('ROLE_ADMIN') or is_granted('ROLE_TEACHER') %}
+                <li>
+                    <a title="Étudiants" href="{{ path('all_students') }}" class="nav-student {% if page == 'all_students' or page == 'student' %} nav-active {% endif %}">
+                        <span class="nav-ico"><i class="fas fa-user-graduate"></i></span>
+                    </a>
+                </li>
+
+                <li>
+                    <a title="Classes" href="{{ path('all_sections') }}" class="nav-section {% if page == 'all_sections' or page == 'section' %} nav-active {% endif %}">
+                        <span class="nav-ico"><i class="fas fa-users"></i></span>
+                    </a>
+                </li>
+
+                <li>
+                    <a title="Intervenants" href="{{ path('teachers') }}" class="nav-teacher {% if page == 'all_teachers' %} nav-active {% endif %}">
+                        <span class="nav-ico"><i class="fas fa-user-astronaut"></i></span>
+                    </a>
+                </li>
+
+                <li>
+                    <a title="Absences, retards et incidents"  href="{{ path('select_call') }}" class="nav-call {% if page == 'call' or page == 'select_call' or page == 'display_calls' or page == 'update_call' %} nav-active {% endif %}">
+                        <span class="nav-ico"><i class="fas fa-bullhorn"></i></span>
+                    </a>
+                </li>
+
+                <li>
+                    <a title="Compétences" href="{{ path('all_disciplines') }}" class="nav-competence {% if page == 'discipline' or page == 'all_disciplines' %} nav-active {% endif %}">
+                        <span class="nav-ico"><i class="fas fa-award"></i></span>
+                    </a>
+                </li>
+
+                <li>
+                    <a title="Parcours" href="{{ path('all_careers') }}" class="nav-career {% if page == 'careers' or page == 'career' or page == 'discipline_career' %} nav-active {% endif %}">
+                        <span class="nav-ico"><i class="fas fa-sliders-h"></i></span>
+                    </a>
+                </li>
+            {% endif %}
+
+            {% if is_granted('ROLE_ADMIN') %}
+                <li>
+                    <a title="Parents" href="{{ path('parents') }}" class="nav-parent {% if page == 'all_parents' %} nav-active {% endif %}">
+                        <span class="nav-ico"><i class="fas fa-baby"></i></span>
+                    </a>
+                </li>
+            {% endif %}
+
+
+            {% if is_granted('ROLE_PARENT') %}
+                {% if page == 'student' %}
+                    {% set id = app.request.attributes.get('_route_params').student %}
+                {% endif %}
+                {% for student in app.user.studentParent.student %}
+                    <li {% if is_mobile() == true %}class="child"{% endif %}>
+                        <a title="{{ student.fullname }}" href="{{ path('student', {'student': student.id, 'firstname': student.firstname, 'lastname': student.lastname }) }}" class="{% if page == 'student' and id == student.id %} nav-active {% endif %}">
+                            {% if is_mobile() == false %}
+                                <span class="nav-ico"><i class="fas fa-user"></i></span>
+                                <span class="nav-item flex">{{ student.firstname }}<i class="fas fa-angle-right"></i></span>
+                            {% else %}
+                                <span class="nav-item flex">{{ student.firstname }}</span>
+                            {% endif %}
+                        </a>
+                    </li>
+                {% endfor %}
+            {% endif %}
+
+
+            {% if is_granted('ROLE_ADMIN') or is_granted('ROLE_TEACHER') %}
+                <li>
+                    <a title="Évaluation" href="{{ path('evaluation') }}" class="nav-evaluation {% if page == 'evaluation' %} nav-active {% endif %}">
+                        <span class="nav-ico"><i class="fas fa-trophy"></i></span>
+                    </a>
+                </li>
+            {% endif %}
+            {% if is_granted('ROLE_SUPER_ADMIN') %}
+               <li>
+                   <a title="Utilitaires"  href="{{ path('useful') }}" class="nav-useful {% if page == 'useful' %} nav-active {% endif %}">
+                       <span class="nav-ico"><i class="fas fa-hammer"></i></span>
+                   </a>
+               </li>
+            {% endif %}
+            {% if is_granted('ROLE_ADMIN') or is_granted('ROLE_TEACHER') %}
+                <li>
+                    <a title="Flux" href="{{ path('feed') }}" class="nav-infos {% if page == 'feed' %} nav-active {% endif %}">
+                        <div style="width: 100%;">
+                            <img src="{{ asset('logos/infos-nav.png') }}" alt="Icone infos" style="width: 27px; display: block; margin: auto; text-align: center;">
+                        </div>
+                    </a>
+                </li>
+            {% endif %}
+        </ul>
+        <div class="block-logo">
+            <img class="logo-egs" src="{{ asset('logos/logo-egs.png') }}" alt="Logo EGS">
+        </div>
+    </nav>
+
+{% endif %}

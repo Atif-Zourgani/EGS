@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Créer des utilisateurs{% endblock %}
+
+
+{% set bodyClass='new-account' %}
+{% block body %}
+
+    <div class="main">
+
+        {% include 'common/_breadcrumbs.html.twig' %}
+
+        <div class="main-scrollable">
+
+            <div class="form-create-users">
+
+                {% if students %}
+
+                    <label for="select-all">Sélectionner tous les étudiants</label>
+                    <input class="select-all-students" type="checkbox" name="select-all" id="select-all"/>
+
+                    <form action="{{ path('create_students_account') }}">
+
+                        {% for student in students %}
+
+                            <div class="flex flex--align-center all-students-without-account">
+                                <input class="student-without-account" type="checkbox" name="student" value="{{ student.id }}">
+                                <label for="student">{{ student.lastname|upper }} {{ student.firstname }} - {% if student.section %}{{ student.section.shortname }}{% endif %}</label>
+                            </div>
+                        {% endfor %}
+
+                        <button class="btn-new-users" type="submit">Créer</button>
+
+                    </form>
+
+                {% else %}
+
+                    <p>Aucun résutat : tous les étudiants sont liés à des comptes utilisateurs.</p>
+
+                {% endif %}
+
+            </div>
+
+        </div>
+
+    </div>
+
+    {% block javascripts %}
+        <script src="{{ asset('build/js/admin.js') }}"></script>
+    {% endblock %}
+
+{% endblock %}
+

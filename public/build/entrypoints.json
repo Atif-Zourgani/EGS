@@ -1,0 +1,85 @@
+{
+  "entrypoints": {
+    "js/diffusion": {
+      "js": [
+        "/build/runtime.7d83f647.js",
+        "/build/js/diffusion.243851f6.js"
+      ]
+    },
+    "js/app": {
+      "js": [
+        "/build/runtime.7d83f647.js",
+        "/build/js/app.64d87975.js"
+      ],
+      "css": [
+        "/build/js/app.4ada4f2c.css"
+      ]
+    },
+    "js/evaluation": {
+      "js": [
+        "/build/runtime.7d83f647.js",
+        "/build/js/evaluation.2a1eb060.js"
+      ],
+      "css": [
+        "/build/js/evaluation.e2cd8867.css"
+      ]
+    },
+    "js/call": {
+      "js": [
+        "/build/runtime.7d83f647.js",
+        "/build/js/call.bee446c0.js"
+      ]
+    },
+    "js/search": {
+      "js": [
+        "/build/runtime.7d83f647.js",
+        "/build/js/search.4e509ca2.js"
+      ]
+    },
+    "js/discipline": {
+      "js": [
+        "/build/runtime.7d83f647.js",
+        "/build/js/discipline.8f052188.js"
+      ]
+    },
+    "js/admin": {
+      "js": [
+        "/build/runtime.7d83f647.js",
+        "/build/js/admin.c09c9860.js"
+      ],
+      "css": [
+        "/build/js/admin.4ada4f2c.css"
+      ]
+    },
+    "js/jquery-ui": {
+      "js": [
+        "/build/runtime.7d83f647.js",
+        "/build/js/jquery-ui.2cabfc29.js"
+      ]
+    },
+    "js/chart": {
+      "js": [
+        "/build/runtime.7d83f647.js",
+        "/build/js/chart.819a9904.js"
+      ]
+    },
+    "css/responsive": {
+      "js": [
+        "/build/runtime.7d83f647.js",
+        "/build/css/responsive.c5cbbb3f.js"
+      ],
+      "css": [
+        "/build/css/responsive.5f7a7eef.css"
+      ]
+    },
+    "css/mobile": {
+      "js": [
+        "/build/runtime.7d83f647.js",
+        "/build/css/mobile.666a07d0.js"
+      ],
+      "css": [
+        "/build/css/mobile.4c71b580.css"
+      ]
+    }
+  }
+}

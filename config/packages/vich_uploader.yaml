@@ -1,0 +1,40 @@
+vich_uploader:
+    db_driver: orm
+
+    mappings:
+        students_photos:
+            uri_prefix: '/uploads/students/photos'
+            upload_destination: '%kernel.root_dir%/../public/uploads/students/photos'
+            #namer: Vich\UploaderBundle\Naming\OrignameNamer
+            namer: vich_uploader.namer_hash
+            #delete_on_remove: false # suppression du fichier à la suppression de l’entité
+            #delete_on_update: false # suppression du fichier quand un nouveau fichier est envoyé
+            inject_on_load: true
+            delete_on_update: true
+            delete_on_remove: true
+
+        sections_photos:
+            uri_prefix: '/uploads/sections/photos'
+            upload_destination: '%kernel.root_dir%/../public/uploads/sections/photos'
+            namer: vich_uploader.namer_hash
+            inject_on_load: true
+            delete_on_update: true
+            delete_on_remove: true
+
+        teachers_photos:
+            uri_prefix: '/uploads/teachers/photos'
+            upload_destination: '%kernel.root_dir%/../public/uploads/teachers/photos'
+            #namer: Vich\UploaderBundle\Naming\OrignameNamer
+            namer: vich_uploader.namer_hash
+            inject_on_load: true
+            delete_on_update: true
+            delete_on_remove: true
+
+        disciplines_logos:
+            uri_prefix: '/uploads/disciplines/logos'
+            upload_destination: '%kernel.root_dir%/../public/uploads/disciplines/logos'
+            #namer: Vich\UploaderBundle\Naming\OrignameNamer
+            namer: vich_uploader.namer_hash
+            inject_on_load: true
+            delete_on_update: true
+            delete_on_remove: true

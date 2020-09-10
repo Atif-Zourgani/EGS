@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        body {
+            color: #172c3b;
+        }
+        .good {
+            color: #12906c;
+        }
+        .medium {
+            color: #db743c;
+        }
+        .bad {
+            color: #bc4627;
+        }
+        .student-points {
+            font-weight: 600;
+        }
+        .underline {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+    <body>
+
+        {% if type == 'positive' %}
+            {% set type = 'positif' %}
+            {% set types = 'positifs' %}
+        {% elseif type == 'negative' %}
+            {% set type = 'négatif' %}
+            {% set types = 'négatifs' %}
+        {% endif %}
+
+        <p>Bonjour {{ student.firstname }},</p>
+
+        {% if incident.incident|length >= 2 %}
+        <p>Tu reçois ce mail, car un intervenant ou un membre de l'administration vient de déclarer des incidents {{ types }} à ton sujet :</p>
+        {% else %}
+        <p>Tu reçois ce mail, car un intervenant ou un membre de l'administration vient de déclarer un incident {{ type }} à ton sujet :</p>
+        {% endif %}
+
+        <ul>
+          {% for incident in incident.incident %}
+              <li>
+                  {{ incident.name }} : {{ incident.points }} points.
+              </li>
+          {% endfor %}
+        </ul>
+
+        <p>Ta note globale de fiabilité est maintenant de :
+          <span class="student-points
+            {#{% set points = currentPoints|last %}#}
+            {% if points >= 16 %} good {% elseif points < 16 and points >= 10 %} medium {% else %} bad {% endif %}">
+              {{ points }} points.
+        </span>
+        </p><br>
+
+        {% for incident in incident.incident %}
+            {% if incident.id == 2 %}
+                <p>Rapproche-toi de l'administration pour justifier tes absences, et ainsi retrouver tes points.</p><br>
+            {% endif %}
+        {% endfor %}
+
+        <p class="underline">Pour rappel :</p>
+        <ul>
+          <li>Entre 11 et 15 points (inclus) : plus accès aux permanences et évènements jeux à l'école.</li>
+          <li>Entre 6 et 10 points (inclus) : projet supplémentaire à rendre avec évaluation comptant dans la moyenne.</li>
+          <li>Entre 0 et 5 points (inclus) : exclusion temporaire.</li>
+        </ul>
+
+        <br>
+        <p>Bonne journée, <br>
+            L'équipe
+        </p>
+
+    </body>
+</html>
+
+

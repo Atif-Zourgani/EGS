@@ -1,0 +1,20 @@
+<div class="legend-call flex flex--center flex--wrap">
+    <div>
+        <i class="far fa-check-circle"></i>
+        <span>Elève présent</span>
+    </div>
+    <div>
+        <i class="far fa-clock"></i>
+        <span>Elève en retard</span>
+    </div>
+    <div>
+        <i class="far fa-times-circle"></i>
+        <span>Elève absent</span>
+    </div>
+    {% if is_granted('ROLE_ADMIN') %}
+        <div>
+            <i class="far fa-smile"></i>
+            <span>Absence justifiée</span>
+        </div>
+    {% endif %}
+</div>

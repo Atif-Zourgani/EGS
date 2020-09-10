@@ -1,0 +1,14 @@
+{% extends "@FOSUser/layout.html.twig" %}
+
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block title %}Email envoyé{% endblock %}
+{% block fos_user_content %}
+
+{#{{ 'resetting.check_email'|trans({'%tokenLifetime%': tokenLifetime})|nl2br }}#}
+    <p>Un e-mail a été envoyé. Il contient un lien sur lequel il vous faudra cliquer pour réinitialiser votre mot de passe.</p><br>
+
+    <p>Remarque : Vous ne pouvez demander un nouveau mot de passe que toutes les {{ tokenLifetime }} heures.</p><br>
+
+    <p>Si vous ne recevez pas un email, vérifiez votre dossier spam ou essayez à nouveau.</p>
+{% endblock %}

@@ -1,0 +1,785 @@
+body {
+  height: 100vh;
+  overflow: hidden;
+  > * {
+    color: $blue;
+  }
+}
+
+a {
+  cursor: pointer;
+}
+
+.cursor-disabled {
+  cursor: not-allowed;
+}
+
+.main {
+  flex: 1;
+  position: relative;
+}
+
+body.all-students, body.all-sections, body.section, body.teachers, body.all-disciplines, body.parents {
+  background-color: $lightGrey;
+}
+
+.burger-menu {
+  color: $lightGrey;
+  cursor: pointer;
+}
+
+.highlighted {
+  background-color: $altBlue;
+  color: $white;
+}
+
+.absolute-middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.absolute-top {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.absolute-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.w-50 {
+  width: 50% !important;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.m-20 {
+  margin: 20px 0;
+}
+
+
+/* FONT COLOR */
+/****************************************/
+
+.green {
+  color: $green !important;
+}
+
+.red {
+  color: $red !important;
+}
+
+/* TITLES */
+/****************************************/
+
+h1 {
+  font-size: 20px;
+  font-weight: $bold;
+  line-height: 1.6;
+}
+h2 {
+  font-style: italic;
+  font-weight: $thin;
+  font-size: 18px;
+}
+
+h3 {
+  font-size: 20px;
+  border-bottom: 2px solid $blue;
+  line-height: 1.5;
+  display: inline-block;
+  span {
+    font-style: italic;
+    font-weight: $light;
+  }
+}
+
+.bold {
+  font-weight: $bold;
+}
+
+.text-center {
+  text-align: center;
+}
+
+
+/* MAIN-SCROLLABLE */
+/****************************************/
+
+.main-scrollable {
+  overflow-y: scroll;
+  height: calc(100vh - 70px);
+}
+
+body.evaluation-form, body.create-call,  body.update-call {
+  .main-scrollable {
+    height: calc(100vh - 137.5px);
+  }
+}
+
+/* FLEXBOX */
+/****************************************/
+
+.flex {
+  display: flex;
+}
+.flex--direction-col {
+  flex-direction: column;
+}
+.flex--align-center {
+  align-items: center;
+}
+.flex--align-start {
+  align-items: flex-start;
+}
+.flex--align-end {
+  align-items: flex-end;
+}
+.flex--align-baseline {
+  align-items: baseline;
+}
+.flex--space-between {
+  justify-content: space-between;
+}
+.flex--space-around {
+  justify-content: space-around;
+}
+.flex--center {
+  justify-content: center;
+}
+.flex--wrap {
+  flex-wrap: wrap;
+}
+.flex--end {
+  justify-content: flex-end;
+}
+
+.flex--start {
+  justify-content: flex-start;
+}
+
+.flex--align-content-start {
+  align-content: flex-start;
+}
+
+/* FLASH MESSAGE */
+/****************************************/
+
+.flash-message {
+  position: absolute;
+  background-color: $lightGrey;
+  padding: 50px;
+  top: 50%;
+  left: calc(50% + 125px);
+  transform: translate(-50%, -50%);
+  border: 1px solid $blue;
+  p {
+    font-size: 18px;
+    line-height: 1.3;
+    text-align: center;
+    display: block;
+    font-weight: $medium;
+    color: $blue;
+  }
+}
+
+
+.close-flash-modal {
+  cursor: pointer;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  font-size: 30px;
+}
+
+/* NAVIGATION */
+/***********************************************/
+
+.nav-menu {
+  background-color: $blue;
+  width: 250px;
+  transition: width .35s linear;
+  height: 100vh;
+  z-index: 10;
+  .logo-egs {
+    width: 60px;
+    display: block;
+    margin: 30px auto;
+  }
+  .active-user-short {
+    cursor: pointer;
+  }
+  .active-user {
+    position: relative;
+  }
+  .logout {
+    z-index: 10;
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 60px;
+    background-color: $lightGrey;
+    padding: 10px 15px;
+    font-size: 14px;
+    &.displayed {
+      display: block;
+    }
+  }
+  ul {
+    width: 250px;
+    transition: width .35s linear;
+  }
+  li:not(:first-of-type) {
+    display: block;
+    border-bottom: 1px solid $altBlue;
+    a {
+      position: relative;
+      color: $lightGrey;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      padding: 10px 20px 10px 15px;
+      overflow: hidden;
+      &.nav-active, &:hover {
+        background-color: $altPink;
+        border-right: 2px solid $lightGrey2;
+        .fa-angle-right {
+          display: none;
+        }
+        &:after {
+          content: "";
+          width: 8px;
+          height: 8px;
+          background-color: $lightGrey2;
+          display: inline-block;
+          position: absolute;
+          right: -4px;
+          top: 50%;
+          transform: rotate(45deg) translate(-50%, -50%);
+        }
+      }
+      &.nav-section {
+        &.nav-active, &:hover {
+          background-color: $pink;
+        }
+      }
+      &.nav-teacher {
+        &.nav-active, &:hover {
+          background-color: $altOrange;
+        }
+      }
+      &.nav-call {
+        &.nav-active, &:hover {
+          background-color: $altOrange2;
+        }
+      }
+      &.nav-parent {
+        &.nav-active, &:hover {
+          background-color: $rust;
+        }
+      }
+      &.nav-competence {
+        &.nav-active, &:hover {
+          background-color: $alt2Blue;
+        }
+      }
+      &.nav-career {
+        &.nav-active, &:hover {
+          background-color: $purple;
+        }
+      }
+      &.nav-evaluation {
+        &.nav-active, &:hover {
+          background-color: $altGreen;
+        }
+      }
+      &.nav-useful {
+        &.nav-active, &:hover {
+          background-color: $green;
+        }
+      }
+      &.nav-infos {
+        &.nav-active, &:hover {
+          background-color: #1c75a6;
+        }
+      }
+
+    }
+  }
+  &.open {
+    width: 75px;
+    transition: width .35s linear;
+    ul {
+      width: 75px;
+      transition: width .35s linear;
+    }
+    .nav-item, .active-user-name, .active-user-short {
+      display: none;
+    }
+    .nav-ico {
+      margin-right: 0;
+    }
+    .burger-menu {
+      margin: auto;
+    }
+  }
+}
+
+.nav-ico {
+  width: 40px;
+  margin-right: 10px;
+  i {
+    font-size: 25px !important;
+    display: block;
+    text-align: center;
+  }
+}
+.nav-item {
+  flex: 1;
+  justify-content: space-between;
+}
+
+/* BREADCRUMBS */
+/***********************************************/
+
+.breadcrumbs, .search-bar, .block-gamer-label-search {
+  background-color: $darkBlue;
+  color: $lightGrey;
+  height: 70px;
+}
+
+.breadcrumbs, .search-bar {
+  width: 100%;
+}
+
+.gamer-label-search {
+  margin-right: 40px;
+  cursor: pointer;
+}
+
+.breadcrumbs {
+  > * {
+    font-size: 18px;
+    line-height: 1.3;
+  }
+  .fas {
+    margin: 0 20px;
+    font-size: 25px;
+    &.fa-angle-right {
+      font-size: 35px;
+    }
+  }
+  .student-points {
+    font-weight: $bold;
+    &.good {
+      color: $altGreen;
+    }
+    &.medium {
+      color: $orange;
+    }
+    &.bad {
+      color: $altPink;
+    }
+  }
+}
+
+
+.gamer-label-trophy-search {
+  width: 30px;
+  margin-right: 15px;
+}
+
+/***** SELECT DESIGNED ****/
+/*******************************************/
+
+.select-designed {
+  margin-left: 10px;
+  border: 2px solid $blue;
+  padding: 10px 35px 10px 10px;
+  position: relative;
+  &:after {
+    content: url("../Images/angle-down-solid-black.svg");
+    position: absolute;
+    width: 15px;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  select {
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  > * {
+    text-align: center;
+    border: none;
+    border-radius: unset;
+    background-color: unset;
+    -webkit-appearance: unset;
+    font-weight: $medium;
+  }
+  &.select-designed--white {
+    &:after {
+      content: url("../Images/angle-down-solid-white.svg");
+    }
+  }
+}
+
+body.student, body.display-calls {
+  .select-designed {
+    box-shadow: 5px 4px 16px 0 rgba(9, 34, 57, 0.3);
+    &:after {
+      width: 10px;
+      top: 48%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+body.select-call, body.evaluation .block-select {
+  .select-designed {
+    margin: 10px;
+    border: none;
+    > select {
+      border: none;
+      border-radius: unset;
+      background-color: unset;
+      -webkit-appearance: unset;
+      font-size: 18px;
+      font-weight: $medium;
+    }
+  }
+}
+
+
+.select2-container--default .select2-selection--single {
+  border: 2px solid $darkBlue;
+  border-radius: 0;
+}
+
+
+  /***** BTN SUBMIT (CALL / EVALUATION) ****/
+/*******************************************/
+
+.submit-skills, .submit-call {
+  background-color: $altGreen;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  cursor: pointer;
+  > * {
+    color: $lightGrey;
+  }
+  i {
+    font-size: 26px;
+    margin-right: 20px;
+  }
+  span {
+    font-size: 18px;
+    font-weight: $regular;
+    letter-spacing: 1px;
+  }
+}
+
+.block-buttons {
+  button, a {
+    &:hover {
+      filter: contrast(1.4);
+    }
+  }
+}
+
+/* SEARCH-BAR */
+/***********************************************/
+
+.search-bar {
+  //margin-right: 20px;
+  .fa-search {
+    font-size: 30px;
+    padding: 0 15px;
+  }
+  input {
+    color: $lightGrey;
+  }
+  .fa-search {
+    color: $lightGrey;
+  }
+  > div, input {
+    width: 100%;
+  }
+}
+
+#no-result {
+  text-align: center;
+  &.active {
+    padding: 30px;
+  }
+}
+
+.no-result {
+  text-align: center;
+  display: none;
+  width: 100%;
+  color: $pink;
+  padding: 20px !important;
+  margin: auto;
+}
+
+#search_student_submit, #search_student_query {
+  color: $white;
+  display: inline-block;
+}
+
+.cards-container {
+  padding: 20px;
+  li.card {
+    display: none;
+  }
+}
+
+#loader {
+  display: block;
+  margin: 10px auto;
+}
+
+#load-more {
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: $medium;
+  margin: 20px auto 40px;
+}
+
+
+
+body.all-students, body.section, body.teachers, body.parents {
+  .card {
+    width: 360px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    > {
+      display: block;
+    }
+  }
+  .user {
+    margin-right: 25px;
+  }
+  .user-name {
+    font-weight: $medium;
+    padding-bottom: 10px;
+  }
+  .user-infos {
+    span, .user-name {
+      display: inline-block;
+    }
+  }
+}
+
+body.all-students, body.section {
+  .user-infos {
+    .user-section {
+      display: block !important;
+    }
+  }
+}
+
+
+/***** PAGE STUDENT ****/
+/*******************************************/
+
+body.all-students, body.student {
+  .user-name {
+    color: $altPink;
+  }
+}
+
+
+/***** PAGE SECTION ****/
+/*******************************************/
+
+body.section {
+  .user-name {
+    color: $pink;
+  }
+}
+
+
+/***** PAGE PARENTS ****/
+/*******************************************/
+
+body.parents {
+  .user-name {
+    color: $rust;
+  }
+  .parent-children {
+    span {
+      font-weight: $medium;
+      border-bottom: 1px solid;
+    }
+    ul {
+      margin: 5px 0;
+      display: list-item;
+      li {
+        line-height: 1.2;
+        list-style: disc inside;
+        &:hover {
+          color: $rust;
+        }
+      }
+    }
+  }
+}
+
+
+/***** PAGE TEACHERS ****/
+/*******************************************/
+
+body.teachers {
+  .user-name {
+    color: $altOrange;
+  }
+  .teacher-discipline {
+    li {
+      display: inline-block!important;
+      line-height: 1.3;
+    }
+    li:not(:last-of-type):after {
+      content: "/";
+      display: inline-block;
+      padding: 0 3px;
+    }
+  }
+}
+
+
+/***** PAGE USEFUL ****/
+/*******************************************/
+
+
+.usefull-list {
+  margin: 50px 30px;
+  li {
+    width: 250px;
+    margin: 15px;
+    box-sizing: border-box;
+  }
+  a {
+    height: 250px;
+    box-sizing: border-box;
+    font-size: 20px;
+    line-height: 1.3;
+    padding: 30% 30px 30px;
+    text-align: center;
+  }
+  i {
+    display: block;
+    margin: 0 auto 15px;
+    font-size: 30px;
+  }
+  .easyadmin {
+    background-color: #bdf5ff;
+    &:hover {
+      background-color: rgba(#bdf5ff, .8);
+    }
+  }
+  .back-up {
+    background-color: #ffa5a2;
+    &:hover {
+      background-color: rgba(#ffa5a2, .8);
+    }
+  }
+  .new-users {
+    background-color: #79ccbf;
+    &:hover {
+      background-color: rgba(#79ccbf, .8);
+    }
+  }
+  .disable-student {
+    background-color: rgba(#8e096d, .5);
+    &:hover {
+      background-color: rgba(#8e096d, .4);
+    }
+  }
+  .password {
+    background-color: #fff286;
+    &:hover {
+      background-color: rgba(#fff286, .8);
+    }
+  }
+  .attendance {
+    background-color: rgba(#FFB882, .8);
+    &:hover {
+      background-color: rgba(#FFB882, .4);
+    }
+  }
+  .best-reliability {
+    background-color: #71c287;
+    &:hover {
+      background-color: rgba(#71c287, .8);
+    }
+  }
+  .bad-reliability {
+    background-color: #b45959;
+    &:hover {
+      background-color: rgba(#b45959, .8);
+    }
+  }
+}
+
+.block-student-to-disable {
+  padding: 5px;
+}
+
+.student-to-disable {
+  margin-left: 10px;
+}
+
+#select-student-to-disabled {
+  margin: 20px 0 20px 20px;
+  display: block;
+  background-color: $lightGrey;
+  padding: 10px;
+  flex: 1;
+}
+
+/***** PAGE BACKUP ****/
+/*******************************************/
+
+.js-delete-datas, .cancel-delete-datas {
+  cursor: pointer;
+}
+
+.modal-security-before-remove {
+  display: none;
+  position: absolute;
+  background-color: $lightGrey;
+  padding: 50px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: 1px solid $blue;
+}
+
+.flash-message--back-up {
+  left: 50%;
+}
+
+.flash-message--back-up--msg {
+  margin-bottom: 30px;
+}
+
+.flash-message--back-up--action p {
+  padding: 20px;
+}

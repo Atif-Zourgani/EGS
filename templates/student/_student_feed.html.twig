@@ -1,0 +1,78 @@
+<section class="feed-overlay">
+
+    <div class="feed-top flex flex--align-center">
+        <button class="close-feed"><i class="fas fa-times"></i></button>
+        <img class="feed-img" src="{{ asset('logos/infos.png') }}" alt="Icone infos">
+        {% if is_mobile() == false %}
+            {% if app.user.student != "" %}
+                <span>Voir mon flux d'informations personnelles</span>
+            {% else %}
+                <span>Voir son flux d'informations personnelles</span>
+            {% endif %}
+        {% endif %}
+
+
+        <div class="select-designed select-designed--white">
+            <select name="feed-cat" id="feed-cat">
+                <option value="all">Flux intégral</option>
+                <option value="Esport">Esport</option>
+                <option value="Administratif">Administratif</option>
+                <option value="Pédagogique">Pédagogique</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="feed-overlay-body">
+
+        {% if app.user.team != "" or app.user.teacher != "" %}
+            <div class="feed-form">
+                <p class="feed-form-title">Ajouter un message</p>
+
+                {{ form_start(form) }}
+
+                    <div class="feed-form-item flex flex--align-center">
+                        {{ form_label(form.category, 'Catégorie :') }}
+                        <div class="select-designed select-designed--white">
+                            {{ form_widget(form.category) }}
+                        </div>
+                    </div>
+
+                    {{ form_widget(form.comment, {'attr': {'class': 'ckeditor'}}) }}
+
+                <button type="submit" class="flex flex--align-center flex--center feed-form-btn">
+                    <i class="fas fa-check"></i>
+                    <span>Enregistrer</span>
+                </button>
+                {{ form_end(form) }}
+            </div>
+        {% endif %}
+
+
+        {% for feed in feeds %}
+            <div class="feed" data-cat="{{ feed.category }}">
+
+                {% if (app.user.team != "" and app.user.team == feed.team) or (is_granted('ROLE_TEACHER') and app.user.teacher == feed.teacher) or (is_granted('ROLE_SUPER_ADMIN')) %}
+                    {{ include('student/_delete_feed.html.twig') }}
+                {% endif %}
+
+                <div class="feed-comment">
+                    {{ feed.comment|raw }}
+                    <div class="feed-triangle"></div>
+                </div>
+                <div class="feed-infos flex flex--align-center flex--space-between">
+                    <div>
+                        <span class="feed-date">{{ feed.createdAt|date('d/m/Y') }}</span>
+                        <span class="feed-cat">/ {{ feed.category }}</span>
+                    </div>
+                    <div>
+                        <span class="feed-author">{% if feed.teacher %}{{ feed.teacher.firstname }} {{ feed.teacher.lastname }}{% elseif feed.team %}{{ feed.team.firstname }} {{ feed.team.lastname }}{% endif %}</span>
+                    </div>
+                </div>
+            </div>
+        {% else %}
+            <p class="feed-empty">Aucun message enregistré pour le moment.</p>
+        {% endfor %}
+    </div>
+
+</section>
+

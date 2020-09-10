@@ -1,0 +1,506 @@
+Nom,Prénom,Classe,Date,Incident,Points
+ANOUAR,LUCAS,"Bachelor 1 A","20 12 2019","Trop d'absences injustifiées",-5
+"DE FIGUEIREDO",Dan,"Bachelor 1 A","18 11 2019","Participation aux JPO/Salon régulière",3
+"DE FIGUEIREDO",Dan,"Bachelor 1 A","20 11 2019","Trop d'absences injustifiées",-5
+"DE FIGUEIREDO",Dan,"Bachelor 1 A","12 12 2019","Trop d'absences injustifiées",-5
+"DE FIGUEIREDO",Dan,"Bachelor 1 A","16 12 2019","Bon comportement",1
+"DE FIGUEIREDO",Dan,"Bachelor 1 A","20 12 2019","Trop d'absences injustifiées",-5
+DIJOUX,Kylian,"Bachelor 1 A","22 11 2019","Trop d'absences injustifiées",-5
+DIJOUX,Kylian,"Bachelor 1 A","17 01 2020","Trop d'absences injustifiées",-5
+"EL ADLY",Ilyass,"Bachelor 1 A","18 11 2019","Participation aux JPO/Salon régulière",3
+"EL ADLY",Ilyass,"Bachelor 1 A","26 11 2019","Trop d'absences injustifiées",-5
+"EL ADLY",Ilyass,"Bachelor 1 A","11 12 2019","Bon comportement",1
+"EL ADLY",Ilyass,"Bachelor 1 A","11 12 2019","Trop de retards",-3
+"EL ADLY",Ilyass,"Bachelor 1 A","18 12 2019","Trop d'absences injustifiées",-5
+"EL ADLY",Ilyass,"Bachelor 1 A","08 01 2020","Trop d'absences injustifiées",-5
+"EL ADLY",Ilyass,"Bachelor 1 A","17 01 2020","Trop d'absences injustifiées",-5
+FEUGAS,Nicolas,"Bachelor 1 A","20 11 2019","Trop d'absences injustifiées",-5
+FEUGAS,Nicolas,"Bachelor 1 A","02 12 2019","Trop d'absences injustifiées",-5
+FEUGAS,Nicolas,"Bachelor 1 A","13 12 2019","Projet supplémentaire rendu",3
+FEUGAS,Nicolas,"Bachelor 1 A","08 01 2020","Trop d'absences injustifiées",-5
+GALVEZ,Valentin,"Bachelor 1 A","20 12 2019","Trop d'absences injustifiées",-5
+GALVEZ,Valentin,"Bachelor 1 A","15 01 2020","Trop d'absences injustifiées",-5
+GONZALEZ,Fabrizzio,"Bachelor 1 A","30 09 2019","Bon comportement",1
+GONZALEZ,Fabrizzio,"Bachelor 1 A","19 12 2019","Trop d'absences injustifiées",-5
+LHEMERY,Guillaume,"Bachelor 1 A","21 11 2019","Trop d'absences injustifiées",-5
+LHEMERY,Guillaume,"Bachelor 1 A","03 12 2019","Projet supplémentaire rendu",3
+LHEMERY,Guillaume,"Bachelor 1 A","17 12 2019","Trop d'absences injustifiées",-5
+MARTINS,Remy,"Bachelor 1 A","22 11 2019","Tilt, rage ou perturbation de cours",-1
+NAUD,Olivier,"Bachelor 1 A","08 01 2020","Trop de retards",-3
+NAUD,Olivier,"Bachelor 1 A","13 01 2020","Bon comportement",1
+PAJANY,Sylvain,"Bachelor 1 A","15 10 2019","Bon comportement",1
+PIERRESTEGUY,Yann,"Bachelor 1 A","13 12 2019","Trop d'absences injustifiées",-5
+ROBILLARD,Clément,"Bachelor 1 A","05 12 2019","Trop d'absences injustifiées",-5
+ROBILLARD,Clément,"Bachelor 1 A","16 12 2019","Bon comportement",1
+ROBILLARD,Clément,"Bachelor 1 A","17 01 2020","Trop d'absences injustifiées",-5
+DEVARENNE,Victor,"Bachelor 1 B","15 01 2020","Trop d'absences injustifiées",-5
+DOUA,Erwan,"Bachelor 1 B","05 12 2019","Trop d'absences injustifiées",-5
+DOUA,Erwan,"Bachelor 1 B","16 12 2019","Trop d'absences injustifiées",-5
+DOUA,Erwan,"Bachelor 1 B","14 01 2020","Trop d'absences injustifiées",-5
+FERRON,Jason,"Bachelor 1 B","21 11 2019","Trop d'absences injustifiées",-5
+FERRON,Jason,"Bachelor 1 B","20 12 2019","Trop d'absences injustifiées",-5
+FROUGIER,Maxime,"Bachelor 1 B","05 11 2019","Trop d'absences injustifiées",-5
+FROUGIER,Maxime,"Bachelor 1 B","17 01 2020","Trop d'absences injustifiées",-5
+HERBAS,Gautier,"Bachelor 1 B","03 10 2019","Bon comportement",1
+HERBAS,Gautier,"Bachelor 1 B","05 11 2019","Trop d'absences injustifiées",-5
+HERBAS,Gautier,"Bachelor 1 B","02 12 2019","Trop d'absences injustifiées",-5
+HERBAS,Gautier,"Bachelor 1 B","16 12 2019","Trop d'absences injustifiées",-5
+HERBAS,Gautier,"Bachelor 1 B","16 12 2019","Bon comportement",1
+HERBAS,Gautier,"Bachelor 1 B","19 12 2019","Trop de retards",-3
+LEDUC,Thomas,"Bachelor 1 B","13 01 2020","Trop d'absences injustifiées",-5
+LESAGE,Florian,"Bachelor 1 B","13 11 2019","Tilt, rage ou perturbation de cours",-1
+LESAGE,Florian,"Bachelor 1 B","08 01 2020","Trop d'absences injustifiées",-5
+LESAGE,Florian,"Bachelor 1 B","14 01 2020","Trop d'absences injustifiées",-5
+LESAGE,Florian,"Bachelor 1 B","17 01 2020","Trop d'absences injustifiées",-5
+PARIS,Bastien,"Bachelor 1 B","13 01 2020","Bon comportement",1
+PECQUERIE,William,"Bachelor 1 B","26 09 2019","Bon comportement",1
+PITRA,Justin,"Bachelor 1 B","03 10 2019","Bon comportement",1
+PITRA,Justin,"Bachelor 1 B","13 01 2020","Trop d'absences injustifiées",-5
+ROUAIRIA,Julien,"Bachelor 1 B","01 10 2019","Trop d'absences injustifiées",-5
+ROUAIRIA,Julien,"Bachelor 1 B","08 10 2019","Trop d'absences injustifiées",-5
+ROUAIRIA,Julien,"Bachelor 1 B","11 10 2019","Trop d'absences injustifiées",-5
+SAINT-AMAUX,Matthieu,"Bachelor 1 B","03 10 2019","Bon comportement",1
+TEEPEN,Ioan,"Bachelor 1 B","05 11 2019","Bon comportement",1
+TEEPEN,Ioan,"Bachelor 1 B","13 01 2020","Bon comportement",1
+YRLES,Seraphin,"Bachelor 1 B","03 10 2019","Bon comportement",1
+YRLES,Seraphin,"Bachelor 1 B","14 01 2020","Trop d'absences injustifiées",-5
+YRLES,Seraphin,"Bachelor 1 B","17 01 2020","Trop d'absences injustifiées",-5
+ALAMI,Achraf,"Bachelor 1 C","09 12 2019","Trop d'absences injustifiées",-5
+ALAMI,Achraf,"Bachelor 1 C","06 01 2020","Trop d'absences injustifiées",-5
+ALAMI,Achraf,"Bachelor 1 C","16 01 2020","Trop d'absences injustifiées",-5
+"ALVES DA SILVA",Jean-Paul,"Bachelor 1 C","19 12 2019","Trop d'absences injustifiées",-5
+"ALVES DA SILVA",Jean-Paul,"Bachelor 1 C","17 01 2020","Bon comportement",1
+AUDIBERT,Thomas,"Bachelor 1 C","02 12 2019","Trop d'absences injustifiées",-5
+AUDIBERT,Thomas,"Bachelor 1 C","17 12 2019","Trop d'absences injustifiées",-5
+AUDIBERT,Thomas,"Bachelor 1 C","19 12 2019","Trop d'absences injustifiées",-5
+AUDIBERT,Thomas,"Bachelor 1 C","13 01 2020","Trop d'absences injustifiées",-5
+AUDIBERT,Thomas,"Bachelor 1 C","15 01 2020","Trop d'absences injustifiées",-5
+BERQUÉ,Séléna,"Bachelor 1 C","18 11 2019","Participation aux JPO/Salon régulière",3
+BERQUÉ,Séléna,"Bachelor 1 C","14 01 2020","Trop d'absences injustifiées",-5
+BERQUÉ,Séléna,"Bachelor 1 C","20 01 2020","Bon comportement",1
+"DE ANDRADE",Samuel,"Bachelor 1 C","17 12 2019","Trop d'absences injustifiées",-5
+"DE ANDRADE",Samuel,"Bachelor 1 C","17 01 2020","Bon comportement",1
+DIDIER,Vincent,"Bachelor 1 C","13 01 2020","Trop d'absences injustifiées",-5
+DUBLANC,Logan,"Bachelor 1 C","16 01 2020","Trop d'absences injustifiées",-5
+GIROUX,Guillaume,"Bachelor 1 C","17 01 2020","Bon comportement",1
+HAMMERSCHMIDT,Jules,"Bachelor 1 C","16 01 2020","Trop d'absences injustifiées",-5
+HARDEMAN,Christopher,"Bachelor 1 C","18 11 2019","Participation aux JPO/Salon régulière",3
+HILAIRET,Alex,"Bachelor 1 C","17 12 2019","Trop d'absences injustifiées",-5
+HOARAU,Romain,"Bachelor 1 C","06 11 2019","Trop d'absences injustifiées",-5
+HOARAU,Romain,"Bachelor 1 C","10 11 2019","Bon comportement",1
+HOARAU,Romain,"Bachelor 1 C","22 11 2019","Trop d'absences injustifiées",-5
+HOARAU,Romain,"Bachelor 1 C","27 11 2019","Projet supplémentaire rendu",3
+HOARAU,Romain,"Bachelor 1 C","16 01 2020","Trop d'absences injustifiées",-5
+HOARAU,Romain,"Bachelor 1 C","17 01 2020","Bon comportement",1
+HOARAU,Romain,"Bachelor 1 C","17 01 2020","Bon comportement",1
+HUET,Lionel,"Bachelor 1 C","19 12 2019","Trop de retards",-3
+LENOIR,Nathan,"Bachelor 1 C","20 11 2019","Trop d'absences injustifiées",-5
+LENOIR,Nathan,"Bachelor 1 C","16 12 2019","Trop d'absences injustifiées",-5
+LENOIR,Nathan,"Bachelor 1 C","13 01 2020","Trop d'absences injustifiées",-5
+"VIAL BOGGIA",Loïc,"Bachelor 1 C","20 11 2019","Trop d'absences injustifiées",-5
+"VIAL BOGGIA",Loïc,"Bachelor 1 C","03 12 2019","Trop d'absences injustifiées",-5
+"VIAL BOGGIA",Loïc,"Bachelor 1 C","05 12 2019","Trop d'absences injustifiées",-5
+"VIAL BOGGIA",Loïc,"Bachelor 1 C","17 12 2019","Trop d'absences injustifiées",-5
+"VIAL BOGGIA",Loïc,"Bachelor 1 C","19 12 2019","Trop d'absences injustifiées",-5
+"VIAL BOGGIA",Loïc,"Bachelor 1 C","13 01 2020","Retour exclusion",1
+"VIAL BOGGIA",Loïc,"Bachelor 1 C","13 01 2020","Retour exclusion",1
+"VIAL BOGGIA",Loïc,"Bachelor 1 C","13 01 2020","Retour exclusion",1
+"VIAL BOGGIA",Loïc,"Bachelor 1 C","13 01 2020","Retour exclusion",1
+"VIAL BOGGIA",Loïc,"Bachelor 1 C","13 01 2020","Retour exclusion",1
+"VIAL BOGGIA",Loïc,"Bachelor 1 C","13 01 2020","Retour exclusion",1
+"VIAL BOGGIA",Loïc,"Bachelor 1 C","13 01 2020","Retour exclusion",1
+"VIAL BOGGIA",Loïc,"Bachelor 1 C","13 01 2020","Retour exclusion",1
+"VIAL BOGGIA",Loïc,"Bachelor 1 C","13 01 2020","Retour exclusion",1
+"VIAL BOGGIA",Loïc,"Bachelor 1 C","13 01 2020","Retour exclusion",1
+"VIAL BOGGIA",Loïc,"Bachelor 1 C","13 01 2020","Retour exclusion",1
+"VIAL BOGGIA",Loïc,"Bachelor 1 C","14 01 2020","Trop d'absences injustifiées",-5
+"VIAL BOGGIA",Loïc,"Bachelor 1 C","17 01 2020","Trop d'absences injustifiées",-5
+CARRÉ,Ronan,"Bachelor 1 D","18 11 2019","Bon comportement",1
+CARRÉ,Ronan,"Bachelor 1 D","26 11 2019","Trop d'absences injustifiées",-5
+CARRÉ,Ronan,"Bachelor 1 D","18 12 2019","Trop d'absences injustifiées",-5
+CARRÉ,Ronan,"Bachelor 1 D","06 01 2020","Trop d'absences injustifiées",-5
+GODEBERT,Quentin,"Bachelor 1 D","08 10 2019","Tilt, rage ou perturbation de cours",-1
+GODEBERT,Quentin,"Bachelor 1 D","05 11 2019","Tilt, rage ou perturbation de cours",-1
+GODEBERT,Quentin,"Bachelor 1 D","05 11 2019","Tilt, rage ou perturbation de cours",-1
+GODEBERT,Quentin,"Bachelor 1 D","20 11 2019","Bon comportement",1
+GODEBERT,Quentin,"Bachelor 1 D","21 11 2019","Bon comportement",1
+IMPERATRICE,Théo,"Bachelor 1 D","18 11 2019","Bon comportement",1
+LACROIX,Jonathan,"Bachelor 1 D","20 11 2019","Bon comportement",1
+LACROIX,Jonathan,"Bachelor 1 D","21 11 2019","Bon comportement",1
+LACROIX,Jonathan,"Bachelor 1 D","11 12 2019","Trop de retards",-3
+LESPRIT,Jérémy,"Bachelor 1 D","18 10 2019","Trop d'absences injustifiées",-5
+LESPRIT,Jérémy,"Bachelor 1 D","05 11 2019","Bon comportement",1
+LESPRIT,Jérémy,"Bachelor 1 D","12 12 2019","Trop d'absences injustifiées",-5
+LESUEUR,Anthony,"Bachelor 1 D","10 01 2020","Trop d'absences injustifiées",-5
+LUSSAC,Killian,"Bachelor 1 D","26 11 2019","Trop d'absences injustifiées",-5
+LUSSAC,Killian,"Bachelor 1 D","28 11 2019","Trop de retards",-3
+LUSSAC,Killian,"Bachelor 1 D","12 12 2019","Trop d'absences injustifiées",-5
+LUSSAC,Killian,"Bachelor 1 D","13 12 2019","Trop de retards",-3
+LUSSAC,Killian,"Bachelor 1 D","14 01 2020","Trop d'absences injustifiées",-5
+PICCIRILLI,Valentin,"Bachelor 1 D","20 12 2019","Trop de retards",-3
+THOMY,Erwan,"Bachelor 1 D","18 10 2019","Trop d'absences injustifiées",-5
+THOMY,Erwan,"Bachelor 1 D","21 11 2019","Bon comportement",1
+THOMY,Erwan,"Bachelor 1 D","28 11 2019","Trop d'absences injustifiées",-5
+THOMY,Erwan,"Bachelor 1 D","12 12 2019","Trop d'absences injustifiées",-5
+THOMY,Erwan,"Bachelor 1 D","19 12 2019","Trop d'absences injustifiées",-5
+THOMY,Erwan,"Bachelor 1 D","09 01 2020","Trop d'absences injustifiées",-5
+USQUELIS,Carl,"Bachelor 1 D","14 10 2019","Trop d'absences injustifiées",-5
+USQUELIS,Carl,"Bachelor 1 D","14 11 2019","Trop d'absences injustifiées",-5
+USQUELIS,Carl,"Bachelor 1 D","11 12 2019","Projet/Devoir non rendu",-3
+USQUELIS,Carl,"Bachelor 1 D","11 12 2019","Projet supplémentaire rendu",3
+USQUELIS,Carl,"Bachelor 1 D","18 12 2019","Trop de retards",-3
+WAHL,Xavier,"Bachelor 1 D","18 12 2019","Trop de retards",-3
+ZENBIL,Yassir,"Bachelor 1 D","08 11 2019","Tilt, rage ou perturbation de cours",-1
+ZENBIL,Yassir,"Bachelor 1 D","20 11 2019","Bon comportement",1
+ZENBIL,Yassir,"Bachelor 1 D","20 12 2019","Tilt, rage ou perturbation de cours",-1
+ZENBIL,Yassir,"Bachelor 1 D","17 01 2020","Trop d'absences injustifiées",-5
+ZIEGLER,Simon,"Bachelor 1 D","26 09 2019","Bon comportement",1
+ZIEGLER,Simon,"Bachelor 1 D","05 11 2019","Bon comportement",1
+ZIEGLER,Simon,"Bachelor 1 D","13 01 2020","Bon comportement",1
+ZIEGLER,Simon,"Bachelor 1 D","13 01 2020","Bon comportement",1
+ZIEGLER,Simon,"Bachelor 1 D","20 01 2020","Bon comportement",1
+ASCONE,Ennio,"Bachelor 1 E","05 11 2019","Bon comportement",1
+ASCONE,Ennio,"Bachelor 1 E","18 11 2019","Participation aux JPO/Salon régulière",3
+ASCONE,Ennio,"Bachelor 1 E","20 11 2019","Bon comportement",1
+ASCONE,Ennio,"Bachelor 1 E","16 12 2019","Bon comportement",1
+ASCONE,Ennio,"Bachelor 1 E","13 01 2020","Bon comportement",1
+ASCONE,Ennio,"Bachelor 1 E","20 01 2020","Participation aux JPO/Salon régulière",3
+CAZALS-RIPPERT,Christophe,"Bachelor 1 E","18 11 2019","Participation aux JPO/Salon régulière",3
+CAZALS-RIPPERT,Christophe,"Bachelor 1 E","25 11 2019","Trop d'absences injustifiées",-5
+CAZALS-RIPPERT,Christophe,"Bachelor 1 E","16 12 2019","Participation aux JPO/Salon régulière",3
+CAZALS-RIPPERT,Christophe,"Bachelor 1 E","07 01 2020","Trop d'absences injustifiées",-5
+DELABROY,Hugo,"Bachelor 1 E","16 10 2019","Bon comportement",1
+DELABROY,Hugo,"Bachelor 1 E","18 11 2019","Participation aux JPO/Salon régulière",3
+DELABROY,Hugo,"Bachelor 1 E","13 12 2019","Trop d'absences injustifiées",-5
+DELABROY,Hugo,"Bachelor 1 E","16 12 2019","Bon comportement",1
+DELABROY,Hugo,"Bachelor 1 E","20 01 2020","Bon comportement",1
+DEMISSY,Maxime,"Bachelor 1 E","16 12 2019","Bon comportement",1
+DEMISSY,Maxime,"Bachelor 1 E","13 01 2020","Bon comportement",1
+FERRAND,Gabriel,"Bachelor 1 E","13 11 2019","Trop d'absences injustifiées",-5
+FERRAND,Gabriel,"Bachelor 1 E","29 11 2019","Trop d'absences injustifiées",-5
+FERRAND,Gabriel,"Bachelor 1 E","20 12 2019","Projet supplémentaire rendu",3
+FIEVRE,Antoine,"Bachelor 1 E","12 11 2019","Trop d'absences injustifiées",-5
+FIEVRE,Antoine,"Bachelor 1 E","11 12 2019","Trop d'absences injustifiées",-5
+FIEVRE,Antoine,"Bachelor 1 E","18 12 2019","Trop d'absences injustifiées",-5
+FIEVRE,Antoine,"Bachelor 1 E","07 01 2020","Trop d'absences injustifiées",-5
+FIEVRE,Antoine,"Bachelor 1 E","10 01 2020","Trop d'absences injustifiées",-5
+FIEVRE,Antoine,"Bachelor 1 E","17 01 2020","Trop d'absences injustifiées",-5
+JUNCA,Elie,"Bachelor 1 E","09 10 2019","Tilt, rage ou perturbation de cours",-1
+JUNCA,Elie,"Bachelor 1 E","16 10 2019","Trop d'absences injustifiées",-5
+JUNCA,Elie,"Bachelor 1 E","05 11 2019","Bon comportement",1
+JUNCA,Elie,"Bachelor 1 E","18 11 2019","Tilt, rage ou perturbation de cours",-1
+JUNCA,Elie,"Bachelor 1 E","21 11 2019","Bon comportement",1
+JUNCA,Elie,"Bachelor 1 E","09 12 2019","Trop d'absences injustifiées",-5
+JUNCA,Elie,"Bachelor 1 E","16 12 2019","Bon comportement",1
+JUNCA,Elie,"Bachelor 1 E","10 01 2020","Trop d'absences injustifiées",-5
+LACHERY,Neal,"Bachelor 1 E","04 10 2019","Trop d'absences injustifiées",-5
+LACHERY,Neal,"Bachelor 1 E","06 11 2019","Trop d'absences injustifiées",-5
+LACHERY,Neal,"Bachelor 1 E","13 11 2019","Trop d'absences injustifiées",-5
+LACHERY,Neal,"Bachelor 1 E","15 11 2019","Trop d'absences injustifiées",-5
+LECONTE,Erwan,"Bachelor 1 E","12 11 2019","Trop d'absences injustifiées",-5
+LECONTE,Erwan,"Bachelor 1 E","20 11 2019","Bon comportement",1
+LECONTE,Erwan,"Bachelor 1 E","09 12 2019","Trop d'absences injustifiées",-5
+LECONTE,Erwan,"Bachelor 1 E","13 12 2019","Trop d'absences injustifiées",-5
+LECONTE,Erwan,"Bachelor 1 E","09 01 2020","Trop d'absences injustifiées",-5
+LECONTE,Erwan,"Bachelor 1 E","17 01 2020","Trop d'absences injustifiées",-5
+MANGIN,Corentin,"Bachelor 1 E","13 01 2020","Bon comportement",1
+MARTY,Léo,"Bachelor 1 E","08 11 2019","Trop d'absences injustifiées",-5
+MARTY,Léo,"Bachelor 1 E","12 11 2019","Trop de retards",-3
+MARTY,Léo,"Bachelor 1 E","26 11 2019","Trop d'absences injustifiées",-5
+MARTY,Léo,"Bachelor 1 E","29 11 2019","Trop d'absences injustifiées",-5
+MARTY,Léo,"Bachelor 1 E","11 12 2019","Trop d'absences injustifiées",-5
+MARTY,Léo,"Bachelor 1 E","13 01 2020","Retour exclusion",1
+MARTY,Léo,"Bachelor 1 E","13 01 2020","Retour exclusion",1
+MARTY,Léo,"Bachelor 1 E","13 01 2020","Retour exclusion",1
+MARTY,Léo,"Bachelor 1 E","13 01 2020","Retour exclusion",1
+MARTY,Léo,"Bachelor 1 E","13 01 2020","Retour exclusion",1
+MARTY,Léo,"Bachelor 1 E","13 01 2020","Retour exclusion",1
+MARTY,Léo,"Bachelor 1 E","13 01 2020","Retour exclusion",1
+MARTY,Léo,"Bachelor 1 E","13 01 2020","Retour exclusion",1
+MARTY,Léo,"Bachelor 1 E","13 01 2020","Retour exclusion",1
+RIDEL,Sacha,"Bachelor 1 E","08 10 2019","Tilt, rage ou perturbation de cours",-1
+RIDEL,Sacha,"Bachelor 1 E","10 10 2019","Tilt, rage ou perturbation de cours",-1
+RIDEL,Sacha,"Bachelor 1 E","20 11 2019","Tilt, rage ou perturbation de cours",-1
+RIDEL,Sacha,"Bachelor 1 E","20 11 2019","Insolence ou irrespect niveau I",-3
+RIDEL,Sacha,"Bachelor 1 E","20 11 2019","Tilt, rage ou perturbation de cours",-1
+RIDEL,Sacha,"Bachelor 1 E","20 11 2019","Projet supplémentaire rendu",3
+RIDEL,Sacha,"Bachelor 1 E","22 11 2019","Trop de retards",-3
+RIDEL,Sacha,"Bachelor 1 E","22 11 2019","Bon comportement",1
+RIDEL,Sacha,"Bachelor 1 E","25 11 2019","Trop d'absences injustifiées",-5
+RIDEL,Sacha,"Bachelor 1 E","18 12 2019","Trop d'absences injustifiées",-5
+RIDEL,Sacha,"Bachelor 1 E","20 12 2019","Projet supplémentaire rendu",3
+ROUMEGOUX,Axel,"Bachelor 1 E","08 01 2020","Trop de retards",-3
+TERGEMINA,Jérémie,"Bachelor 1 E","05 11 2019","Bon comportement",1
+TERGEMINA,Jérémie,"Bachelor 1 E","20 11 2019","Bon comportement",1
+TERGEMINA,Jérémie,"Bachelor 1 E","16 12 2019","Bon comportement",1
+TERGEMINA,Jérémie,"Bachelor 1 E","13 01 2020","Bon comportement",1
+TERGEMINA,Jérémie,"Bachelor 1 E","20 01 2020","Participation aux JPO/Salon régulière",3
+TRINIDAD,Audric,"Bachelor 1 E","03 12 2019","Trop d'absences injustifiées",-5
+TRINIDAD,Audric,"Bachelor 1 E","16 12 2019","Participation aux JPO/Salon régulière",3
+BARBARAY,Clément,"Bachelor 1 F","10 01 2020","Bon comportement",1
+BREGLER,Thomas,"Bachelor 1 F","01 10 2019","Insolence ou irrespect niveau II",-5
+BREGLER,Thomas,"Bachelor 1 F","09 10 2019","Tilt, rage ou perturbation de cours",-1
+BREGLER,Thomas,"Bachelor 1 F","04 11 2019","Projet supplémentaire rendu",3
+BREGLER,Thomas,"Bachelor 1 F","04 11 2019","Bon comportement",1
+BREGLER,Thomas,"Bachelor 1 F","18 11 2019","Bon comportement",1
+BREGLER,Thomas,"Bachelor 1 F","02 12 2019","Bon comportement",1
+BREGLER,Thomas,"Bachelor 1 F","02 12 2019","Vie en communauté",-2
+BREGLER,Thomas,"Bachelor 1 F","02 12 2019","Bon comportement",1
+BREGLER,Thomas,"Bachelor 1 F","05 12 2019","Bon comportement",1
+BREGLER,Thomas,"Bachelor 1 F","10 12 2019","Trop d'absences injustifiées",-5
+BREGLER,Thomas,"Bachelor 1 F","13 01 2020","Bon comportement",1
+BREGLER,Thomas,"Bachelor 1 F","14 01 2020","Trop d'absences injustifiées",-5
+CLARO,Thomas,"Bachelor 1 F","05 11 2019","Bon comportement",1
+"DE LAVIGNE",Théo,"Bachelor 1 F","15 11 2019","Trop d'absences injustifiées",-5
+"DE LAVIGNE",Théo,"Bachelor 1 F","18 11 2019","Participation aux JPO/Salon régulière",3
+"DE LAVIGNE",Théo,"Bachelor 1 F","25 11 2019","Trop de retards",-3
+"DE LAVIGNE",Théo,"Bachelor 1 F","10 12 2019","Trop d'absences injustifiées",-5
+"DE LAVIGNE",Théo,"Bachelor 1 F","15 01 2020","Trop de retards",-3
+DEGALLAIX,Maxime,"Bachelor 1 F","26 09 2019","Bon comportement",1
+DEGALLAIX,Maxime,"Bachelor 1 F","16 12 2019","Participation aux JPO/Salon régulière",3
+DEGALLAIX,Maxime,"Bachelor 1 F","20 01 2020","Bon comportement",1
+ERMITE,Maxime,"Bachelor 1 F","22 11 2019","Trop de retards",-3
+FONTAINE,Thomas,"Bachelor 1 F","04 11 2019","Bon comportement",1
+FONTAINE,Thomas,"Bachelor 1 F","05 11 2019","Bon comportement",1
+FONTAINE,Thomas,"Bachelor 1 F","12 12 2019","Trop d'absences injustifiées",-5
+FONTAINE,Thomas,"Bachelor 1 F","13 01 2020","Bon comportement",1
+JOZ-ROLAND,Loïs,"Bachelor 1 F","02 12 2019","Trop de retards",-3
+JOZ-ROLAND,Loïs,"Bachelor 1 F","11 12 2019","Trop d'absences injustifiées",-5
+JOZ-ROLAND,Loïs,"Bachelor 1 F","16 12 2019","Participation aux JPO/Salon régulière",3
+JOZ-ROLAND,Loïs,"Bachelor 1 F","08 01 2020","Bon comportement",1
+JOZ-ROLAND,Loïs,"Bachelor 1 F","20 01 2020","Bon comportement",1
+LEVOUIN,Romain,"Bachelor 1 F","10 01 2020","Trop d'absences injustifiées",-5
+MENARD,Adonaï,"Bachelor 1 F","18 10 2019","Trop d'absences injustifiées",-5
+MENARD,Adonaï,"Bachelor 1 F","28 11 2019","Trop d'absences injustifiées",-5
+MENARD,Adonaï,"Bachelor 1 F","12 12 2019","Trop de retards",-3
+MENARD,Adonaï,"Bachelor 1 F","20 12 2019","Projet supplémentaire rendu",3
+MENARD,Adonaï,"Bachelor 1 F","14 01 2020","Trop d'absences injustifiées",-5
+PICOT,Matthieu,"Bachelor 1 F","26 09 2019","Bon comportement",1
+PICOT,Matthieu,"Bachelor 1 F","08 01 2020","Bon comportement",1
+PUPIER,Loïc,"Bachelor 1 F","01 10 2019","Tilt, rage ou perturbation de cours",-1
+PUPIER,Loïc,"Bachelor 1 F","01 10 2019","Vie en communauté",-2
+ROPERS,Hugo,"Bachelor 1 F","05 11 2019","Bon comportement",1
+VINGADESSIN,Gwendal,"Bachelor 1 F","10 12 2019","Trop de retards",-3
+Charil,Paul,"Bachelor 1 G","20 01 2020","Bon comportement",1
+Chesneau,Timothée,"Bachelor 1 G","20 01 2020","Participation aux JPO/Salon régulière",3
+"De Antoni",Enzo,"Bachelor 1 G","20 01 2020","Bon comportement",1
+Flament,Julien,"Bachelor 1 G","20 01 2020","Bon comportement",1
+Hermouet,Gwenn,"Bachelor 1 G","09 01 2020","Trop d'absences injustifiées",-5
+Hermouet,Gwenn,"Bachelor 1 G","16 01 2020","Trop d'absences injustifiées",-5
+Bardou,Théo,"Bachelor 2 A","10 10 2019","Trop d'absences injustifiées",-5
+Bardou,Théo,"Bachelor 2 A","26 11 2019","Trop d'absences injustifiées",-5
+Bardou,Théo,"Bachelor 2 A","15 01 2020","Trop d'absences injustifiées",-5
+Bérard,Adrien,"Bachelor 2 A","11 10 2019","Tilt, rage ou perturbation de cours",-1
+Bérard,Adrien,"Bachelor 2 A","08 11 2019","Tilt, rage ou perturbation de cours",-1
+Bérard,Adrien,"Bachelor 2 A","22 11 2019","Trop d'absences injustifiées",-5
+Bérard,Adrien,"Bachelor 2 A","28 11 2019","Projet supplémentaire rendu",3
+Bérard,Adrien,"Bachelor 2 A","13 12 2019","Tilt, rage ou perturbation de cours",-1
+Boëgler,Jean-Emmanuel,"Bachelor 2 A","22 11 2019","Trop d'absences injustifiées",-5
+Boëgler,Jean-Emmanuel,"Bachelor 2 A","18 12 2019","Trop d'absences injustifiées",-5
+Boëgler,Jean-Emmanuel,"Bachelor 2 A","16 01 2020","Trop d'absences injustifiées",-5
+Boukhari,Sofiane,"Bachelor 2 A","31 10 2019","Bon comportement",1
+Boukhari,Sofiane,"Bachelor 2 A","06 11 2019","Trop d'absences injustifiées",-5
+Boukhari,Sofiane,"Bachelor 2 A","18 11 2019","Trop d'absences injustifiées",-5
+Boukhari,Sofiane,"Bachelor 2 A","21 11 2019","Trop d'absences injustifiées",-5
+Boukhari,Sofiane,"Bachelor 2 A","29 11 2019","Tilt, rage ou perturbation de cours",-1
+Boukhari,Sofiane,"Bachelor 2 A","16 12 2019","Trop d'absences injustifiées",-5
+Boukhari,Sofiane,"Bachelor 2 A","20 12 2019","Trop d'absences injustifiées",-5
+Boulanger,Hugo,"Bachelor 2 A","07 11 2019","Exclusion d'un cours",-3
+Boulanger,Hugo,"Bachelor 2 A","18 11 2019","Participation aux JPO/Salon régulière",3
+Boulanger,Hugo,"Bachelor 2 A","11 12 2019","Trop de retards",-3
+Boulanger,Hugo,"Bachelor 2 A","16 12 2019","Participation aux JPO/Salon régulière",3
+Boulanger,Hugo,"Bachelor 2 A","18 12 2019","Exclusion d'un cours",-3
+Boulanger,Hugo,"Bachelor 2 A","18 12 2019","Insolence ou irrespect niveau I",-3
+Boulanger,Hugo,"Bachelor 2 A","08 01 2020","Trop d'absences injustifiées",-5
+Boulanger,Hugo,"Bachelor 2 A","13 01 2020","Insolence ou irrespect niveau I",-3
+Calon,Martin,"Bachelor 2 A","10 10 2019","Trop d'absences injustifiées",-5
+Calon,Martin,"Bachelor 2 A","20 12 2019","Trop d'absences injustifiées",-5
+Calon,Martin,"Bachelor 2 A","15 01 2020","Trop d'absences injustifiées",-5
+CAMPOS,Enzo,"Bachelor 2 A","13 01 2020","Trop d'absences injustifiées",-5
+Cancalon,Léo,"Bachelor 2 A","09 12 2019","Trop d'absences injustifiées",-5
+Cardetas,Julien,"Bachelor 2 A","18 11 2019","Trop d'absences injustifiées",-5
+Cardetas,Julien,"Bachelor 2 A","28 11 2019","Projet supplémentaire rendu",3
+Cardetas,Julien,"Bachelor 2 A","04 12 2019","Trop d'absences injustifiées",-5
+Cardetas,Julien,"Bachelor 2 A","15 01 2020","Trop d'absences injustifiées",-5
+Carlo,Nicola,"Bachelor 2 A","03 10 2019","Bon comportement",1
+Carlo,Nicola,"Bachelor 2 A","20 11 2019","Trop d'absences injustifiées",-5
+Carlo,Nicola,"Bachelor 2 A","22 11 2019","Trop d'absences injustifiées",-5
+Carlo,Nicola,"Bachelor 2 A","18 12 2019","Trop d'absences injustifiées",-5
+Carlo,Nicola,"Bachelor 2 A","13 01 2020","Trop d'absences injustifiées",-5
+Carlo,Nicola,"Bachelor 2 A","16 01 2020","Trop d'absences injustifiées",-5
+Dauphin,Hugo,"Bachelor 2 A","19 11 2019","Trop d'absences injustifiées",-5
+Dauphin,Hugo,"Bachelor 2 A","16 12 2019","Trop d'absences injustifiées",-5
+Dauphin,Hugo,"Bachelor 2 A","08 01 2020","Projet supplémentaire rendu",3
+Dauphin,Hugo,"Bachelor 2 A","20 01 2020","Participation aux JPO/Salon régulière",3
+Debeer,Alexandre,"Bachelor 2 A","18 12 2019","Trop d'absences injustifiées",-5
+Diot,Quentin,"Bachelor 2 A","20 11 2019","Trop d'absences injustifiées",-5
+Diot,Quentin,"Bachelor 2 A","25 11 2019","Trop d'absences injustifiées",-5
+Diot,Quentin,"Bachelor 2 A","03 12 2019","Trop d'absences injustifiées",-5
+Diot,Quentin,"Bachelor 2 A","15 01 2020","Trop d'absences injustifiées",-5
+Diot,Quentin,"Bachelor 2 A","16 01 2020","Bon comportement",1
+Dupont,Chloé,"Bachelor 2 A","20 12 2019","Trop d'absences injustifiées",-5
+Dupont,Chloé,"Bachelor 2 A","16 01 2020","Bon comportement",1
+"Dupuis Markowski",Jimmy,"Bachelor 2 A","07 11 2019","Trop d'absences injustifiées",-5
+"Dupuis Markowski",Jimmy,"Bachelor 2 A","20 12 2019","Trop d'absences injustifiées",-5
+"Dupuis Markowski",Jimmy,"Bachelor 2 A","16 01 2020","Trop d'absences injustifiées",-5
+Godo,Valentin,"Bachelor 2 A","15 10 2019","Bon comportement",1
+Godo,Valentin,"Bachelor 2 A","06 11 2019","Trop d'absences injustifiées",-5
+Godo,Valentin,"Bachelor 2 A","12 11 2019","Trop d'absences injustifiées",-5
+Godo,Valentin,"Bachelor 2 A","14 11 2019","Mensonge / Rupture de confiance",-2
+Godo,Valentin,"Bachelor 2 A","19 11 2019","Trop d'absences injustifiées",-5
+Godo,Valentin,"Bachelor 2 A","21 11 2019","Trop d'absences injustifiées",-5
+Godo,Valentin,"Bachelor 2 A","27 11 2019","Trop d'absences injustifiées",-5
+Godo,Valentin,"Bachelor 2 A","03 12 2019","Trop d'absences injustifiées",-5
+Godo,Valentin,"Bachelor 2 A","10 12 2019","Trop d'absences injustifiées",-5
+Godo,Valentin,"Bachelor 2 A","16 12 2019","Trop d'absences injustifiées",-5
+Godo,Valentin,"Bachelor 2 A","20 12 2019","Trop d'absences injustifiées",-5
+Goncalves,Julian,"Bachelor 2 A","16 12 2019","Trop d'absences injustifiées",-5
+LAURENT,Nils,"Bachelor 2 A","07 11 2019","Exclusion d'un cours",-3
+LAURENT,Nils,"Bachelor 2 A","13 01 2020","Trop d'absences injustifiées",-5
+Legavre,Raphaël,"Bachelor 2 A","03 10 2019","Bon comportement",1
+Legavre,Raphaël,"Bachelor 2 A","18 11 2019","Participation aux JPO/Salon régulière",3
+Legavre,Raphaël,"Bachelor 2 A","12 12 2019","Tilt, rage ou perturbation de cours",-1
+Legavre,Raphaël,"Bachelor 2 A","18 12 2019","Trop d'absences injustifiées",-5
+Lemaitre,Brendan,"Bachelor 2 A","05 12 2019","Trop d'absences injustifiées",-5
+Levacher,Scott,"Bachelor 2 A","05 11 2019","Trop d'absences injustifiées",-5
+Levacher,Scott,"Bachelor 2 A","07 11 2019","Trop d'absences injustifiées",-5
+Levacher,Scott,"Bachelor 2 A","15 11 2019","Trop d'absences injustifiées",-5
+Levacher,Scott,"Bachelor 2 A","20 11 2019","Trop d'absences injustifiées",-5
+Levacher,Scott,"Bachelor 2 A","25 11 2019","Trop d'absences injustifiées",-5
+Levacher,Scott,"Bachelor 2 A","03 12 2019","Trop d'absences injustifiées",-5
+Levacher,Scott,"Bachelor 2 A","05 12 2019","Trop d'absences injustifiées",-5
+Levacher,Scott,"Bachelor 2 A","13 12 2019","Trop d'absences injustifiées",-5
+Levacher,Scott,"Bachelor 2 A","19 12 2019","Trop d'absences injustifiées",-5
+Levacher,Scott,"Bachelor 2 A","13 01 2020","Trop d'absences injustifiées",-5
+Levacher,Scott,"Bachelor 2 A","16 01 2020","Trop d'absences injustifiées",-5
+Melous,Thomas,"Bachelor 2 A","19 11 2019","Trop d'absences injustifiées",-5
+Melous,Thomas,"Bachelor 2 A","19 12 2019","Trop d'absences injustifiées",-5
+Melous,Thomas,"Bachelor 2 A","13 01 2020","Trop d'absences injustifiées",-5
+Melous,Thomas,"Bachelor 2 A","16 01 2020","Trop d'absences injustifiées",-5
+Muzrukov,Boris,"Bachelor 2 A","11 10 2019","Trop d'absences injustifiées",-5
+Muzrukov,Boris,"Bachelor 2 A","17 10 2019","Bon comportement",1
+Muzrukov,Boris,"Bachelor 2 A","18 10 2019","Bon comportement",1
+Muzrukov,Boris,"Bachelor 2 A","18 11 2019","Participation aux JPO/Salon régulière",3
+Muzrukov,Boris,"Bachelor 2 A","20 11 2019","Trop d'absences injustifiées",-5
+Muzrukov,Boris,"Bachelor 2 A","04 12 2019","Bon comportement",1
+Muzrukov,Boris,"Bachelor 2 A","16 12 2019","Trop d'absences injustifiées",-5
+Muzrukov,Boris,"Bachelor 2 A","16 12 2019","Bon comportement",1
+Muzrukov,Boris,"Bachelor 2 A","14 01 2020","Trop d'absences injustifiées",-5
+Sallaberry,Thibault,"Bachelor 2 A","03 10 2019","Bon comportement",1
+Sallaberry,Thibault,"Bachelor 2 A","03 12 2019","Trop d'absences injustifiées",-5
+Sallaberry,Thibault,"Bachelor 2 A","18 12 2019","Trop d'absences injustifiées",-5
+Vignali,Patrick,"Bachelor 2 A","18 12 2019","Trop d'absences injustifiées",-5
+Vignali,Patrick,"Bachelor 2 A","17 01 2020","Trop de retards",-3
+Vivier,Jérémie,"Bachelor 2 A","18 11 2019","Bon comportement",1
+Barneoud,Thibaud-Antoine,"Bachelor 2 B","07 10 2019","Tilt, rage ou perturbation de cours",-1
+Barneoud,Thibaud-Antoine,"Bachelor 2 B","14 10 2019","Trop d'absences injustifiées",-5
+Barneoud,Thibaud-Antoine,"Bachelor 2 B","09 11 2019","Bon comportement",1
+Barneoud,Thibaud-Antoine,"Bachelor 2 B","11 11 2019","Bon comportement",1
+Barneoud,Thibaud-Antoine,"Bachelor 2 B","12 11 2019","Trop d'absences injustifiées",-5
+Barneoud,Thibaud-Antoine,"Bachelor 2 B","18 11 2019","Bon comportement",1
+Barneoud,Thibaud-Antoine,"Bachelor 2 B","04 12 2019","Projet supplémentaire rendu",3
+Barneoud,Thibaud-Antoine,"Bachelor 2 B","11 12 2019","Trop d'absences injustifiées",-5
+Barneoud,Thibaud-Antoine,"Bachelor 2 B","16 12 2019","Projet supplémentaire rendu",3
+Barneoud,Thibaud-Antoine,"Bachelor 2 B","09 01 2020","Trop d'absences injustifiées",-5
+Barneoud,Thibaud-Antoine,"Bachelor 2 B","16 01 2020","Trop de retards",-3
+Barneoud,Thibaud-Antoine,"Bachelor 2 B","20 01 2020","Bon comportement",1
+Belloeil,Hugo,"Bachelor 2 B","17 10 2019","Trop d'absences injustifiées",-5
+Belloeil,Hugo,"Bachelor 2 B","12 11 2019","Trop d'absences injustifiées",-5
+Belloeil,Hugo,"Bachelor 2 B","18 12 2019","Trop d'absences injustifiées",-5
+Blanchard,Guillaume,"Bachelor 2 B","05 11 2019","Bon comportement",1
+Blanchard,Guillaume,"Bachelor 2 B","15 11 2019","Trop d'absences injustifiées",-5
+Blanchard,Guillaume,"Bachelor 2 B","18 11 2019","Participation aux JPO/Salon régulière",3
+Blanchard,Guillaume,"Bachelor 2 B","16 12 2019","Bon comportement",1
+Blanchard,Guillaume,"Bachelor 2 B","19 12 2019","Trop d'absences injustifiées",-5
+Blanchard,Guillaume,"Bachelor 2 B","20 01 2020","Bon comportement",1
+Blin,Julien,"Bachelor 2 B","15 11 2019","Trop d'absences injustifiées",-5
+Blin,Julien,"Bachelor 2 B","21 11 2019","Bon comportement",1
+Butin,Léo,"Bachelor 2 B","26 11 2019","Trop de retards",-3
+Butin,Léo,"Bachelor 2 B","29 11 2019","Trop d'absences injustifiées",-5
+Butin,Léo,"Bachelor 2 B","07 01 2020","Trop d'absences injustifiées",-5
+Butin,Léo,"Bachelor 2 B","14 01 2020","Trop d'absences injustifiées",-5
+Chasson,Pierre,"Bachelor 2 B","16 10 2019","Trop d'absences injustifiées",-5
+Chasson,Pierre,"Bachelor 2 B","26 11 2019","Trop d'absences injustifiées",-5
+Chasson,Pierre,"Bachelor 2 B","09 12 2019","Trop d'absences injustifiées",-5
+Chasson,Pierre,"Bachelor 2 B","20 12 2019","Trop d'absences injustifiées",-5
+Chasson,Pierre,"Bachelor 2 B","08 01 2020","Trop d'absences injustifiées",-5
+Chasson,Pierre,"Bachelor 2 B","10 01 2020","Trop d'absences injustifiées",-5
+Chasson,Pierre,"Bachelor 2 B","17 01 2020","Trop d'absences injustifiées",-5
+Debray,Jonathan,"Bachelor 2 B","26 09 2019","Bon comportement",1
+Debray,Jonathan,"Bachelor 2 B","26 11 2019","Trop d'absences injustifiées",-5
+Debray,Jonathan,"Bachelor 2 B","09 01 2020","Bon comportement",1
+Decap,Valentin,"Bachelor 2 B","10 10 2019","Tilt, rage ou perturbation de cours",-1
+Decap,Valentin,"Bachelor 2 B","12 11 2019","Tilt, rage ou perturbation de cours",-1
+Decap,Valentin,"Bachelor 2 B","18 11 2019","Tilt, rage ou perturbation de cours",-1
+Decap,Valentin,"Bachelor 2 B","16 12 2019","Bon comportement",1
+Deret,Kilian,"Bachelor 2 B","05 11 2019","Bon comportement",1
+Deret,Kilian,"Bachelor 2 B","21 11 2019","Bon comportement",1
+Deret,Kilian,"Bachelor 2 B","17 12 2019","Tilt, rage ou perturbation de cours",-1
+Deret,Kilian,"Bachelor 2 B","14 01 2020","Tilt, rage ou perturbation de cours",-1
+Derly,Florentin,"Bachelor 2 B","07 10 2019","Tilt, rage ou perturbation de cours",-1
+Derly,Florentin,"Bachelor 2 B","31 10 2019","Bon comportement",1
+Derly,Florentin,"Bachelor 2 B","18 11 2019","Bon comportement",1
+Dussert,Alexandre,"Bachelor 2 B","12 11 2019","Trop d'absences injustifiées",-5
+Dussert,Alexandre,"Bachelor 2 B","18 11 2019","Tilt, rage ou perturbation de cours",-1
+Dussert,Alexandre,"Bachelor 2 B","27 11 2019","Trop d'absences injustifiées",-5
+Dussert,Alexandre,"Bachelor 2 B","18 12 2019","Trop d'absences injustifiées",-5
+Dussert,Alexandre,"Bachelor 2 B","08 01 2020","Trop d'absences injustifiées",-5
+Dussert,Alexandre,"Bachelor 2 B","10 01 2020","Trop d'absences injustifiées",-5
+Dussert,Alexandre,"Bachelor 2 B","17 01 2020","Trop d'absences injustifiées",-5
+Fonchy,Clément,"Bachelor 2 B","18 10 2019","Trop d'absences injustifiées",-5
+Fonchy,Clément,"Bachelor 2 B","15 11 2019","Trop d'absences injustifiées",-5
+Fonchy,Clément,"Bachelor 2 B","04 12 2019","Trop d'absences injustifiées",-5
+Fonchy,Clément,"Bachelor 2 B","09 01 2020","Trop d'absences injustifiées",-5
+Fonchy,Clément,"Bachelor 2 B","17 01 2020","Trop d'absences injustifiées",-5
+Frisch,Thomas,"Bachelor 2 B","11 10 2019","Tilt, rage ou perturbation de cours",-1
+Frisch,Thomas,"Bachelor 2 B","18 10 2019","Trop d'absences injustifiées",-5
+Frisch,Thomas,"Bachelor 2 B","26 11 2019","Trop d'absences injustifiées",-5
+Frisch,Thomas,"Bachelor 2 B","04 12 2019","Trop d'absences injustifiées",-5
+Frisch,Thomas,"Bachelor 2 B","07 01 2020","Trop d'absences injustifiées",-5
+Frisch,Thomas,"Bachelor 2 B","09 01 2020","Trop d'absences injustifiées",-5
+Guillard,Rémi,"Bachelor 2 B","18 12 2019","Trop d'absences injustifiées",-5
+Guillard,Rémi,"Bachelor 2 B","10 01 2020","Trop d'absences injustifiées",-5
+Ithurriague,Jokin,"Bachelor 2 B","15 11 2019","Trop d'absences injustifiées",-5
+Ithurriague,Jokin,"Bachelor 2 B","18 11 2019","Bon comportement",1
+Ithurriague,Jokin,"Bachelor 2 B","27 11 2019","Trop d'absences injustifiées",-5
+Ithurriague,Jokin,"Bachelor 2 B","06 12 2019","Trop d'absences injustifiées",-5
+Ithurriague,Jokin,"Bachelor 2 B","18 12 2019","Trop de retards",-3
+Ithurriague,Jokin,"Bachelor 2 B","07 01 2020","Trop d'absences injustifiées",-5
+Ithurriague,Jokin,"Bachelor 2 B","09 01 2020","Trop d'absences injustifiées",-5
+Lemoine,Quentin,"Bachelor 2 B","09 12 2019","Trop d'absences injustifiées",-5
+Lesage,Nicolas,"Bachelor 2 B","15 11 2019","Trop d'absences injustifiées",-5
+Lesage,Nicolas,"Bachelor 2 B","04 12 2019","Trop d'absences injustifiées",-5
+Lesage,Nicolas,"Bachelor 2 B","18 12 2019","Trop d'absences injustifiées",-5
+Lesage,Nicolas,"Bachelor 2 B","09 01 2020","Trop d'absences injustifiées",-5
+Loualiche,Benjamin,"Bachelor 2 B","14 11 2019","Trop d'absences injustifiées",-5
+Loualiche,Benjamin,"Bachelor 2 B","28 11 2019","Trop d'absences injustifiées",-5
+Loualiche,Benjamin,"Bachelor 2 B","16 12 2019","Participation aux JPO/Salon régulière",3
+Loualiche,Benjamin,"Bachelor 2 B","19 12 2019","Trop d'absences injustifiées",-5
+Loualiche,Benjamin,"Bachelor 2 B","16 01 2020","Trop d'absences injustifiées",-5
+Lucmaret,Baptiste,"Bachelor 2 B","20 01 2020","Bon comportement",1
+Machuret,Paul,"Bachelor 2 B","27 11 2019","Trop d'absences injustifiées",-5
+Machuret,Paul,"Bachelor 2 B","10 12 2019","Trop d'absences injustifiées",-5
+Machuret,Paul,"Bachelor 2 B","06 01 2020","Trop d'absences injustifiées",-5
+Machuret,Paul,"Bachelor 2 B","08 01 2020","Trop d'absences injustifiées",-5
+Magliulo,Corentin,"Bachelor 2 B","10 12 2019","Trop d'absences injustifiées",-5
+Mengual,Loic,"Bachelor 2 B","18 10 2019","Trop d'absences injustifiées",-5
+Mengual,Loic,"Bachelor 2 B","05 11 2019","Bon comportement",1
+Mengual,Loic,"Bachelor 2 B","26 11 2019","Trop d'absences injustifiées",-5
+Mengual,Loic,"Bachelor 2 B","18 12 2019","Trop d'absences injustifiées",-5
+Mengual,Loic,"Bachelor 2 B","09 01 2020","Trop d'absences injustifiées",-5
+Mengual,Loic,"Bachelor 2 B","14 01 2020","Trop d'absences injustifiées",-5
+Poitevin,Yannick,"Bachelor 2 B","28 09 2019","Tilt, rage ou perturbation de cours",-1
+Poitevin,Yannick,"Bachelor 2 B","01 10 2019","Bon comportement",1
+Poitevin,Yannick,"Bachelor 2 B","01 10 2019","Insolence ou irrespect niveau I",-3
+Poitevin,Yannick,"Bachelor 2 B","09 10 2019","Vie en communauté",-2
+Poitevin,Yannick,"Bachelor 2 B","09 10 2019","Bon comportement",1
+Poitevin,Yannick,"Bachelor 2 B","15 10 2019","Insolence ou irrespect niveau I",-3
+Poitevin,Yannick,"Bachelor 2 B","18 10 2019","Trop d'absences injustifiées",-5
+Poitevin,Yannick,"Bachelor 2 B","21 10 2019","Mensonge / Rupture de confiance",-2
+Poitevin,Yannick,"Bachelor 2 B","08 11 2019","Bon comportement",1
+Poitevin,Yannick,"Bachelor 2 B","10 12 2019","Trop d'absences injustifiées",-5
+Poitevin,Yannick,"Bachelor 2 B","11 12 2019","Projet supplémentaire rendu",3
+Poitevin,Yannick,"Bachelor 2 B","06 01 2020","Trop d'absences injustifiées",-5
+Poitevin,Yannick,"Bachelor 2 B","09 01 2020","Trop d'absences injustifiées",-5
+Pujo,Tanguy,"Bachelor 2 B","31 10 2019","Bon comportement",1
+Pujo,Tanguy,"Bachelor 2 B","20 11 2019","Bon comportement",1

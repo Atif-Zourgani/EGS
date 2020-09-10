@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ student.firstname }} {{ student.lastname }}{% endblock %}
+{% block metaDescriptionContent %}{% endblock %}
+
+{% set bodyClass='student-reliability' %}
+{% if type == 'negative' %}
+    {% set bodyClass='student-reliability negative' %}
+{% endif %}
+
+{% form_theme incidentsForm _self %}
+
+{% block body %}
+
+    <div class="main">
+
+        {% include 'common/_breadcrumbs.html.twig' %}
+
+        <div class="main-scrollable">
+
+            {{ form_start(incidentsForm) }}
+
+            <h1>{{ form_label(incidentsForm.incident, 'Déclarer un ou plusieurs incidents') }}</h1>
+
+            <span class="incident-error" style="display: none;">Veuillez sélectionner un incident.</span>
+
+            <div class="all-incidents flex flex--align-start flex--center">
+                <ul id="{{ incidentsForm.incident.vars.id }}" class="flex flex--align-start flex--wrap flex--center">
+                    {% for incidentForm in incidentsForm.incident %}
+                        {% set entity = incidentsForm.incident.vars.choices[incidentForm.vars.value].data %}
+                        <li class="incident {% if entity.id == 1 or entity.id == 2 %} incident-disable {% endif %}">
+                            {{ form_widget(incidentForm, {'attr': {'class': entity.icon }} ) }}
+                            <label for="{{ entity.id }}">
+                                <span>{{ entity.name }}</span><br>
+                                <span>({{ entity.points }} pts.)</span><br>
+{#
+                                <span>( {{ entity.studentReliability|length * entity.points }} )</span>
+#}
+                            </label>
+                        </li>
+                    {% endfor %}
+                </ul>
+                {% do incidentsForm.incident.setRendered(true) %} {# to hide this fields in the form_rest #}
+            </div>
+
+            <button type="submit" class="submit-incident flex flex--align-center flex--center">
+                <i class="fas fa-check"></i>
+                <span>Valider l'incident</span>
+            </button>
+
+            {{ form_end(incidentsForm) }}
+
+        </div>
+    </div>
+
+
+{% endblock %}
+
+
+
+
